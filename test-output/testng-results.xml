@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="54514" started-at="2017-04-09T07:33:56Z" finished-at="2017-04-09T07:34:51Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="54514" started-at="2017-04-09T07:33:56Z" finished-at="2017-04-09T07:34:51Z">
+      <class name="com.oc.testng.Testng">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.oc.testng.Testng@19409c9]" name="beforeMethod" is-config="true" duration-ms="5010" started-at="2017-04-09T15:33:56Z" finished-at="2017-04-09T15:34:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="LoginA()[pri:0, instance:com.oc.testng.Testng@19409c9]" name="LoginA" duration-ms="636" started-at="2017-04-09T15:34:01Z" finished-at="2017-04-09T15:34:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginA -->
+        <test-method status="PASS" signature="AppQuery()[pri:0, instance:com.oc.testng.Testng@19409c9]" name="AppQuery" duration-ms="48856" started-at="2017-04-09T15:34:02Z" finished-at="2017-04-09T15:34:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AppQuery -->
+      </class> <!-- com.oc.testng.Testng -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
