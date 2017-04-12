@@ -26,4 +26,3 @@ public class Log {
             Log.info(message);
     }
 }  
- 
