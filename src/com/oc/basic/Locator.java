@@ -1,4 +1,4 @@
-//封装元素，Webdriver的元素，每个元素都有相应的定位地址（xpath路径或css或id）等待时间和定位类型，默认为By.xpath
+//灏佽鍏冪礌锛學ebdriver鐨勫厓绱狅紝姣忎釜鍏冪礌閮芥湁鐩稿簲鐨勫畾浣嶅湴鍧�锛坸path璺緞鎴朿ss鎴杋d锛夌瓑寰呮椂闂村拰瀹氫綅绫诲瀷锛岄粯璁や负By.xpath
 
 package com.oc.basic;
 
@@ -50,6 +50,7 @@ public class Locator {
 
 	public void setBy(ByType byType) {
 		this.byType = byType;
+		System.out.println("pull test");
 	}
 
 
