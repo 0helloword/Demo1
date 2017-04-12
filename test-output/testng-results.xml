@@ -1,24 +1,167 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="2" total="4" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="54514" started-at="2017-04-09T07:33:56Z" finished-at="2017-04-09T07:34:51Z">
+  <suite name="Default suite" duration-ms="62433" started-at="2017-04-12T02:05:28Z" finished-at="2017-04-12T02:06:30Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="54514" started-at="2017-04-09T07:33:56Z" finished-at="2017-04-09T07:34:51Z">
+    <test name="Default test" duration-ms="62433" started-at="2017-04-12T02:05:28Z" finished-at="2017-04-12T02:06:30Z">
       <class name="com.oc.testng.Testng">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.oc.testng.Testng@19409c9]" name="beforeMethod" is-config="true" duration-ms="5010" started-at="2017-04-09T15:33:56Z" finished-at="2017-04-09T15:34:01Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.oc.testng.Testng@1201837]" name="beforeMethod" is-config="true" duration-ms="5545" started-at="2017-04-12T10:05:28Z" finished-at="2017-04-12T10:05:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="LoginA()[pri:0, instance:com.oc.testng.Testng@19409c9]" name="LoginA" duration-ms="636" started-at="2017-04-09T15:34:01Z" finished-at="2017-04-09T15:34:02Z">
+        <test-method status="PASS" signature="LoginA()[pri:0, instance:com.oc.testng.Testng@1201837]" name="LoginA" duration-ms="361" started-at="2017-04-12T10:05:33Z" finished-at="2017-04-12T10:05:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginA -->
-        <test-method status="PASS" signature="AppQuery()[pri:0, instance:com.oc.testng.Testng@19409c9]" name="AppQuery" duration-ms="48856" started-at="2017-04-09T15:34:02Z" finished-at="2017-04-09T15:34:51Z">
+        <test-method status="PASS" signature="AppQuery()[pri:0, instance:com.oc.testng.Testng@1201837]" name="AppQuery" duration-ms="47812" started-at="2017-04-12T10:05:34Z" finished-at="2017-04-12T10:06:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AppQuery -->
+        <test-method status="FAIL" signature="ManualAudit_pos()[pri:0, instance:com.oc.testng.Testng@1201837]" name="ManualAudit_pos" duration-ms="2223" started-at="2017-04-12T10:06:21Z" finished-at="2017-04-12T10:06:24Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: {"method":"link text","selector":"³õ²½ÉóºË£¨POS£©"}
+Command duration or timeout: 163 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:03'
+System info: host: 'test-PC', ip: '192.168.150.116', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0_79'
+Session ID: d1cae362-58e4-44e3-831a-63dbf2967b68
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=24.0}]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"link text","selector":"³õ²½ÉóºË£¨POS£©"}
+Command duration or timeout: 163 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:03'
+System info: host: 'test-PC', ip: '192.168.150.116', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0_79'
+Session ID: d1cae362-58e4-44e3-831a-63dbf2967b68
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=24.0}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:401)
+	at org.openqa.selenium.By$ByLinkText.findElement(By.java:242)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at com.oc.page.HomePage.FirstAuditPos(HomePage.java:24)
+	at com.oc.action.HomePageAction.FirstAuditPos(HomePageAction.java:35)
+	at com.oc.testng.Testng.ManualAudit_pos(Testng.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:335)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:330)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Unable to locate element: {"method":"link text","selector":"³õ²½ÉóºË£¨POS£©"}
+Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:03'
+System info: host: 'test-PC', ip: '192.168.150.116', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0_79'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///D:/Users/test/AppData/Local/Temp/anonymous5991851171222091949webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:9470)
+	at <anonymous class>.FirefoxDriver.prototype.findElement(file:///D:/Users/test/AppData/Local/Temp/anonymous5991851171222091949webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:9479)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///D:/Users/test/AppData/Local/Temp/anonymous5991851171222091949webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:11455)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_(file:///D:/Users/test/AppData/Local/Temp/anonymous5991851171222091949webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:11460)
+	at <anonymous class>.DelayedCommand.prototype.execute/<(file:///D:/Users/test/AppData/Local/Temp/anonymous5991851171222091949webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:11402)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ManualAudit_pos -->
+        <test-method status="FAIL" signature="AuditAllot_pos()[pri:0, instance:com.oc.testng.Testng@1201837]" name="AuditAllot_pos" duration-ms="6474" started-at="2017-04-12T10:06:24Z" finished-at="2017-04-12T10:06:30Z">
+          <exception class="org.openqa.selenium.InvalidElementStateException">
+            <message>
+              <![CDATA[a.ownerDocument.defaultView is null
+Command duration or timeout: 705 milliseconds
+Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:03'
+System info: host: 'test-PC', ip: '192.168.150.116', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0_79'
+Session ID: d1cae362-58e4-44e3-831a-63dbf2967b68
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=24.0}]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.InvalidElementStateException: a.ownerDocument.defaultView is null
+Command duration or timeout: 705 milliseconds
+Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:03'
+System info: host: 'test-PC', ip: '192.168.150.116', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0_79'
+Session ID: d1cae362-58e4-44e3-831a-63dbf2967b68
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=24.0}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
+	at com.oc.action.AuditAllotAction_pos.Button(AuditAllotAction_pos.java:23)
+	at com.oc.testng.Testng.AuditAllot_pos(Testng.java:74)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:335)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:330)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: a.ownerDocument.defaultView is null
+Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:03'
+System info: host: 'test-PC', ip: '192.168.150.116', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0_79'
+Driver info: driver.version: unknown
+	at <anonymous class>.Utils.getPageUnloadedIndicator(file:///D:/Users/test/AppData/Local/Temp/anonymous5991851171222091949webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:8122)
+	at <anonymous class>.WebElement.clickElement(file:///D:/Users/test/AppData/Local/Temp/anonymous5991851171222091949webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10873)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///D:/Users/test/AppData/Local/Temp/anonymous5991851171222091949webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:11455)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_(file:///D:/Users/test/AppData/Local/Temp/anonymous5991851171222091949webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:11460)
+	at <anonymous class>.DelayedCommand.prototype.execute/<(file:///D:/Users/test/AppData/Local/Temp/anonymous5991851171222091949webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:11402)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.InvalidElementStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AuditAllot_pos -->
       </class> <!-- com.oc.testng.Testng -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

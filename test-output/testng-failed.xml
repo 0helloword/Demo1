@@ -6,7 +6,8 @@
       <class name="com.oc.testng.Testng">
         <methods>
           <include name="beforeMethod"/>
-          <include name="AppQuery"/>
+          <include name="ManualAudit_pos"/>
+          <include name="AuditAllot_pos"/>
         </methods>
       </class> <!-- com.oc.testng.Testng -->
     </classes>

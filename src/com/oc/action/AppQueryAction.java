@@ -34,11 +34,11 @@ public class AppQueryAction {
 		  AppQueryPage.LastPage(driver).click();
 		  Thread.sleep(3000);
 		  AppQueryPage.PreviousPage(driver).click();
-		  Thread.sleep(2000);
+		  Thread.sleep(3000);
 		  AppQueryPage.FirstPage(driver).click();
-		  Thread.sleep(2000);
-		  AppQueryPage.UpButton(driver).click();
-		  Thread.sleep(2000);
+		  Thread.sleep(3000);
+		  //AppQueryPage.UpButton(driver).click();
+		  //Thread.sleep(2000);
 	  }
 	  
 	    public void AppQuery(String appstate) throws InterruptedException{

@@ -1,6 +1,7 @@
 package com.oc.action;
 
 import org.openqa.selenium.WebDriver;
+
 import com.oc.page.HomePage;
 
 
@@ -18,10 +19,27 @@ public class HomePageAction {
 	}
 
 	// 工单查询
-	public void appquery() {
+	public void AppQuery() {
 		HomePage.AppQuery(driver).click();
 	
 	}
+	
+	// 人工审核
+	public void ManualAudit() {
+		HomePage.ManualAudit(driver).click();
+		}
+	
+	//初步审核
+	public void FirstAuditPos() throws InterruptedException {
+		Thread.sleep(2000);
+		HomePage.FirstAuditPos(driver).click();
+		}
+	
+	//审核分单
+	public void AuditAllotPos() throws InterruptedException {
+		Thread.sleep(1000);
+		HomePage.AuditAllotPos(driver).click();
+		}
 	
     //返回driver
     public WebDriver ReturnDriver(){
