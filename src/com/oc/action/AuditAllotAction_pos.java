@@ -45,9 +45,9 @@ public class AuditAllotAction_pos {
 		Thread.sleep(2000);
 		AuditAllotPage_pos.Id(driver).click();
 		Thread.sleep(2000);
-		AuditAllotPage_pos.Alloter(driver).click();
+		AuditAllotPage_pos.Alloter(driver).sendKeys(username);
 		Thread.sleep(1000);
-		AuditAllotPage_pos.Input(driver).sendKeys(username);
+		//AuditAllotPage_pos.Input(driver).sendKeys(username);
 		Thread.sleep(2000);
 		AuditAllotPage_pos.Allot(driver).click();
 		Thread.sleep(2000);

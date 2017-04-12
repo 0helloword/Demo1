@@ -22,13 +22,18 @@ public class AuditAllotPage_pos {
 	        return element;
 	    }
 	    
+	    public static WebElement App(WebDriver driver){
+	        element = driver.findElement(By.name("id"));//查询条件-工单编号
+	        return element;
+	    }
+	    
 	    public static WebElement Id(WebDriver driver){
 	        element = driver.findElement(By.name("ids"));//勾选框
 	        return element;
 	    }
 	    
 	    public static WebElement Alloter(WebDriver driver){
-	        element = driver.findElement(By.id("select2-drop-mask"));//审核人筛选框
+	        element = driver.findElement(By.id("s2id_autogen116_search"));//审核人筛选框
 	        return element;
 	    }
 	    
