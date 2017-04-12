@@ -7,6 +7,7 @@
         <methods>
           <include name="beforeMethod"/>
           <include name="AuditAllot_pos"/>
+          <include name="LoginA"/>
         </methods>
       </class> <!-- com.oc.testng.oc_process -->
     </classes>
