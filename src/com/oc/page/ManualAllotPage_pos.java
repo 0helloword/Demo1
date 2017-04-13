@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class AuditAllotPage_pos {
+public class ManualAllotPage_pos {
 	 private static WebElement element;
 	    
 	    public static WebElement QueryButton(WebDriver driver){
@@ -33,12 +33,7 @@ public class AuditAllotPage_pos {
 	    }
 	    
 	    public static WebElement Alloter(WebDriver driver){
-	        element = driver.findElement(By.id("s2id_autogen116_search"));//审核人筛选框
-	        return element;
-	    }
-	    
-	    public static WebElement Input(WebDriver driver){
-	        element = driver.findElement(By.className("select2-input"));//审核人输入框
+	        element = driver.findElement(By.id("executorId"));//审核人筛选框
 	        return element;
 	    }
 	    
@@ -52,35 +47,6 @@ public class AuditAllotPage_pos {
 	        return element;
 	    }
 	    
-	    public static WebElement NextPage(WebDriver driver){
-	        element = driver.findElement(By.linkText("下一页"));//下一页按键
-	        return element;
-	    }
-	
-	    public static WebElement PreviousPage(WebDriver driver){
-	        element = driver.findElement(By.linkText("上一页"));//上一页按键
-	        return element;
-	    }
-	
-	    public static WebElement FirstPage(WebDriver driver){
-	        element = driver.findElement(By.linkText("第一页"));//第一页按键
-	        return element;
-	    }
-	    
-	    public static WebElement LastPage(WebDriver driver){
-	        element = driver.findElement(By.linkText("最后一页"));//最后一页按键
-	        return element;
-	    }
-	    
-	    public static WebElement Go(WebDriver driver){
-	        element = driver.findElement(By.linkText("go"));//go按键
-	        return element;
-	    }
-	    
-	    public static WebElement PageInput(WebDriver driver){
-	        element = driver.findElement(By.id("pageInput"));//输入页码
-	        return element;
-	    }
 	    
 	    public static WebElement Up(WebDriver driver){
 	        element = driver.findElement(By.className("icon-arrow-up"));//向上按键

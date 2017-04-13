@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.oc.testng.oc_process">
+      <class name="com.oc.testng.OcProcess">
         <methods>
           <include name="beforeMethod"/>
+          <include name="ManualAudit_pos"/>
+          <include name="ExpertAllot_pos"/>
+          <include name="ExpertAudit_pos"/>
           <include name="AuditAllot_pos"/>
-          <include name="LoginA"/>
         </methods>
-      </class> <!-- com.oc.testng.oc_process -->
+      </class> <!-- com.oc.testng.OcProcess -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

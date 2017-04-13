@@ -18,23 +18,27 @@ public class ManualAuditAction_pos {
 	}
 
 	// 获取工单
-	public void GetApp() throws InterruptedException {
+	public void Getapp() throws InterruptedException {
 		Log.info("获取工单");
 		Thread.sleep(2000);
 		String appnum = ManualAuditPage_pos.AppNumber(driver).getText();
 		Log.info("当前待审核工单数为" + appnum);
-		// int appnum1=Integer.parseInt(appnum);
-		// if(appnum1>=1)
-		// {
-		// ManualAuditPage.GetApp(driver).click();
-		// }
-		// else
-		// {
-		ManualAuditPage_pos.Go(driver).click();
-		Thread.sleep(2000);
-		ManualAuditPage_pos.ContinueAudit(driver).click();
+		 int appnum1=Integer.parseInt(appnum);
+		 if(appnum1>=1)
+		 {
+			 ManualAuditPage_pos.GetApp(driver).click();
+		 }
+
 	}
 
+	public void ContinueAudit() throws InterruptedException {
+		Log.info("继续审核");
+		Thread.sleep(2000);
+		//ManualAuditPage_pos.Go(driver).click();
+		//Thread.sleep(2000);
+		ManualAuditPage_pos.ContinueAudit(driver).click();
+	}
+	
 	// }
 	public void AuditReturn(String returnCause, String returnDesc)
 			throws InterruptedException {

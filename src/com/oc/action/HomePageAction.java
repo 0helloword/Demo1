@@ -29,17 +29,36 @@ public class HomePageAction {
 		HomePage.ManualAudit(driver).click();
 		}
 	
-	//初步审核
+	//初步审核-pos
 	public void FirstAuditPos() throws InterruptedException {
 		Thread.sleep(2000);
 		HomePage.FirstAuditPos(driver).click();
 		}
 	
-	//审核分单
+	//审核分单-pos
 	public void AuditAllotPos() throws InterruptedException {
 		Thread.sleep(1000);
 		HomePage.AuditAllotPos(driver).click();
 		}
+	
+	// 专家审批
+	public void ExpertAudit() throws InterruptedException {
+		Thread.sleep(5000);
+		HomePage.ExpertAudit(driver).click();
+		}
+	
+	//初步审批-pos
+		public void ExpertAuditPos() throws InterruptedException {
+			Thread.sleep(2000);
+			HomePage.ExpertAuditPos(driver).click();
+			}
+		
+	//审批分单-pos
+		public void ExpertAllotPos() throws InterruptedException {
+			Thread.sleep(1000);
+			HomePage.ExpertAllotPos(driver).click();
+			}
+	
 	
     //返回driver
     public WebDriver ReturnDriver(){

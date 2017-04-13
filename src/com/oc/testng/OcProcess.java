@@ -1,7 +1,6 @@
 package com.oc.testng;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -9,7 +8,7 @@ import org.testng.annotations.Test;
 import com.oc.action.*;
 import com.oc.basic.*;
 
-public class Testng {
+public class OcProcess {
 
 	LoginAction login = null;
 	LogoutAction logout = null;
@@ -17,6 +16,9 @@ public class Testng {
 	AppQueryAction appquery = null;
 	ManualAuditAction_pos manualaudit_pos=null;
 	ManualAllotAction_pos auditallot_pos=null;
+	ExpertAllotAction_pos expertallot_pos=null;
+	ExpertAuditAction_pos expertaudit_pos=null;
+	
 	WebDriver webdriver = new FirefoxDriver();
 	
 	
@@ -35,42 +37,44 @@ public class Testng {
 		// 登录
 		login.Login("999111", "cyj111");
 	}
-
-	@Test(priority = 2)
-	public void AppQuery() throws InterruptedException {
-		// 工单查询
-		app.AppQuery();// 左侧菜单栏工单查询
-		appquery = new AppQueryAction(webdriver);// 右侧工单查询功能
-		appquery.AppQueryButton();// 工单查询界面按键验证
-		// appinfo.AppQuery("未提交");//筛选功能验证?
-		appquery.AppDtail("35441771");// 工单详情验证
-		appquery.CheckInfo();// 工单审核记录验证
-	}
 	
+	 @Test(priority=2)
+	 public void AuditAllot_pos() throws Exception {
+		 app.ManualAudit();//人工审核
+		 app.AuditAllotPos();//人工审核分单—pos
+		 auditallot_pos=new ManualAllotAction_pos(webdriver);
+		 auditallot_pos.AllotApp("小拉", "35441321");
+	 }
 	 @Test(priority=3)
 	 public void ManualAudit_pos() throws Exception {
-		 //人工初步审核
-		 app.ManualAudit();  //人工审核
-		 app.FirstAuditPos();//初步审核
+		 //app.ManualAudit();  //人工审核
+		 app.FirstAuditPos();//初步审核-pos
 		 manualaudit_pos=new ManualAuditAction_pos(webdriver);
-		 manualaudit_pos.Getapp();
+		 manualaudit_pos.ContinueAudit();
 		 manualaudit_pos.Audit1("信息和照片均一致", "照片一致");
 		 manualaudit_pos.Audit2("社保单位名称与申请表一致","学信网一致","照片一致","照片一致");
 		 manualaudit_pos.Audit3();
-		 //manualaudit.Audit4info();  //因滚动栏原因不好定位？
-		 //manualaudit.Audit4phoneself("单位电话", "18956254412", "生效", "test");
-		// manualaudit.Audit4phoneother("当康", "亲属", "16589784452", "失效", "test");
-		 manualaudit_pos.Audit4("信息已验证","信息已验证", "RES01", "信息已验证", "信息已验证", "信息已验证", "公司名和地址均一致");
+		 manualaudit_pos.Audit4("信息已验证","信息已验证", "RES05", "信息已验证", "信息已验证", "信息已验证", "公司名和地址均一致");
 	 }
 	 
 	 @Test(priority=4)
-	 public void AuditAllot_pos() throws Exception {
-		 app.ManualAudit();//人工审核
-		 app.AuditAllotPos();//人工审核分单——pos贷
-		 auditallot_pos=new ManualAllotAction_pos(webdriver);
-		 auditallot_pos.Button();
-		 auditallot_pos.AllotApp("小拉","35441143");
-		 
+	 public void ExpertAllot_pos() throws Exception {
+		 app.ExpertAudit();//专家审批
+		 app.ExpertAllotPos();//专家审批分单—pos贷
+		 expertallot_pos=new ExpertAllotAction_pos(webdriver);
+		 expertallot_pos.AllotApp("小拉", "35441321");
+	 }
+	
+	 @Test(priority=5)
+	 public void ExpertAudit_pos() throws Exception {
+		 //app.ManualAudit();  //专家审批
+		 app.ExpertAuditPos();//初步审批-pos
+		 expertaudit_pos=new ExpertAuditAction_pos(webdriver);
+		 expertaudit_pos.ContinueAudit();
+		 expertaudit_pos.Audit1();
+		 expertaudit_pos.Audit2();
+		 expertaudit_pos.Audit3();
+		 expertaudit_pos.Audit4();
 	 }
 	
 	// @Test(priority=3)

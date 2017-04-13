@@ -50,7 +50,7 @@ public class HomePage {
         return element;
     }
     
-    public static WebElement ExpertAuditAllotPos(WebDriver driver){
+    public static WebElement ExpertAllotPos(WebDriver driver){
         element = driver.findElement(By.linkText("审批分单（POS）"));//审批分单pos
         return element;
     }
@@ -60,7 +60,7 @@ public class HomePage {
         return element;
     }
     
-    public static WebElement ExpertAuditAllotCash(WebDriver driver){
+    public static WebElement ExpertAllotCash(WebDriver driver){
         element = driver.findElement(By.linkText("审批分单（CASH）"));//审批分单cash
         return element;
     }
