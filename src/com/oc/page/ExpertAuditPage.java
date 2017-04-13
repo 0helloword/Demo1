@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class ExpertAuditPage_pos {
+public class ExpertAuditPage {
 	 private static WebElement element;
 	    
 	    public static WebElement GetApp(WebDriver driver){

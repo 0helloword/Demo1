@@ -20,22 +20,22 @@ public class HomePage {
         return element;
     }
     
-    public static WebElement FirstAuditPos(WebDriver driver){
+    public static WebElement ManualAuditPos(WebDriver driver){
         element = driver.findElement(By.linkText("≥ı≤Ω…Û∫À£®POS£©"));//≥ı≤Ω…Û∫Àpos
         return element;
     }
     
-    public static WebElement AuditAllotPos(WebDriver driver){
+    public static WebElement ManualAllotPos(WebDriver driver){
         element = driver.findElement(By.linkText("…Û∫À∑÷µ•£®POS£©"));//…Û∫À∑÷µ•pos
         return element;
     }
     
-    public static WebElement FirstAuditCash(WebDriver driver){
+    public static WebElement ManualAuditCash(WebDriver driver){
         element = driver.findElement(By.linkText("≥ı≤Ω…Û∫À£®CASH£©"));//≥ı≤Ω…Û∫Àcash
         return element;
     }
     
-    public static WebElement AuditAllotCash(WebDriver driver){
+    public static WebElement ManualAllotCash(WebDriver driver){
         element = driver.findElement(By.linkText("…Û∫À∑÷µ•£®CASH£©"));//…Û∫À∑÷µ•cash
         return element;
     }

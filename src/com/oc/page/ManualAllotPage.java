@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class ManualAllotPage_pos {
+public class ManualAllotPage {
 	 private static WebElement element;
 	    
 	    public static WebElement QueryButton(WebDriver driver){

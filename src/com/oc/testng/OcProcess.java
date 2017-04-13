@@ -14,10 +14,10 @@ public class OcProcess {
 	LogoutAction logout = null;
 	HomePageAction app = null;
 	AppQueryAction appquery = null;
-	ManualAuditAction_pos manualaudit_pos=null;
-	ManualAllotAction_pos auditallot_pos=null;
-	ExpertAllotAction_pos expertallot_pos=null;
-	ExpertAuditAction_pos expertaudit_pos=null;
+	ManualAuditAction manualaudit=null;
+	ManualAllotAction auditallot=null;
+	ExpertAllotAction expertallot=null;
+	ExpertAuditAction expertaudit=null;
 	
 	WebDriver webdriver = new FirefoxDriver();
 	
@@ -40,44 +40,95 @@ public class OcProcess {
 	
 	 @Test(priority=2)
 	 public void AuditAllot_pos() throws Exception {
+		 Log.info("人工审核分单-pos");
 		 app.ManualAudit();//人工审核
-		 app.AuditAllotPos();//人工审核分单—pos
-		 auditallot_pos=new ManualAllotAction_pos(webdriver);
-		 auditallot_pos.AllotApp("小拉", "35441321");
+		 app.ManualAllotPos();//人工审核分单—pos
+		 auditallot=new ManualAllotAction(webdriver);
+		 auditallot.AllotApp("小拉", "35441321");
 	 }
+	 
 	 @Test(priority=3)
 	 public void ManualAudit_pos() throws Exception {
+		 Log.info("人工审核-继续审核-pos");
 		 //app.ManualAudit();  //人工审核
-		 app.FirstAuditPos();//初步审核-pos
-		 manualaudit_pos=new ManualAuditAction_pos(webdriver);
-		 manualaudit_pos.ContinueAudit();
-		 manualaudit_pos.Audit1("信息和照片均一致", "照片一致");
-		 manualaudit_pos.Audit2("社保单位名称与申请表一致","学信网一致","照片一致","照片一致");
-		 manualaudit_pos.Audit3();
-		 manualaudit_pos.Audit4("信息已验证","信息已验证", "RES05", "信息已验证", "信息已验证", "信息已验证", "公司名和地址均一致");
+		 app.ManualAuditPos();//初步审核-pos
+		 manualaudit=new ManualAuditAction(webdriver);
+		 manualaudit.ContinueAudit();
+		 manualaudit.Audit1("信息和照片均一致", "照片一致");
+		 manualaudit.Audit2("社保单位名称与申请表一致","学信网一致","照片一致","照片一致");
+		 manualaudit.Audit3();
+		 manualaudit.Audit4("信息已验证","信息已验证", "RES05", "信息已验证", "信息已验证", "信息已验证", "公司名和地址均一致");
 	 }
 	 
 	 @Test(priority=4)
 	 public void ExpertAllot_pos() throws Exception {
+		 Log.info("专家审批分单-pos");
 		 app.ExpertAudit();//专家审批
 		 app.ExpertAllotPos();//专家审批分单—pos贷
-		 expertallot_pos=new ExpertAllotAction_pos(webdriver);
-		 expertallot_pos.AllotApp("小拉", "35441321");
+		 expertallot=new ExpertAllotAction(webdriver);
+		 expertallot.AllotApp("小拉", "35441321");
 	 }
 	
 	 @Test(priority=5)
 	 public void ExpertAudit_pos() throws Exception {
+		 Log.info("专家审批-继续审核-pos");
 		 //app.ManualAudit();  //专家审批
 		 app.ExpertAuditPos();//初步审批-pos
-		 expertaudit_pos=new ExpertAuditAction_pos(webdriver);
-		 expertaudit_pos.ContinueAudit();
-		 expertaudit_pos.Audit1();
-		 expertaudit_pos.Audit2();
-		 expertaudit_pos.Audit3();
-		 expertaudit_pos.Audit4();
+		 expertaudit=new ExpertAuditAction(webdriver);
+		 expertaudit.ContinueAudit();
+		 expertaudit.Audit1();
+		 expertaudit.Audit2();
+		 expertaudit.Audit3();
+		 expertaudit.Audit4();
 	 }
 	
-	// @Test(priority=3)
+	 
+	 @Test(priority=6)
+	 public void AuditAllot_cash() throws Exception {
+		 Log.info("人工审核分单-cash");
+		 app.ManualAudit();//人工审核
+		 app.ManualAllotCash();//人工审核分单—cash
+		 auditallot=new ManualAllotAction(webdriver);
+		 auditallot.AllotApp("小拉", "35441789");
+	 }
+	 
+	 @Test(priority=7)
+	 public void ManualAudit_cash() throws Exception {
+		 Log.info("人工审核-继续审核-cash");
+		 //app.ManualAudit();  //人工审核
+		 app.ManualAuditCash();//初步审核-cash
+		 manualaudit=new ManualAuditAction(webdriver);
+		 manualaudit.ContinueAudit();
+		 manualaudit.Audit1("信息和照片均一致", "照片一致");
+		 manualaudit.Audit2("社保单位名称与申请表一致","学信网一致","照片一致","照片一致");
+		 manualaudit.Audit3();
+		 manualaudit.Audit4("信息已验证","信息已验证", "RES01", "信息已验证", "信息已验证", "信息已验证", "公司名和地址均一致");
+	 }
+	 
+	 @Test(priority=8)
+	 public void ExpertAllot_cash() throws Exception {
+		 Log.info("专家审批分单-cash");
+		 app.ExpertAudit();//专家审批
+		 app.ExpertAllotCash();//专家审批分单—cash
+		 expertallot=new ExpertAllotAction(webdriver);
+		 expertallot.AllotApp("小拉", "35441789");
+	 }
+	
+	 @Test(priority=9)
+	 public void ExpertAudit_cash() throws Exception {
+		 Log.info("专家审批-继续审核-cash");
+		 //app.ManualAudit();  //专家审批
+		 app.ExpertAuditCash();//初步审批-cash
+		 expertaudit=new ExpertAuditAction(webdriver);
+		 expertaudit.ContinueAudit();
+		 expertaudit.Audit1();
+		 expertaudit.Audit2();
+		 expertaudit.Audit3();
+		 expertaudit.Audit4();
+	 }
+	 
+	 
+	// @Test(priority=10)
 	// public void LogOut(){
 	// //退出登录
 	// logout=new LogOutAction();

@@ -15,8 +15,8 @@ public class Testng {
 	LogoutAction logout = null;
 	HomePageAction app = null;
 	AppQueryAction appquery = null;
-	ManualAuditAction_pos manualaudit_pos=null;
-	ManualAllotAction_pos auditallot_pos=null;
+	ManualAuditAction manualaudit_pos=null;
+	ManualAllotAction auditallot_pos=null;
 	WebDriver webdriver = new FirefoxDriver();
 	
 	
@@ -51,8 +51,8 @@ public class Testng {
 	 public void ManualAudit_pos() throws Exception {
 		 //人工初步审核
 		 app.ManualAudit();  //人工审核
-		 app.FirstAuditPos();//初步审核
-		 manualaudit_pos=new ManualAuditAction_pos(webdriver);
+		 app.ManualAuditPos();//初步审核
+		 manualaudit_pos=new ManualAuditAction(webdriver);
 		 manualaudit_pos.Getapp();
 		 manualaudit_pos.Audit1("信息和照片均一致", "照片一致");
 		 manualaudit_pos.Audit2("社保单位名称与申请表一致","学信网一致","照片一致","照片一致");
@@ -66,8 +66,8 @@ public class Testng {
 	 @Test(priority=4)
 	 public void AuditAllot_pos() throws Exception {
 		 app.ManualAudit();//人工审核
-		 app.AuditAllotPos();//人工审核分单——pos贷
-		 auditallot_pos=new ManualAllotAction_pos(webdriver);
+		 app.ManualAllotPos();//人工审核分单——pos贷
+		 auditallot_pos=new ManualAllotAction(webdriver);
 		 auditallot_pos.Button();
 		 auditallot_pos.AllotApp("小拉","35441143");
 		 

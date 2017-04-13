@@ -8,12 +8,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import com.oc.basic.Log;
-import com.oc.page.ManualAuditPage_pos;
+import com.oc.page.ManualAuditPage;
 
-public class ManualAuditAction_pos {
+public class ManualAuditAction {
 	private WebDriver driver;
 
-	public ManualAuditAction_pos(WebDriver driver) {
+	public ManualAuditAction(WebDriver driver) {
 		this.driver = driver;
 	}
 
@@ -21,12 +21,12 @@ public class ManualAuditAction_pos {
 	public void Getapp() throws InterruptedException {
 		Log.info("获取工单");
 		Thread.sleep(2000);
-		String appnum = ManualAuditPage_pos.AppNumber(driver).getText();
+		String appnum = ManualAuditPage.AppNumber(driver).getText();
 		Log.info("当前待审核工单数为" + appnum);
 		 int appnum1=Integer.parseInt(appnum);
 		 if(appnum1>=1)
 		 {
-			 ManualAuditPage_pos.GetApp(driver).click();
+			 ManualAuditPage.GetApp(driver).click();
 		 }
 
 	}
@@ -36,122 +36,122 @@ public class ManualAuditAction_pos {
 		Thread.sleep(2000);
 		//ManualAuditPage_pos.Go(driver).click();
 		//Thread.sleep(2000);
-		ManualAuditPage_pos.ContinueAudit(driver).click();
+		ManualAuditPage.ContinueAudit(driver).click();
 	}
 	
 	// }
 	public void AuditReturn(String returnCause, String returnDesc)
 			throws InterruptedException {
 		Thread.sleep(5000);
-		String app = ManualAuditPage_pos.App(driver).getText();
+		String app = ManualAuditPage.App(driver).getText();
 		Log.info("当前审核工单为：" + app + "审核状态：退回");
-		ManualAuditPage_pos.Return(driver).click();
-		new Select(ManualAuditPage_pos.ReturnCause(driver))
+		ManualAuditPage.Return(driver).click();
+		new Select(ManualAuditPage.ReturnCause(driver))
 				.selectByVisibleText(returnCause);
-		ManualAuditPage_pos.ReturnDesc(driver).sendKeys(returnDesc);
-		ManualAuditPage_pos.ReturnSubmit(driver).click();
+		ManualAuditPage.ReturnDesc(driver).sendKeys(returnDesc);
+		ManualAuditPage.ReturnSubmit(driver).click();
 	}
 
 	public void SaveOff() throws InterruptedException {
 		Thread.sleep(5000);
-		String app = ManualAuditPage_pos.App(driver).getText();
+		String app = ManualAuditPage.App(driver).getText();
 		Log.info("当前审核工单为：" + app + "审核状态：暂存");
-		ManualAuditPage_pos.SaveOff(driver).click();
-		ManualAuditPage_pos.SaveOffConfirm(driver).click();
+		ManualAuditPage.SaveOff(driver).click();
+		ManualAuditPage.SaveOffConfirm(driver).click();
 	}
 
 	public void Audit1(String nciic, String nciicPic)
 			throws InterruptedException {
 		Thread.sleep(5000);
-		String app = ManualAuditPage_pos.App(driver).getText();
+		String app = ManualAuditPage.App(driver).getText();
 		Log.info("当前审核工单为：" + app + "审核状态：人工初步审核");
 		Thread.sleep(2000);
-		String nciicAuto = ManualAuditPage_pos.NciicAuto(driver).getText();
+		String nciicAuto = ManualAuditPage.NciicAuto(driver).getText();
 		Log.info(nciicAuto);
 		Thread.sleep(2000);
-		new Select(ManualAuditPage_pos.NciicCheck(driver))
+		new Select(ManualAuditPage.NciicCheck(driver))
 				.selectByVisibleText(nciic);
 		Thread.sleep(2000);
-		new Select(ManualAuditPage_pos.NciicPic(driver))
+		new Select(ManualAuditPage.NciicPic(driver))
 				.selectByVisibleText(nciicPic);
 		Thread.sleep(2000);
-		ManualAuditPage_pos.Remarks(driver).sendKeys("test");
+		ManualAuditPage.Remarks(driver).sendKeys("test");
 		Thread.sleep(2000);
-		ManualAuditPage_pos.Next(driver).click();
+		ManualAuditPage.Next(driver).click();
 	}
 
 	public void Audit2(String shebao, String xuexin,String storepic,String sellpic)
 			throws InterruptedException {
 		Thread.sleep(2000);
-		String cardinfo = ManualAuditPage_pos.CardCheck(driver).getText();
+		String cardinfo = ManualAuditPage.CardCheck(driver).getText();
 		// String sellinfo=ManualAuditPage.SellRemarks(driver).getText();
 		// String pysdt=ManualAuditPage.PySdt(driver).getText();
 		// Log.info(cardinfo+"\n"+sellinfo+"\n"+pysdt); //因滚动栏无法获取销售备注和学信网查询结果？
 		Log.info(cardinfo);
 		Thread.sleep(2000);
-		new Select(ManualAuditPage_pos.SheBao(driver)).selectByVisibleText(shebao);
+		new Select(ManualAuditPage.SheBao(driver)).selectByVisibleText(shebao);
 		Thread.sleep(2000);
-		new Select(ManualAuditPage_pos.XueXin(driver)).selectByVisibleText(xuexin);
+		new Select(ManualAuditPage.XueXin(driver)).selectByVisibleText(xuexin);
 		Thread.sleep(2000);
-		new Select(ManualAuditPage_pos.StorePic(driver)).selectByVisibleText(storepic);
+		new Select(ManualAuditPage.StorePic(driver)).selectByVisibleText(storepic);
 		Thread.sleep(2000);
-		new Select(ManualAuditPage_pos.SellPic(driver))
+		new Select(ManualAuditPage.SellPic(driver))
 				.selectByVisibleText(sellpic);
 		Thread.sleep(2000);
-		ManualAuditPage_pos.Next(driver).click();
+		ManualAuditPage.Next(driver).click();
 	}
 
 	public void Audit3() throws InterruptedException {
 		Thread.sleep(2000);
-		ManualAuditPage_pos.Next(driver).click();
+		ManualAuditPage.Next(driver).click();
 	}
 
 	public void Audit4phoneself(String type, String contact, String state,
 			String remark) throws InterruptedException {
 		Thread.sleep(2000);
-		ManualAuditPage_pos.Phone(driver).click();
+		ManualAuditPage.Phone(driver).click();
 		Thread.sleep(2000);
-		ManualAuditPage_pos.AddSelf(driver).click();
+		ManualAuditPage.AddSelf(driver).click();
 		Thread.sleep(2000);
-		new Select(ManualAuditPage_pos.Type(driver)).selectByVisibleText(type);
-		ManualAuditPage_pos.Contact(driver).sendKeys(contact);
-		new Select(ManualAuditPage_pos.State(driver)).selectByVisibleText(state);
+		new Select(ManualAuditPage.Type(driver)).selectByVisibleText(type);
+		ManualAuditPage.Contact(driver).sendKeys(contact);
+		new Select(ManualAuditPage.State(driver)).selectByVisibleText(state);
 		Thread.sleep(2000);
-		ManualAuditPage_pos.Remark(driver).sendKeys(remark);
-		ManualAuditPage_pos.Save(driver).click();// 保存新增本人联系信息
+		ManualAuditPage.Remark(driver).sendKeys(remark);
+		ManualAuditPage.Save(driver).click();// 保存新增本人联系信息
 		Thread.sleep(2000);
-		ManualAuditPage_pos.Determine(driver).click();
+		ManualAuditPage.Determine(driver).click();
 		Thread.sleep(1000);
-		ManualAuditPage_pos.Determine(driver).click();
+		ManualAuditPage.Determine(driver).click();
 		Thread.sleep(2000);
-		ManualAuditPage_pos.Disable(driver).click();
+		ManualAuditPage.Disable(driver).click();
 		Thread.sleep(2000);
-		ManualAuditPage_pos.Determine(driver).click();
+		ManualAuditPage.Determine(driver).click();
 	}
 
 	public void Audit4phoneother(String name, String typeother, String contact,
 			String state, String remark) throws InterruptedException {
 		Thread.sleep(2000);
 		// ManualAuditPage.Phone(driver).click();
-		ManualAuditPage_pos.AddOther(driver).click();
+		ManualAuditPage.AddOther(driver).click();
 		Thread.sleep(2000);
-		ManualAuditPage_pos.Name(driver).sendKeys(name);
-		new Select(ManualAuditPage_pos.TypeOther(driver))
+		ManualAuditPage.Name(driver).sendKeys(name);
+		new Select(ManualAuditPage.TypeOther(driver))
 				.selectByVisibleText(typeother);
-		ManualAuditPage_pos.Contact(driver).sendKeys(contact);
-		new Select(ManualAuditPage_pos.State(driver)).selectByVisibleText(state);
+		ManualAuditPage.Contact(driver).sendKeys(contact);
+		new Select(ManualAuditPage.State(driver)).selectByVisibleText(state);
 		Thread.sleep(2000);
-		ManualAuditPage_pos.Remark(driver).sendKeys(remark);
+		ManualAuditPage.Remark(driver).sendKeys(remark);
 		Thread.sleep(2000);
-		ManualAuditPage_pos.Cancle(driver).click();// 取消新增本人联系信息
-		ManualAuditPage_pos.Back(driver).click();
+		ManualAuditPage.Cancle(driver).click();// 取消新增本人联系信息
+		ManualAuditPage.Back(driver).click();
 	}
 
 	public void Audit4info() throws Exception {
 		Thread.sleep(2000);
-		String pycompany = ManualAuditPage_pos.PyCompany(driver).getText();
-		String rule = ManualAuditPage_pos.Rule(driver).getText();
-		String pysdt = ManualAuditPage_pos.MobileRecord(driver).getText();
+		String pycompany = ManualAuditPage.PyCompany(driver).getText();
+		String rule = ManualAuditPage.Rule(driver).getText();
+		String pysdt = ManualAuditPage.MobileRecord(driver).getText();
 		Log.info(pycompany + "\n" + rule + "\n" + pysdt);
 		Thread.sleep(2000);
 	}
@@ -165,13 +165,13 @@ public class ManualAuditAction_pos {
 		if (number == 8) {
 			System.out.println("下拉框个数为4");
 			Thread.sleep(2000);
-			new Select(ManualAuditPage_pos.OfficeTelephone(driver))
+			new Select(ManualAuditPage.OfficeTelephone(driver))
 					.selectByVisibleText(OfficeTelephone);
-			new Select(ManualAuditPage_pos.PhoneCheck(driver))
+			new Select(ManualAuditPage.PhoneCheck(driver))
 					.selectByVisibleText(Phone);
-			new Select(ManualAuditPage_pos.Check(driver))
+			new Select(ManualAuditPage.Check(driver))
 					.selectByVisibleText(Check);
-			new Select(ManualAuditPage_pos.FamilyPhone(driver))
+			new Select(ManualAuditPage.FamilyPhone(driver))
 					.selectByVisibleText(FamilyPhone);
 		} else {
 			if (number == 12) {//因滚动栏原因暂未解决定位问题
@@ -215,12 +215,12 @@ public class ManualAuditAction_pos {
 //		ManualAuditPage.SaveOff(driver).click();// 暂存
 //		Thread.sleep(2000);
 //		ManualAuditPage.SaveOffComfirm(driver).click();
-		ManualAuditPage_pos.Confirm(driver).click();
+		ManualAuditPage.Confirm(driver).click();
 		Thread.sleep(2000);
-		ManualAuditPage_pos.Commit(driver).click();//提交
+		ManualAuditPage.Commit(driver).click();//提交
 		Thread.sleep(1000);
-		ManualAuditPage_pos.Determine(driver).click();//确认
+		ManualAuditPage.Determine(driver).click();//确认
 		Thread.sleep(1000);
-		ManualAuditPage_pos.Determine(driver).click();//确认
+		ManualAuditPage.Determine(driver).click();//确认
 	}
 }

@@ -2,35 +2,35 @@
 <testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="122148" started-at="2017-04-13T06:48:35Z" finished-at="2017-04-13T06:50:38Z">
+  <suite name="Default suite" duration-ms="116303" started-at="2017-04-13T07:45:46Z" finished-at="2017-04-13T07:47:42Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="122148" started-at="2017-04-13T06:48:35Z" finished-at="2017-04-13T06:50:38Z">
+    <test name="Default test" duration-ms="116303" started-at="2017-04-13T07:45:46Z" finished-at="2017-04-13T07:47:42Z">
       <class name="com.oc.testng.OcProcess">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.oc.testng.OcProcess@87be2a]" name="beforeMethod" is-config="true" duration-ms="4990" started-at="2017-04-13T14:48:35Z" finished-at="2017-04-13T14:48:40Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.oc.testng.OcProcess@87be2a]" name="beforeMethod" is-config="true" duration-ms="5166" started-at="2017-04-13T15:45:46Z" finished-at="2017-04-13T15:45:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="LoginA()[pri:0, instance:com.oc.testng.OcProcess@87be2a]" name="LoginA" duration-ms="336" started-at="2017-04-13T14:48:40Z" finished-at="2017-04-13T14:48:41Z">
+        <test-method status="PASS" signature="LoginA()[pri:0, instance:com.oc.testng.OcProcess@87be2a]" name="LoginA" duration-ms="570" started-at="2017-04-13T15:45:51Z" finished-at="2017-04-13T15:45:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginA -->
-        <test-method status="PASS" signature="AuditAllot_pos()[pri:0, instance:com.oc.testng.OcProcess@87be2a]" name="AuditAllot_pos" duration-ms="17094" started-at="2017-04-13T14:48:41Z" finished-at="2017-04-13T14:48:58Z">
+        <test-method status="PASS" signature="AuditAllot_cash()[pri:0, instance:com.oc.testng.OcProcess@87be2a]" name="AuditAllot_cash" duration-ms="17197" started-at="2017-04-13T15:45:51Z" finished-at="2017-04-13T15:46:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AuditAllot_pos -->
-        <test-method status="PASS" signature="ManualAudit_pos()[pri:0, instance:com.oc.testng.OcProcess@87be2a]" name="ManualAudit_pos" duration-ms="49538" started-at="2017-04-13T14:48:58Z" finished-at="2017-04-13T14:49:47Z">
+        </test-method> <!-- AuditAllot_cash -->
+        <test-method status="PASS" signature="ManualAudit_cash()[pri:0, instance:com.oc.testng.OcProcess@87be2a]" name="ManualAudit_cash" duration-ms="46454" started-at="2017-04-13T15:46:09Z" finished-at="2017-04-13T15:46:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ManualAudit_pos -->
-        <test-method status="PASS" signature="ExpertAllot_pos()[pri:0, instance:com.oc.testng.OcProcess@87be2a]" name="ExpertAllot_pos" duration-ms="19449" started-at="2017-04-13T14:49:47Z" finished-at="2017-04-13T14:50:07Z">
+        </test-method> <!-- ManualAudit_cash -->
+        <test-method status="PASS" signature="ExpertAllot_cash()[pri:0, instance:com.oc.testng.OcProcess@87be2a]" name="ExpertAllot_cash" duration-ms="19346" started-at="2017-04-13T15:46:55Z" finished-at="2017-04-13T15:47:14Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ExpertAllot_pos -->
-        <test-method status="PASS" signature="ExpertAudit_pos()[pri:0, instance:com.oc.testng.OcProcess@87be2a]" name="ExpertAudit_pos" duration-ms="30731" started-at="2017-04-13T14:50:07Z" finished-at="2017-04-13T14:50:38Z">
+        </test-method> <!-- ExpertAllot_cash -->
+        <test-method status="PASS" signature="ExpertAudit_cash()[pri:0, instance:com.oc.testng.OcProcess@87be2a]" name="ExpertAudit_cash" duration-ms="27556" started-at="2017-04-13T15:47:14Z" finished-at="2017-04-13T15:47:42Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ExpertAudit_pos -->
+        </test-method> <!-- ExpertAudit_cash -->
       </class> <!-- com.oc.testng.OcProcess -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
