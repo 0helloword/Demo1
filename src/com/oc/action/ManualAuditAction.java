@@ -218,9 +218,9 @@ public class ManualAuditAction {
 		ManualAuditPage.Confirm(driver).click();
 		Thread.sleep(2000);
 		ManualAuditPage.Commit(driver).click();//提交
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		ManualAuditPage.Determine(driver).click();//确认
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		ManualAuditPage.Determine(driver).click();//确认
 	}
 }

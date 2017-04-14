@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="suite1">
+	<test name="oc" preserve-order="true">
+		<parameter name="url_sa" value="http://123.57.56.45:10080/cnsa/initLogin" />
+		<parameter name="username" value="999111" />
+		<parameter name="password" value="cyj111" />
+		
+		<classes >
+		<class name="com.sa.testng.Sa">
+		<methods>
+					<include name="Login" />
+					<include name="NewApply" />
+					
+					</methods>
+					</class>
+		
+		</classes>
+	</test>
+</suite>
+
+

@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Default suite]">
+  <parameter name="username" value="999111"/>
+  <parameter name="url_sa" value="not-found"/>
+  <parameter name="password" value="cyj111"/>
   <test name="Default test(failed)">
     <classes>
-      <class name="com.oc.testng.OcProcess">
+      <class name="data.Sa">
         <methods>
+          <include name="NewApply"/>
+          <include name="Login"/>
           <include name="beforeMethod"/>
-          <include name="AuditAllot_cash"/>
-          <include name="ExpertAudit_cash"/>
-          <include name="ManualAudit_cash"/>
-          <include name="ExpertAllot_cash"/>
         </methods>
-      </class> <!-- com.oc.testng.OcProcess -->
+      </class> <!-- data.Sa -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

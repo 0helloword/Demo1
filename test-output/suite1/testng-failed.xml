@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [suite1]">
+  <parameter name="username" value="999111"/>
+  <parameter name="url_sa" value="http://123.57.56.45:10080/cnsa/initLogin"/>
+  <parameter name="password" value="cyj111"/>
+  <test name="oc(failed)">
+    <parameter name="username" value="999111"/>
+    <parameter name="url_sa" value="http://123.57.56.45:10080/cnsa/initLogin"/>
+    <parameter name="password" value="cyj111"/>
+    <classes>
+      <class name="com.sa.testng.Sa">
+        <methods>
+          <include name="NewApply"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.sa.testng.Sa -->
+    </classes>
+  </test> <!-- oc(failed) -->
+</suite> <!-- Failed suite [suite1] -->

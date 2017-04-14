@@ -3,6 +3,7 @@ package com.oc.testng;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.oc.action.*;
@@ -21,32 +22,34 @@ public class OcProcess {
 	
 	WebDriver webdriver = new FirefoxDriver();
 	
-	
+	@Parameters({"url_oc"})
 	@BeforeTest
-	public void beforeMethod() {
+	public void beforeMethod(String url_oc) {
 		Log.startTestCase("开始testcase001");
 		// 初始化类，并打开链接
 		login = new LoginAction(webdriver);
-		webdriver.get("http://123.57.56.45:7778/OC/initLogin");
+		webdriver.get(url_oc);
 		webdriver.manage().window().maximize();
 		app=new HomePageAction(webdriver);
 	}
-
+	
+	@Parameters({"username", "password" })
 	@Test(priority = 1)
-	public void LoginA() {
+	public void Login(String username,String password) {
 		// 登录
-		login.Login("999111", "cyj111");
+		login.Login(username, password);
 	}
 	
+	@Parameters({"loginname", "appid_pos" })
 	 @Test(priority=2)
-	 public void AuditAllot_pos() throws Exception {
+	 public void AuditAllot_pos(String loginname,String appid) throws Exception {
 		 Log.info("人工审核分单-pos");
 		 app.ManualAudit();//人工审核
 		 app.ManualAllotPos();//人工审核分单—pos
 		 auditallot=new ManualAllotAction(webdriver);
-		 auditallot.AllotApp("小拉", "35441321");
+		 auditallot.AllotApp(loginname, appid);
 	 }
-	 
+	
 	 @Test(priority=3)
 	 public void ManualAudit_pos() throws Exception {
 		 Log.info("人工审核-继续审核-pos");
@@ -60,13 +63,14 @@ public class OcProcess {
 		 manualaudit.Audit4("信息已验证","信息已验证", "RES05", "信息已验证", "信息已验证", "信息已验证", "公司名和地址均一致");
 	 }
 	 
+	 @Parameters({"loginname", "appid_pos" })
 	 @Test(priority=4)
-	 public void ExpertAllot_pos() throws Exception {
+	 public void ExpertAllot_pos(String loginname,String appid_pos) throws Exception {
 		 Log.info("专家审批分单-pos");
 		 app.ExpertAudit();//专家审批
 		 app.ExpertAllotPos();//专家审批分单—pos贷
 		 expertallot=new ExpertAllotAction(webdriver);
-		 expertallot.AllotApp("小拉", "35441321");
+		 expertallot.AllotApp(loginname, appid_pos);
 	 }
 	
 	 @Test(priority=5)
@@ -82,14 +86,14 @@ public class OcProcess {
 		 expertaudit.Audit4();
 	 }
 	
-	 
+	 @Parameters({"loginname", "appid_cash" })
 	 @Test(priority=6)
-	 public void AuditAllot_cash() throws Exception {
+	 public void AuditAllot_cash(String loginname,String appid_cash) throws Exception {
 		 Log.info("人工审核分单-cash");
 		 app.ManualAudit();//人工审核
 		 app.ManualAllotCash();//人工审核分单—cash
 		 auditallot=new ManualAllotAction(webdriver);
-		 auditallot.AllotApp("小拉", "35441789");
+		 auditallot.AllotApp(loginname, appid_cash);
 	 }
 	 
 	 @Test(priority=7)
@@ -105,13 +109,14 @@ public class OcProcess {
 		 manualaudit.Audit4("信息已验证","信息已验证", "RES01", "信息已验证", "信息已验证", "信息已验证", "公司名和地址均一致");
 	 }
 	 
+	 @Parameters({"loginname", "appid_cash" })
 	 @Test(priority=8)
-	 public void ExpertAllot_cash() throws Exception {
+	 public void ExpertAllot_cash(String loginname,String appid_cash) throws Exception {
 		 Log.info("专家审批分单-cash");
 		 app.ExpertAudit();//专家审批
 		 app.ExpertAllotCash();//专家审批分单—cash
 		 expertallot=new ExpertAllotAction(webdriver);
-		 expertallot.AllotApp("小拉", "35441789");
+		 expertallot.AllotApp(loginname, appid_cash);
 	 }
 	
 	 @Test(priority=9)
