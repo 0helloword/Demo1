@@ -3,24 +3,25 @@
 
 <suite name="suite1">
 	<test name="oc" preserve-order="true">
-		<parameter name="url_oc" value="http://123.57.234.78:7778/OC/initLogin" />
+		<parameter name="url_oc" value="http://123.57.56.45:7778/OC/initLogin" />
 		<parameter name="username" value="999111" />
 		<parameter name="password" value="cyj111" />
 		<parameter name="loginname" value="小拉" />
-		<parameter name="appid_pos" value="10035424" />
+		<parameter name="appid_pos" value="10035424"/>
 		<parameter name="appid_cash" value="10037338" />
 		<classes >
 		<class name="com.oc.testng.OcProcess">
 		<methods>
 					<include name="Login" />
+					<include name="GetApp" />
 				    <include name="AuditAllot_pos" />
 					<include name="ManualAudit_pos" />
 					<include name="ExpertAllot_pos" />
 					<include name="ExpertAudit_pos" />
-					<include name="AuditAllot_cash" />
-					<include name="ManualAudit_cash" />
-					<include name="ExpertAllot_cash" />
-					<include name="ExpertAudit_cash" />
+					<!-- include name="AuditAllot_cash" / -->
+					<!-- include name="ManualAudit_cash" /-->
+					<!-- include name="ExpertAllot_cash" /-->
+					<!-- include name="ExpertAudit_cash" /-->
 				</methods>
 					</class>
 		</classes>

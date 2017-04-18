@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="suite1" duration-ms="147662" started-at="2017-04-18T03:06:34Z" finished-at="2017-04-18T03:09:02Z">
+  <suite name="suite1" duration-ms="148849" started-at="2017-04-18T06:54:44Z" finished-at="2017-04-18T06:57:13Z">
     <groups>
     </groups>
-    <test name="oc" duration-ms="147662" started-at="2017-04-18T03:06:34Z" finished-at="2017-04-18T03:09:02Z">
+    <test name="oc" duration-ms="148849" started-at="2017-04-18T06:54:44Z" finished-at="2017-04-18T06:57:13Z">
       <class name="com.sa.testng.Sa">
-        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:com.sa.testng.Sa@22cebe]" name="beforeMethod" is-config="true" duration-ms="6675" started-at="2017-04-18T11:06:34Z" finished-at="2017-04-18T11:06:41Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:com.sa.testng.Sa@1a2ae05]" name="beforeMethod" is-config="true" duration-ms="5473" started-at="2017-04-18T14:54:44Z" finished-at="2017-04-18T14:54:50Z">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="Login(java.lang.String, java.lang.String)[pri:0, instance:com.sa.testng.Sa@22cebe]" name="Login" duration-ms="807" started-at="2017-04-18T11:06:41Z" finished-at="2017-04-18T11:06:41Z">
+        <test-method status="PASS" signature="Login(java.lang.String, java.lang.String)[pri:0, instance:com.sa.testng.Sa@1a2ae05]" name="Login" duration-ms="782" started-at="2017-04-18T14:54:50Z" finished-at="2017-04-18T14:54:50Z">
           <params>
             <param index="0">
               <value>
@@ -34,37 +34,37 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="PASS" signature="NewApply()[pri:0, instance:com.sa.testng.Sa@22cebe]" name="NewApply" duration-ms="23471" started-at="2017-04-18T11:06:41Z" finished-at="2017-04-18T11:07:05Z">
+        <test-method status="PASS" signature="NewApply()[pri:0, instance:com.sa.testng.Sa@1a2ae05]" name="NewApply" duration-ms="24744" started-at="2017-04-18T14:54:50Z" finished-at="2017-04-18T14:55:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NewApply -->
-        <test-method status="PASS" signature="LoanInfo(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.sa.testng.Sa@22cebe]" name="LoanInfo" duration-ms="14641" started-at="2017-04-18T11:07:05Z" finished-at="2017-04-18T11:07:20Z">
+        <test-method status="PASS" signature="LoanInfo(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.sa.testng.Sa@1a2ae05]" name="LoanInfo" duration-ms="14656" started-at="2017-04-18T14:55:15Z" finished-at="2017-04-18T14:55:30Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Äã¶à´ó]]>
+                <![CDATA[³ÂºÃ]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[530121198207183746]]>
+                <![CDATA[130205199901019810]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[18956745541]]>
+                <![CDATA[18952345141]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[422078954578452]]>
+                <![CDATA[4221499954578452]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoanInfo -->
-        <test-method status="PASS" signature="Upload(java.lang.String)[pri:0, instance:com.sa.testng.Sa@22cebe]" name="Upload" duration-ms="18909" started-at="2017-04-18T11:07:20Z" finished-at="2017-04-18T11:07:38Z">
+        <test-method status="PASS" signature="Upload(java.lang.String)[pri:0, instance:com.sa.testng.Sa@1a2ae05]" name="Upload" duration-ms="19022" started-at="2017-04-18T14:55:30Z" finished-at="2017-04-18T14:55:49Z">
           <params>
             <param index="0">
               <value>
@@ -75,26 +75,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Upload -->
-        <test-method status="PASS" signature="BasicInfo(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.sa.testng.Sa@22cebe]" name="BasicInfo" duration-ms="83144" started-at="2017-04-18T11:07:38Z" finished-at="2017-04-18T11:09:02Z">
+        <test-method status="PASS" signature="BasicInfo(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.sa.testng.Sa@1a2ae05]" name="BasicInfo" duration-ms="84151" started-at="2017-04-18T14:55:49Z" finished-at="2017-04-18T14:57:13Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[56785421@qq.com]]>
+                <![CDATA[567811221@qq.com]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[56785421]]>
+                <![CDATA[5678533121]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[18956754452]]>
+                <![CDATA[18958913452]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[19865784452]]>
+                <![CDATA[15905784452]]>
               </value>
             </param>
             <param index="4">

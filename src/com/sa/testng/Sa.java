@@ -60,6 +60,7 @@ public class Sa {
 		// ´û¿îĞÅÏ¢
 		upload=new UploadAction(webdriver);
 		upload.upload(picpath);
+		//upload.getappid();
 	}
 	
 	@Parameters({"email","qq","contractphone","uncontractphone","password" })

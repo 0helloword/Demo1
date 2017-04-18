@@ -36,4 +36,9 @@ public class UploadAction {
 	    Thread.sleep(3000);
 	    UploadPage.next(driver).click();
 	}
+	
+//	public String getappid(){
+//		String appid=UploadPage.appid(driver).getText();
+//		return appid;
+//	}
 }

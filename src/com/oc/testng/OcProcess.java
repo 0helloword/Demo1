@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import com.oc.action.*;
 import com.oc.basic.*;
+import com.sa.action.UploadAction;
 
 public class OcProcess {
 
@@ -19,6 +20,7 @@ public class OcProcess {
 	ManualAllotAction auditallot=null;
 	ExpertAllotAction expertallot=null;
 	ExpertAuditAction expertaudit=null;
+	String appid_pos=null;
 	
 	WebDriver webdriver = new FirefoxDriver();
 	
@@ -40,17 +42,17 @@ public class OcProcess {
 		login.Login(username, password);
 	}
 	
-	@Parameters({"loginname", "appid_pos" })
-	 @Test(priority=2)
-	 public void AuditAllot_pos(String loginname,String appid) throws Exception {
+	@Parameters({"loginname","appid_pos" })
+	 @Test(priority=3)
+	 public void AuditAllot_pos(String loginname,String appid_pos) throws Exception {
 		 Log.info("人工审核分单-pos");
 		 app.ManualAudit();//人工审核
 		 app.ManualAllotPos();//人工审核分单—pos
 		 auditallot=new ManualAllotAction(webdriver);
-		 auditallot.AllotApp(loginname, appid);
+		 auditallot.AllotApp(loginname, appid_pos);
 	 }
 	
-	 @Test(priority=3)
+	 @Test(priority=4)
 	 public void ManualAudit_pos() throws Exception {
 		 Log.info("人工审核-继续审核-pos");
 		 //app.ManualAudit();  //人工审核
@@ -63,8 +65,8 @@ public class OcProcess {
 		 manualaudit.Audit4("信息已验证","信息已验证", "RES05", "信息已验证", "信息已验证", "信息已验证", "公司名和地址均一致");
 	 }
 	 
-	 @Parameters({"loginname", "appid_pos" })
-	 @Test(priority=4)
+	 @Parameters({"loginname","appid_pos"})
+	 @Test(priority=5)
 	 public void ExpertAllot_pos(String loginname,String appid_pos) throws Exception {
 		 Log.info("专家审批分单-pos");
 		 app.ExpertAudit();//专家审批
@@ -73,7 +75,7 @@ public class OcProcess {
 		 expertallot.AllotApp(loginname, appid_pos);
 	 }
 	
-	 @Test(priority=5)
+	 @Test(priority=6)
 	 public void ExpertAudit_pos() throws Exception {
 		 Log.info("专家审批-继续审核-pos");
 		 //app.ManualAudit();  //专家审批

@@ -112,7 +112,7 @@ public class BasicInfoAction {
 		Thread.sleep(1000);
 		BasicInfoPage.uncontractname(driver).sendKeys("³Ѹ");
 		Thread.sleep(1000);
-		BasicInfoPage.uncontractphone(driver).sendKeys(contractphone);
+		BasicInfoPage.uncontractphone(driver).sendKeys(uncontractphone);
 		Thread.sleep(1000);
 		BasicInfoPage.uncontractWeixin(driver).sendKeys("45612345");
 		Thread.sleep(1000);
