@@ -3,12 +3,12 @@
 
 <suite name="suite1">
 	<test name="oc" preserve-order="true">
-		<parameter name="url_oc" value="http://123.57.56.45:7778/OC/initLogin" />
+		<parameter name="url_oc" value="http://123.57.234.78:7778/OC/initLogin" />
 		<parameter name="username" value="999111" />
 		<parameter name="password" value="cyj111" />
 		<parameter name="loginname" value="小拉" />
-		<parameter name="appid_pos" value="35441144" />
-		<parameter name="appid_cash" value="35441800" />
+		<parameter name="appid_pos" value="10035424" />
+		<parameter name="appid_cash" value="10037338" />
 		<classes >
 		<class name="com.oc.testng.OcProcess">
 		<methods>

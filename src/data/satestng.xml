@@ -6,16 +6,25 @@
 		<parameter name="url_sa" value="http://123.57.56.45:10080/cnsa/initLogin" />
 		<parameter name="username" value="999111" />
 		<parameter name="password" value="cyj111" />
-		
+		<parameter name="picpath" value="E:\\test1.jpg" />
+		<parameter name="customername" value="你多大" />
+		<parameter name="cardId" value="530121198207183746" />
+		<parameter name="mobile" value="18956745541" />
+		<parameter name="repayAcc" value="422078954578452" />
+		<parameter name="email" value="56785421@qq.com" />
+		<parameter name="qq" value="56785421" />
+		<parameter name="contractphone" value="18956754452" />
+		<parameter name="uncontractphone" value="19865784452" />
 		<classes >
 		<class name="com.sa.testng.Sa">
 		<methods>
 					<include name="Login" />
 					<include name="NewApply" />
-					
+					<include name="LoanInfo" />
+					<include name="Upload" />
+					<include name="BasicInfo" />
 					</methods>
 					</class>
-		
 		</classes>
 	</test>
 </suite>

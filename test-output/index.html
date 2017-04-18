@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,12 +101,27 @@
                     <div class="method-list-content passed suite-suite1">
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite1" title="com.sa.testng.Sa" hash-for-method="BasicInfo(56785421@qq.com, 56785421, 18956754452, 19865784452, cyj111)">BasicInfo(56785421@qq.com, 56785421, 18956754452, 19865784452, cyj111)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite1" title="com.sa.testng.Sa" hash-for-method="LoanInfo(你多大, 530121198207183746, 18956745541, 422078954578452)">LoanInfo(你多大, 530121198207183746, 18956745541, 422078954578452)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-suite1" title="com.sa.testng.Sa" hash-for-method="Login(999111, cyj111)">Login(999111, cyj111)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-suite1" title="com.sa.testng.Sa" hash-for-method="NewApply">NewApply</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite1" title="com.sa.testng.Sa" hash-for-method="Upload(E:\\test1.jpg)">Upload(E:\\test1.jpg)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-suite1 -->
@@ -129,6 +144,22 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="BasicInfo(56785421@qq.com, 56785421, 18956754452, 19865784452, cyj111)">
+                  </a> <!-- BasicInfo(56785421@qq.com, 56785421, 18956754452, 19865784452, cyj111) -->
+                  <span class="method-name">BasicInfo</span>
+                  <span class="parameters">(56785421@qq.com, 56785421, 18956754452, 19865784452, cyj111)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="LoanInfo(你多大, 530121198207183746, 18956745541, 422078954578452)">
+                  </a> <!-- LoanInfo(你多大, 530121198207183746, 18956745541, 422078954578452) -->
+                  <span class="method-name">LoanInfo</span>
+                  <span class="parameters">(你多大, 530121198207183746, 18956745541, 422078954578452)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="Login(999111, cyj111)">
                   </a> <!-- Login(999111, cyj111) -->
                   <span class="method-name">Login</span>
@@ -140,6 +171,14 @@
                   <a name="NewApply">
                   </a> <!-- NewApply -->
                   <span class="method-name">NewApply</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Upload(E:\\test1.jpg)">
+                  </a> <!-- Upload(E:\\test1.jpg) -->
+                  <span class="method-name">Upload</span>
+                  <span class="parameters">(E:\\test1.jpg)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -155,14 +194,26 @@
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;suite1&quot;&gt;
   &lt;test name=&quot;oc&quot;&gt;
+    &lt;parameter name=&quot;cardId&quot; value=&quot;530121198207183746&quot;/&gt;
+    &lt;parameter name=&quot;picpath&quot; value=&quot;E:\\test1.jpg&quot;/&gt;
     &lt;parameter name=&quot;username&quot; value=&quot;999111&quot;/&gt;
+    &lt;parameter name=&quot;email&quot; value=&quot;56785421@qq.com&quot;/&gt;
+    &lt;parameter name=&quot;repayAcc&quot; value=&quot;422078954578452&quot;/&gt;
     &lt;parameter name=&quot;url_sa&quot; value=&quot;http://123.57.56.45:10080/cnsa/initLogin&quot;/&gt;
+    &lt;parameter name=&quot;uncontractphone&quot; value=&quot;19865784452&quot;/&gt;
     &lt;parameter name=&quot;password&quot; value=&quot;cyj111&quot;/&gt;
+    &lt;parameter name=&quot;contractphone&quot; value=&quot;18956754452&quot;/&gt;
+    &lt;parameter name=&quot;qq&quot; value=&quot;56785421&quot;/&gt;
+    &lt;parameter name=&quot;mobile&quot; value=&quot;18956745541&quot;/&gt;
+    &lt;parameter name=&quot;customername&quot; value=&quot;你多大&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.sa.testng.Sa&quot;&gt;
         &lt;methods&gt;
           &lt;include name=&quot;Login&quot;/&gt;
           &lt;include name=&quot;NewApply&quot;/&gt;
+          &lt;include name=&quot;LoanInfo&quot;/&gt;
+          &lt;include name=&quot;Upload&quot;/&gt;
+          &lt;include name=&quot;BasicInfo&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.sa.testng.Sa --&gt;
     &lt;/classes&gt;
@@ -204,20 +255,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'NewApply')
+data.setCell(0, 1, 'BasicInfo')
 data.setCell(0, 2, 'com.sa.testng.Sa')
-data.setCell(0, 3, 24424);
+data.setCell(0, 3, 83144);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'Login')
+data.setCell(1, 1, 'NewApply')
 data.setCell(1, 2, 'com.sa.testng.Sa')
-data.setCell(1, 3, 666);
+data.setCell(1, 3, 23471);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'Upload')
+data.setCell(2, 2, 'com.sa.testng.Sa')
+data.setCell(2, 3, 18909);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'LoanInfo')
+data.setCell(3, 2, 'com.sa.testng.Sa')
+data.setCell(3, 3, 14641);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'Login')
+data.setCell(4, 2, 'com.sa.testng.Sa')
+data.setCell(4, 3, 807);
 window.suiteTableData['suite1']= { tableData: data, tableDiv: 'times-div-suite1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 25 seconds</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-suite1">
               </div> <!-- times-div-suite1 -->
             </div> <!-- times-div -->
@@ -250,11 +313,23 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">Login(999111, cyj111)</span>
-                <span class="method-start">6467 ms</span>
+                <span class="method-start">6683 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">NewApply</span>
-                <span class="method-start">7134 ms</span>
+                <span class="method-start">7491 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">LoanInfo(你多大, 530121198207183746, 18956745541, 422078954578452)</span>
+                <span class="method-start">30962 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Upload(E:\\test1.jpg)</span>
+                <span class="method-start">45604 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">BasicInfo(56785421@qq.com, 56785421, 18956754452, 19865784452, cyj111)</span>
+                <span class="method-start">64514 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

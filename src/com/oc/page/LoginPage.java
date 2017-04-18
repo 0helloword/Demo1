@@ -5,21 +5,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class LoginPage {
-    
     private static WebElement element;
     
-    public static WebElement userName(WebDriver driver){
+    public static WebElement userName(WebDriver driver){//用户名
         element = driver.findElement(By.id("username"));
         return element;
     }
     
-    public static WebElement passWord(WebDriver driver){
+    public static WebElement passWord(WebDriver driver){//密码
         element = driver.findElement(By.id("password"));
         return element;
     }
-    public static WebElement loginButton(WebDriver driver){
+    public static WebElement loginButton(WebDriver driver){//登录按键
         element = driver.findElement(By.id("loginButton"));
         return element;
-    }
-        
+    }  
 }  
