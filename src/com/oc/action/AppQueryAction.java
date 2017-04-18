@@ -1,10 +1,7 @@
 package com.oc.action;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
-
 import com.oc.basic.*;
 import com.oc.page.AppQueryPage;
 

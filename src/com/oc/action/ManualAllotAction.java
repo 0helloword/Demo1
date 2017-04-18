@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import com.oc.basic.ComElement;
-import com.oc.basic.Log;
 import com.oc.page.AppQueryPage;
 import com.oc.page.ManualAllotPage;
 
