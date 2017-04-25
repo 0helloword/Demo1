@@ -2,14 +2,18 @@ package com.oc.testng;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.oc.action.*;
 import com.oc.basic.*;
-import com.sa.action.UploadAction;
 
+import listeners.*;
+
+//@Listeners({ myListener.class })
 public class OcProcess {
 
 	LoginAction login = null;
@@ -24,11 +28,12 @@ public class OcProcess {
 	
 	WebDriver webdriver = new FirefoxDriver();
 	
+
 	@Parameters({"url_oc"})
 	@BeforeTest
-	public void beforeMethod(String url_oc) {
-		Log.startTestCase("¿ªÊ¼testcase001");
-		// ³õÊ¼»¯Àà£¬²¢´ò¿ªÁ´½Ó
+	public void beforeTest(String url_oc) {
+		Log.startTestCase("å¼€å§‹testcase001");
+		// åˆå§‹åŒ–ç±»ï¼Œå¹¶æ‰“å¼€é“¾æ¥
 		login = new LoginAction(webdriver);
 		webdriver.get(url_oc);
 		webdriver.manage().window().maximize();
@@ -36,50 +41,61 @@ public class OcProcess {
 	}
 	
 	@Parameters({"username", "password" })
-	@Test(priority = 1)
+	@Test(priority = 0)  
 	public void Login(String username,String password) {
-		// µÇÂ¼
+		// ç™»å½•
 		login.Login(username, password);
 	}
 	
 	@Parameters({"loginname","appid_pos" })
-	 @Test(priority=3)
-	 public void AuditAllot_pos(String loginname,String appid_pos) throws Exception {
-		 Log.info("ÈË¹¤ÉóºË·Öµ¥-pos");
-		 app.ManualAudit();//ÈË¹¤ÉóºË
-		 app.ManualAllotPos();//ÈË¹¤ÉóºË·Öµ¥¡ªpos
+	 @Test(priority = 1)  
+	 public void ManualAllot_pos(String loginname,String appid_pos) throws Exception {
+		 Log.info("äººå·¥å®¡æ ¸åˆ†å•-pos");
+		 app.ManualAudit();//äººå·¥å®¡æ ¸
+		 app.ManualAllotPos();//äººå·¥å®¡æ ¸åˆ†å•â€”pos
 		 auditallot=new ManualAllotAction(webdriver);
 		 auditallot.AllotApp(loginname, appid_pos);
-	 }
+		 	 }
 	
-	 @Test(priority=4)
+	 @Test(priority = 2)  
 	 public void ManualAudit_pos() throws Exception {
-		 Log.info("ÈË¹¤ÉóºË-¼ÌĞøÉóºË-pos");
-		 //app.ManualAudit();  //ÈË¹¤ÉóºË
-		 app.ManualAuditPos();//³õ²½ÉóºË-pos
+		 Log.info("äººå·¥å®¡æ ¸-ç»§ç»­å®¡æ ¸-pos");
+		 //app.ManualAudit();  //äººå·¥å®¡æ ¸
+		 app.ManualAuditPos();//åˆæ­¥å®¡æ ¸-pos
 		 manualaudit=new ManualAuditAction(webdriver);
 		 manualaudit.ContinueAudit();
-		 manualaudit.Audit1("ĞÅÏ¢ºÍÕÕÆ¬¾ùÒ»ÖÂ", "ÕÕÆ¬Ò»ÖÂ");
-		 manualaudit.Audit2("Éç±£µ¥Î»Ãû³ÆÓëÉêÇë±íÒ»ÖÂ","Ñ§ĞÅÍøÒ»ÖÂ","ÕÕÆ¬Ò»ÖÂ","ÕÕÆ¬Ò»ÖÂ");
+		 manualaudit.Audit1("ä¿¡æ¯å’Œç…§ç‰‡å‡ä¸€è‡´", "ç…§ç‰‡ä¸€è‡´");
+		 manualaudit.Audit2("ç¤¾ä¿å•ä½åç§°ä¸ç”³è¯·è¡¨ä¸€è‡´","å­¦ä¿¡ç½‘ä¸€è‡´","ç…§ç‰‡ä¸€è‡´","ç…§ç‰‡ä¸€è‡´");
 		 manualaudit.Audit3();
-		 manualaudit.Audit4("ĞÅÏ¢ÒÑÑéÖ¤","ĞÅÏ¢ÒÑÑéÖ¤", "RES05", "ĞÅÏ¢ÒÑÑéÖ¤", "ĞÅÏ¢ÒÑÑéÖ¤", "ĞÅÏ¢ÒÑÑéÖ¤", "¹«Ë¾ÃûºÍµØÖ·¾ùÒ»ÖÂ");
+		 manualaudit.Audit4("ä¿¡æ¯å·²éªŒè¯","ä¿¡æ¯å·²éªŒè¯", "RES05", "ä¿¡æ¯å·²éªŒè¯", "ä¿¡æ¯å·²éªŒè¯", "ä¿¡æ¯å·²éªŒè¯", "å…¬å¸åå’Œåœ°å€å‡ä¸€è‡´");
+	 }
+	 
+	 @Test(priority = 2)  
+	 public void ManualAuditReturn_pos() throws Exception {
+		 Log.info("äººå·¥å®¡æ ¸-é€€å›-pos");
+		 //app.ManualAudit();  //äººå·¥å®¡æ ¸
+		 app.ManualAuditPos();//åˆæ­¥å®¡æ ¸-pos
+		 manualaudit=new ManualAuditAction(webdriver);
+		 manualaudit.ContinueAudit();
+		 manualaudit.AuditReturn();
+	
 	 }
 	 
 	 @Parameters({"loginname","appid_pos"})
-	 @Test(priority=5)
+	 @Test(priority = 3)  
 	 public void ExpertAllot_pos(String loginname,String appid_pos) throws Exception {
-		 Log.info("×¨¼ÒÉóÅú·Öµ¥-pos");
-		 app.ExpertAudit();//×¨¼ÒÉóÅú
-		 app.ExpertAllotPos();//×¨¼ÒÉóÅú·Öµ¥¡ªpos´û
+		 Log.info("ä¸“å®¶å®¡æ‰¹åˆ†å•-pos");
+		 app.ExpertAudit();//ä¸“å®¶å®¡æ‰¹
+		 app.ExpertAllotPos();//ä¸“å®¶å®¡æ‰¹åˆ†å•â€”posè´·
 		 expertallot=new ExpertAllotAction(webdriver);
 		 expertallot.AllotApp(loginname, appid_pos);
 	 }
 	
-	 @Test(priority=6)
+	 @Test(priority = 4)  
 	 public void ExpertAudit_pos() throws Exception {
-		 Log.info("×¨¼ÒÉóÅú-¼ÌĞøÉóºË-pos");
-		 //app.ManualAudit();  //×¨¼ÒÉóÅú
-		 app.ExpertAuditPos();//³õ²½ÉóÅú-pos
+		 Log.info("ä¸“å®¶å®¡æ‰¹-ç»§ç»­å®¡æ ¸-pos");
+		 //app.ManualAudit();  //ä¸“å®¶å®¡æ‰¹
+		 app.ExpertAuditPos();//åˆæ­¥å®¡æ‰¹-pos
 		 expertaudit=new ExpertAuditAction(webdriver);
 		 expertaudit.ContinueAudit();
 		 expertaudit.Audit1();
@@ -87,45 +103,75 @@ public class OcProcess {
 		 expertaudit.Audit3();
 		 expertaudit.Audit4();
 	 }
+	 
+	 @Test(priority = 4) 
+	 public void ExpertAuditRefuse_pos() throws Exception {
+		 Log.info("ä¸“å®¶å®¡æ‰¹-æ‹’ç»-pos");
+		 //app.ManualAudit();  //ä¸“å®¶å®¡æ‰¹
+		 app.ExpertAuditPos();//åˆæ­¥å®¡æ‰¹-pos
+		 expertaudit=new ExpertAuditAction(webdriver);
+		 expertaudit.ContinueAudit();
+		 expertaudit.AuditRefuse();
+			 }
+	 
+	 @Test(priority = 4) 
+	 public void ExpertAuditReturn_pos() throws Exception {
+		 Log.info("ä¸“å®¶å®¡æ‰¹-é€€å›-pos");
+		 app.ExpertAudit();  //ä¸“å®¶å®¡æ‰¹
+		 app.ExpertAuditPos();//åˆæ­¥å®¡æ‰¹-pos
+		 expertaudit=new ExpertAuditAction(webdriver);
+		 expertaudit.ContinueAudit();
+		 expertaudit.AuditReturn();
+			 }
 	
 	 @Parameters({"loginname", "appid_cash" })
-	 @Test(priority=6)
+	 @Test(priority = 5) 
 	 public void AuditAllot_cash(String loginname,String appid_cash) throws Exception {
-		 Log.info("ÈË¹¤ÉóºË·Öµ¥-cash");
-		 app.ManualAudit();//ÈË¹¤ÉóºË
-		 app.ManualAllotCash();//ÈË¹¤ÉóºË·Öµ¥¡ªcash
+		 Log.info("äººå·¥å®¡æ ¸åˆ†å•-cash");
+		 app.ManualAudit();//äººå·¥å®¡æ ¸
+		 app.ManualAllotCash();//äººå·¥å®¡æ ¸åˆ†å•â€”cash
 		 auditallot=new ManualAllotAction(webdriver);
 		 auditallot.AllotApp(loginname, appid_cash);
 	 }
 	 
-	 @Test(priority=7)
+	 @Test(priority = 6) 
 	 public void ManualAudit_cash() throws Exception {
-		 Log.info("ÈË¹¤ÉóºË-¼ÌĞøÉóºË-cash");
-		 //app.ManualAudit();  //ÈË¹¤ÉóºË
-		 app.ManualAuditCash();//³õ²½ÉóºË-cash
+		 Log.info("äººå·¥å®¡æ ¸-ç»§ç»­å®¡æ ¸-cash");
+		 //app.ManualAudit();  //äººå·¥å®¡æ ¸
+		 app.ManualAuditCash();//åˆæ­¥å®¡æ ¸-cash
 		 manualaudit=new ManualAuditAction(webdriver);
 		 manualaudit.ContinueAudit();
-		 manualaudit.Audit1("ĞÅÏ¢ºÍÕÕÆ¬¾ùÒ»ÖÂ", "ÕÕÆ¬Ò»ÖÂ");
-		 manualaudit.Audit2("Éç±£µ¥Î»Ãû³ÆÓëÉêÇë±íÒ»ÖÂ","Ñ§ĞÅÍøÒ»ÖÂ","ÕÕÆ¬Ò»ÖÂ","ÕÕÆ¬Ò»ÖÂ");
+		 manualaudit.Audit1("ä¿¡æ¯å’Œç…§ç‰‡å‡ä¸€è‡´", "ç…§ç‰‡ä¸€è‡´");
+		 manualaudit.Audit2("ç¤¾ä¿å•ä½åç§°ä¸ç”³è¯·è¡¨ä¸€è‡´","å­¦ä¿¡ç½‘ä¸€è‡´","ç…§ç‰‡ä¸€è‡´","ç…§ç‰‡ä¸€è‡´");
 		 manualaudit.Audit3();
-		 manualaudit.Audit4("ĞÅÏ¢ÒÑÑéÖ¤","ĞÅÏ¢ÒÑÑéÖ¤", "RES01", "ĞÅÏ¢ÒÑÑéÖ¤", "ĞÅÏ¢ÒÑÑéÖ¤", "ĞÅÏ¢ÒÑÑéÖ¤", "¹«Ë¾ÃûºÍµØÖ·¾ùÒ»ÖÂ");
+		 manualaudit.Audit4("ä¿¡æ¯å·²éªŒè¯","ä¿¡æ¯å·²éªŒè¯", "RES01", "ä¿¡æ¯å·²éªŒè¯", "ä¿¡æ¯å·²éªŒè¯", "ä¿¡æ¯å·²éªŒè¯", "å…¬å¸åå’Œåœ°å€å‡ä¸€è‡´");
+	 }
+	 
+	 @Test(priority = 6) 
+	 public void ManualAuditReturn_cash() throws Exception {
+		 Log.info("äººå·¥å®¡æ ¸-é€€å›-cash");
+		 //app.ManualAudit();  //äººå·¥å®¡æ ¸
+		 app.ManualAuditCash();//åˆæ­¥å®¡æ ¸-cash
+		 manualaudit=new ManualAuditAction(webdriver);
+		 manualaudit.ContinueAudit();
+		 manualaudit.AuditReturn();
 	 }
 	 
 	 @Parameters({"loginname", "appid_cash" })
-	 @Test(priority=8)
+	 @Test(priority = 7) 
 	 public void ExpertAllot_cash(String loginname,String appid_cash) throws Exception {
-		 Log.info("×¨¼ÒÉóÅú·Öµ¥-cash");
-		 app.ExpertAudit();//×¨¼ÒÉóÅú
-		 app.ExpertAllotCash();//×¨¼ÒÉóÅú·Öµ¥¡ªcash
+		 Log.info("ä¸“å®¶å®¡æ‰¹åˆ†å•-cash");
+		 app.ExpertAudit();//ä¸“å®¶å®¡æ‰¹
+		 app.ExpertAllotCash();//ä¸“å®¶å®¡æ‰¹åˆ†å•â€”cash
 		 expertallot=new ExpertAllotAction(webdriver);
 		 expertallot.AllotApp(loginname, appid_cash);
 	 }
 	
-	 @Test(priority=9)
+	 @Test(priority = 8) 
 	 public void ExpertAudit_cash() throws Exception {
-		 Log.info("×¨¼ÒÉóÅú-¼ÌĞøÉóºË-cash");
-		 //app.ManualAudit();  //×¨¼ÒÉóÅú
-		 app.ExpertAuditCash();//³õ²½ÉóÅú-cash
+		 Log.info("ä¸“å®¶å®¡æ‰¹-ç»§ç»­å®¡æ ¸-cash");
+		 //app.ManualAudit();  //ä¸“å®¶å®¡æ‰¹
+		 app.ExpertAuditCash();//åˆæ­¥å®¡æ‰¹-cash
 		 expertaudit=new ExpertAuditAction(webdriver);
 		 expertaudit.ContinueAudit();
 		 expertaudit.Audit1();
@@ -134,17 +180,37 @@ public class OcProcess {
 		 expertaudit.Audit4();
 	 }
 	 
+	 @Test(priority = 8) 
+	 public void ExpertAuditRefuse_cash() throws Exception {
+		 Log.info("ä¸“å®¶å®¡æ‰¹-æ‹’ç»-cash");
+		 //app.ManualAudit();  //ä¸“å®¶å®¡æ‰¹
+		 app.ExpertAuditCash();//åˆæ­¥å®¡æ‰¹-cash
+		 expertaudit=new ExpertAuditAction(webdriver);
+		 expertaudit.ContinueAudit();
+		 expertaudit.AuditRefuse();
+			 }
 	 
-	// @Test(priority=10)
-	// public void LogOut(){
-	// //ÍË³öµÇÂ¼
-	// logout=new LogOutAction();
-	// Log.endTestCase("ÍË³öµÇÂ¼");
-	// }
-
-	// @AfterMethod
-	// public void afterMethod(){
-	// //¹Ø±Õä¯ÀÀÆ÷
-	// login.ReturnDriver().close();
-	// }
+	 @Test(priority = 8) 
+	 public void ExpertAuditReturn_cash() throws Exception {
+		 Log.info("ä¸“å®¶å®¡æ‰¹-é€€å›-cash");
+		 //app.ExpertAudit();  //ä¸“å®¶å®¡æ‰¹
+		 app.ExpertAuditCash();//åˆæ­¥å®¡æ‰¹-cash
+		 expertaudit=new ExpertAuditAction(webdriver);
+		 expertaudit.ContinueAudit();
+		 expertaudit.AuditReturn();
+			 }
+	 
+//	 @Test(priority=9)
+//	 public void LogOut(){
+//	 //é€€å‡ºç™»å½•
+//		 Log.info("é€€å‡ºç™»å½•");
+//		 logout=new LogoutAction(webdriver);
+//		 logout.logout();
+//	 }
+//
+	@AfterTest()
+	 public void afterTest(){
+	 //å…³é—­æµè§ˆå™¨
+		 logout.ReturnDriver().close();
+	 }
 }

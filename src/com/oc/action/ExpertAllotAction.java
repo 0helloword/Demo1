@@ -2,6 +2,7 @@ package com.oc.action;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Reporter;
 
 import com.oc.basic.ComElement;
 import com.oc.basic.Log;
@@ -38,7 +39,6 @@ public class ExpertAllotAction {
 	  
 	
 	public void AllotApp(String username,String app) throws InterruptedException {
-		Log.info("专家审批分单");
 		Thread.sleep(2000);
 		//new Select(AuditAllotPage_pos.AllotState(driver)).selectByVisibleText("未分配");
 		ExpertAllotPage.App(driver).sendKeys(app);
@@ -52,6 +52,7 @@ public class ExpertAllotAction {
 		ExpertAllotPage.Allot(driver).click();
 		Thread.sleep(2000);
 		ExpertAllotPage.Comfirm(driver).click();
+		Reporter.log("专家审批分单成功-pos");
 
 }
 

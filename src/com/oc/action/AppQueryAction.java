@@ -34,8 +34,8 @@ public class AppQueryAction {
 		  Thread.sleep(3000);
 		  ComElement.FirstPage(driver).click();
 		  Thread.sleep(3000);
-		  //AppQueryPage.UpButton(driver).click();
-		  //Thread.sleep(2000);
+		  AppQueryPage.UpButton(driver).click();
+		  Thread.sleep(2000);
 	  }
 	  
 	    public void AppQuery(String appstate) throws InterruptedException{

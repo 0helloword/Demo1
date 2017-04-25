@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- 该xml实现使用ReportNG替换TestNG自带报告 -->
+
+<suite name="process" >
+    <test name="test" preserver-order="true">  
+
+		<!--禁用测试报告  parameter name="userdefaultlisteners" value="false" /-->
+        <parameter name="url_oc" value="http://123.57.56.45:7778/OC/initLogin" />
+		<parameter name="username" value="999111" />
+		<parameter name="password" value="cyj111" />
+		<parameter name="loginname" value="小拉" />
+		<!-- 以下为需要修改的参数 -->
+		<parameter name="appid_pos" value="35441244"/>
+		<parameter name="appid_cash" value="35441447"/>	
+		<classes >
+		<class name="com.oc.testng.OcProcess" >
+		<methods>
+					<include name="Login" />
+				    <include name="ManualAllot_pos" />
+				    <include name="ManualAudit_pos" />
+					<exclude name="ManualAuditReturn_pos" />
+					<include name="ExpertAllot_pos" />
+					<include name="ExpertAudit_pos" />
+					<exclude name="ExpertAuditRefuse_pos" />
+					<exclude name="ExpertAuditReturn_pos"/>
+					<exclude name="AuditAllot_cash" />
+					<exclude name="ManualAudit_cash" />
+					<exclude name="ManualAuditReturn_cash" />
+					<exclude name="ExpertAllot_cash" />
+					<exclude name="ExpertAudit_cash" />
+					<exclude name="ExpertAuditRefuse_cash" />
+					<exclude name="ExpertAuditReturn_cash"/>
+					
+					<include name="LogOut" />
+			</methods>
+					</class>
+					</classes>
+	<!-- listener类在reportng-1.1.5.jar中 -->
+     <listeners>
+            <listener class-name="org.uncommons.reportng.HTMLReporter" />
+            <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+            <listener class-name="listeners.myListener" />
+        </listeners>
+    </test> 
+</suite> 

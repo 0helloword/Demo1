@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Reporter;
 
 import com.oc.basic.Log;
 import com.oc.page.ManualAuditPage;
@@ -32,24 +33,33 @@ public class ManualAuditAction {
 	}
 
 	public void ContinueAudit() throws InterruptedException {
-		Log.info("继续审核");
 		Thread.sleep(2000);
 		//ManualAuditPage_pos.Go(driver).click();
 		//Thread.sleep(2000);
 		ManualAuditPage.ContinueAudit(driver).click();
 	}
 	
+	public void ContinueAudit2() throws InterruptedException {
+		Log.info("继续审核");
+		Thread.sleep(2000);
+		//ManualAuditPage_pos.Go(driver).click();
+		//Thread.sleep(2000);
+		ManualAuditPage.ContinueAudit2(driver).click();
+	}
+	
 	// }
-	public void AuditReturn(String returnCause, String returnDesc)
+	public void AuditReturn()
 			throws InterruptedException {
 		Thread.sleep(5000);
 		String app = ManualAuditPage.App(driver).getText();
 		Log.info("当前审核工单为：" + app + "审核状态：退回");
 		ManualAuditPage.Return(driver).click();
-		new Select(ManualAuditPage.ReturnCause(driver))
-				.selectByVisibleText(returnCause);
-		ManualAuditPage.ReturnDesc(driver).sendKeys(returnDesc);
+		new Select(ManualAuditPage.ReturnCause(driver)).selectByIndex(1);
+		ManualAuditPage.ReturnDesc(driver).sendKeys("人工审核退回");
 		ManualAuditPage.ReturnSubmit(driver).click();
+		Thread.sleep(2000);
+		ManualAuditPage.ReturnSubmitConfirm(driver).click();
+		Reporter.log("人工审核退回-pos");
 	}
 
 	public void SaveOff() throws InterruptedException {
@@ -222,5 +232,6 @@ public class ManualAuditAction {
 		ManualAuditPage.Determine(driver).click();//确认
 		Thread.sleep(2000);
 		ManualAuditPage.Determine(driver).click();//确认
+		Reporter.log("人工审核成功-pos");
 	}
 }

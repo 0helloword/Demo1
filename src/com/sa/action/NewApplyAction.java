@@ -11,7 +11,7 @@ public class NewApplyAction {
 	public NewApplyAction(WebDriver driver) {
 		this.driver = driver;
 	}
-
+	
 	// 提交申请
 	public void NewApply()
 			throws InterruptedException {
@@ -26,7 +26,8 @@ public class NewApplyAction {
 		Thread.sleep(1000);
 		new Select(NewApplyPage.commodityType(driver)).selectByIndex(4);//商品类型
 		Thread.sleep(1000);
-		NewApplyPage.commodityBrand(driver).sendKeys("充电器");//商品品牌
+		//new Select(NewApplyPage.commodityBrand(driver)).selectByIndex(1);//商品品牌
+		NewApplyPage.commodityBrand(driver).sendKeys("充电器");
 		Thread.sleep(1000);
 		NewApplyPage.commodityModel(driver).sendKeys("001");//商品型号
 		NewApplyPage.commodityPrice(driver).sendKeys("5000");//商品价格

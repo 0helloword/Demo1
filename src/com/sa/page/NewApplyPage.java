@@ -35,7 +35,8 @@ public class NewApplyPage {
     }
     
     public static WebElement commodityBrand(WebDriver driver){
-        element = driver.findElement(By.id("commodityName_0"));//商品品牌
+        //element = driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[2]/div/form/div[3]/table/tbody/tr/td[3]/div/select"));//商品品牌
+    	element = driver.findElement(By.id("commodityName_0"));
         return element;
     }
     

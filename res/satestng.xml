@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="suite1">
+	<test name="sa" preserve-order="true">
+		<parameter name="url_sa" value="http://123.57.56.45:10080/cnsa/initLogin" />
+		<parameter name="username" value="999111" />
+		<parameter name="password" value="cyj111" />
+		<parameter name="picpath" value="E:\\test1.jpg" />
+		<!-- 以下为需要修改的参数 -->
+		<parameter name="customername" value="陈好" />
+		<parameter name="cardId" value="130205199901019810" />
+		<parameter name="mobile" value="18952345141" />
+		<parameter name="repayAcc" value="4221499954578452" />
+		<parameter name="email" value="567811221@qq.com" />
+		<parameter name="qq" value="5678533121" />
+		<parameter name="contractphone" value="18958913452" />
+		<parameter name="uncontractphone" value="15905784452" />
+		<classes >
+		<class name="com.sa.testng.SaProcess">
+		<methods>
+					<include name="Login" />
+					<include name="NewApply" />
+					<include name="LoanInfo" />
+					<include name="Upload" />
+					<include name="BasicInfo" />
+					</methods>
+					</class>
+		</classes>
+	</test>
+</suite>
+
+

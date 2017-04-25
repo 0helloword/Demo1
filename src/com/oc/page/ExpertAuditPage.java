@@ -26,6 +26,16 @@ public class ExpertAuditPage {
 	        element = driver.findElement(By.linkText("继续审核"));//继续审核按键
 	        return element;
 	    }
+	    
+	    public static WebElement ContinueAudit2(WebDriver driver){
+	        element = driver.findElement(By.xpath("(//a[contains(text(),'继续审核')])[2]"));//继续审核2按键
+	        return element;
+	    }
+	    
+	    public static WebElement ContinueAudit3(WebDriver driver){
+	        element = driver.findElement(By.xpath("(//a[contains(text(),'继续审核')])[3]"));//继续审核3按键
+	        return element;
+	    }
 	    //人工初步审核界面公共元素
 	    public static WebElement OpenButton(WebDriver driver){
 	        element = driver.findElement(By.cssSelector("a.collapse"));//标题伸缩按键
@@ -146,7 +156,12 @@ public class ExpertAuditPage {
 	    }
 	    
 	    public static WebElement ReturnSubmit(WebDriver driver){
-	        element = driver.findElement(By.className("reutrnAppSubmit"));//退回审核-退回提交
+	        element = driver.findElement(By.id("reutrnAppSubmit"));//退回审核-退回提交
+	        return element;
+	    }
+	    
+	    public static WebElement ReturnSubmitConfirm(WebDriver driver){
+	        element = driver.findElement(By.xpath("(//button[@type='button'])[8]"));//退回审核-退回提交确定
 	        return element;
 	    }
 	    

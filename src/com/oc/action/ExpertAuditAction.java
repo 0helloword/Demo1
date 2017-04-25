@@ -2,6 +2,7 @@ package com.oc.action;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Reporter;
 
 import com.oc.basic.Log;
 import com.oc.page.ExpertAuditPage;
@@ -33,36 +34,49 @@ public class ExpertAuditAction {
 		ExpertAuditPage.ContinueAudit(driver).click();
 	}
 	
+	public void ContinueAudit2() throws InterruptedException {
+		Thread.sleep(2000);
+		//ExpertAuditPage_pos.Go(driver).click();
+		//Thread.sleep(2000);
+		ExpertAuditPage.ContinueAudit2(driver).click();
+	}
+	
+	
 	// }
-	public void AuditReturn(String returnCause, String returnDesc)
+	public void AuditReturn()
 			throws InterruptedException {
 		Thread.sleep(5000);
 		String app = ExpertAuditPage.App(driver).getText();
 		Log.info("当前审核工单为：" + app + "审核状态：退回");
 		ExpertAuditPage.Return(driver).click();
-		new Select(ExpertAuditPage.ReturnCause(driver))
-				.selectByVisibleText(returnCause);
-		ExpertAuditPage.ReturnDesc(driver).sendKeys(returnDesc);
+		Thread.sleep(2000);
+		new Select(ExpertAuditPage.ReturnCause(driver)).selectByIndex(1);
+		Thread.sleep(2000);
+		ExpertAuditPage.ReturnDesc(driver).sendKeys("专家审批退回");
+		Thread.sleep(2000);
 		ExpertAuditPage.ReturnSubmit(driver).click();
+		Thread.sleep(2000);
+		ExpertAuditPage.ReturnSubmitConfirm(driver).click();
+		Reporter.log("专家审批退回-pos");
 	}
 	
-	public void AuditRefuse(String refuseCause1,String refuseCause2,String refuseDesc)
+	public void AuditRefuse()
 			throws InterruptedException {
 		Thread.sleep(5000);
 		String app = ExpertAuditPage.App(driver).getText();
 		Log.info("当前审核工单为：" + app + "审核状态：拒绝");
 		ExpertAuditPage.Refuse(driver).click();
-		new Select(ExpertAuditPage.RefuseCause1(driver))
-				.selectByVisibleText(refuseCause1);
+		Thread.sleep(2000);
+		new Select(ExpertAuditPage.RefuseCause1(driver)).selectByIndex(1);
 		Thread.sleep(1000);
-		new Select(ExpertAuditPage.RefuseCause2(driver))
-		.selectByVisibleText(refuseCause2);
+		new Select(ExpertAuditPage.RefuseCause2(driver)).selectByIndex(1);
 		Thread.sleep(1000);
-		ExpertAuditPage.RefuseOpinion(driver).sendKeys(refuseDesc);
+		ExpertAuditPage.RefuseOpinion(driver).sendKeys("专家审批拒绝");
 		Thread.sleep(1000);
 		ExpertAuditPage.RefuseCommit(driver).click();
 		Thread.sleep(1000);
 		ExpertAuditPage.RefuseConfirm(driver).click();
+		Reporter.log("专家审批拒绝-pos");
 	}
 	
 
@@ -122,5 +136,6 @@ public class ExpertAuditAction {
 		ExpertAuditPage.CommitConfirm(driver).click();//确认
 		Thread.sleep(2000);
 		ExpertAuditPage.Determine(driver).click();//确认
+		Reporter.log("专家审批成功-pos");
 	}
 }

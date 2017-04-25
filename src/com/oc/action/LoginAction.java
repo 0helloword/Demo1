@@ -1,6 +1,7 @@
 package com.oc.action;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Reporter;
 
 import com.oc.basic.Log;
 import com.oc.page.*;
@@ -22,7 +23,7 @@ public class LoginAction {
         LoginPage.passWord(driver).sendKeys(pw);
         Log.info("输入密码："+pw);
         LoginPage.loginButton(driver).click();
-        Log.info("点击登录");
+        Reporter.log("登录成功");
        
     }
 
