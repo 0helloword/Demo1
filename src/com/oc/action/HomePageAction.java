@@ -23,7 +23,8 @@ public class HomePageAction {
 	}
 
 	// »Àπ§…Û∫À
-	public void ManualAudit() {
+	public void ManualAudit() throws InterruptedException {
+		Thread.sleep(2000);
 		HomePage.ManualAudit(driver).click();
 	}
 

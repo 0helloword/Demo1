@@ -38,4 +38,9 @@ public class ComElement {
 	        return element;
 	    }
 	    
+	    public static WebElement table(WebDriver driver){
+	        element = driver.findElement(By.xpath("//table"));//±í¸ñ¼ÇÂ¼
+	        return element;
+	    }
+	    
 }

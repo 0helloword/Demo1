@@ -18,8 +18,11 @@ public class AppQueryPage {
 	        element = driver.findElement(By.cssSelector("button.btn.red-pink"));//重置按键
 	        return element;
 	    }
-	
-	   
+	    
+	    public static WebElement AppId(WebDriver driver){
+	        element = driver.findElement(By.id("idParam"));//查询条件-工单编号
+	        return element;
+	    }
 	    
 	    public static WebElement AppState(WebDriver driver){
 	        element = driver.findElement(By.id("appState"));//查询条件-工单状态
@@ -31,8 +34,8 @@ public class AppQueryPage {
 	        return element;
 	    }
 
-	    public static WebElement PageNumber(WebDriver driver){
-	        element = driver.findElement(By.xpath("//*[contains(.,'每页')]"));//查询结果页数
+	    public static WebElement AppLoanType(WebDriver driver){
+	        element = driver.findElement(By.id("loanType"));//查询条件-贷款类型
 	        return element;
 	    }
 	    

@@ -1,6 +1,9 @@
 package com.oc.action;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.oc.basic.Log;
@@ -18,12 +21,14 @@ public class LoginAction {
     
     //登录
     public void Login(String user,String pw) {
+    	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         LoginPage.userName(driver).sendKeys(user);
         Log.info("输入用户名："+user);
         LoginPage.passWord(driver).sendKeys(pw);
         Log.info("输入密码："+pw);
         LoginPage.loginButton(driver).click();
-        Reporter.log("登录成功");
+        Assert.assertEquals("小拉", LoginPage.loginname(driver).getText());
+        Log.info("登录成功");
        
     }
 

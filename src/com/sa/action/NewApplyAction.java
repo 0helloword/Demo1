@@ -20,7 +20,7 @@ public class NewApplyAction {
 		Thread.sleep(2000);
 		new Select(NewApplyPage.careerType(driver)).selectByIndex(1);//职业
 		Thread.sleep(2000);
-		new Select(NewApplyPage.productSeries(driver)).selectByIndex(1);// 系列
+		new Select(NewApplyPage.productSeries(driver)).selectByIndex(3);// 系列
 		Thread.sleep(1000);
 		new Select(NewApplyPage.productType(driver)).selectByIndex(1);//货物类别
 		Thread.sleep(1000);

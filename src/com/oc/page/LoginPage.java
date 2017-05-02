@@ -20,4 +20,9 @@ public class LoginPage {
         element = driver.findElement(By.id("loginButton"));
         return element;
     }  
+    
+    public static WebElement loginname(WebDriver driver){//µÇÂ¼°´¼ü
+        element = driver.findElement(By.cssSelector("span.name"));
+        return element;
+    }
 }  

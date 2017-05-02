@@ -200,14 +200,14 @@ public class OcProcess {
 		 expertaudit.AuditReturn();
 			 }
 	 
-//	 @Test(priority=9)
-//	 public void LogOut(){
-//	 //退出登录
-//		 Log.info("退出登录");
-//		 logout=new LogoutAction(webdriver);
-//		 logout.logout();
-//	 }
-//
+	 @Test(priority=9)
+	 public void LogOut(){
+	 //退出登录
+		 Log.info("退出登录");
+		 logout=new LogoutAction(webdriver);
+		 logout.logout();
+	 }
+
 	@AfterTest()
 	 public void afterTest(){
 	 //关闭浏览器
