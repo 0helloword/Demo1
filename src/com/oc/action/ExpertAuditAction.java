@@ -57,7 +57,6 @@ public class ExpertAuditAction {
 		ExpertAuditPage.ReturnSubmit(driver).click();
 		Thread.sleep(2000);
 		ExpertAuditPage.ReturnSubmitConfirm(driver).click();
-		Reporter.log("专家审批退回-pos");
 	}
 	
 	public void AuditRefuse()
@@ -76,7 +75,6 @@ public class ExpertAuditAction {
 		ExpertAuditPage.RefuseCommit(driver).click();
 		Thread.sleep(1000);
 		ExpertAuditPage.RefuseConfirm(driver).click();
-		Reporter.log("专家审批拒绝-pos");
 	}
 	
 
@@ -136,6 +134,5 @@ public class ExpertAuditAction {
 		ExpertAuditPage.CommitConfirm(driver).click();//确认
 		Thread.sleep(2000);
 		ExpertAuditPage.Determine(driver).click();//确认
-		Reporter.log("专家审批成功-pos");
 	}
 }

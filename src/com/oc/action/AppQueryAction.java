@@ -71,9 +71,10 @@ public class AppQueryAction {
 	    }
 	    
 	    public void AppDtail(String app) throws InterruptedException{
+	    	Thread.sleep(2000);
 	    	Log.info("验证工单详情界面");
 	    	AppQueryPage.AppId(driver).sendKeys(app);
-	    	Thread.sleep(2000);
+	    	Thread.sleep(1000);
 	    	AppQueryPage.QueryButton(driver).click();
 	    	Thread.sleep(2000);
 		    AppQueryPage.App(driver,app).click();
@@ -94,14 +95,15 @@ public class AppQueryAction {
 		    AppQueryPage.BackButton1(driver).click();
 		    Thread.sleep(2000);
 	    }
-//	    
-//	    public void CheckInfo() throws InterruptedException{
-//	    	Log.info("验证审核信息界面");
-//		    AppQueryPage.Check(driver).click();
-//		    Thread.sleep(2000);
-//		    String verify=AppQueryPage.CheckLog(driver).getText();
-//		    assert verify.contains("审核记录");// 做断言 assertion
-//		    Thread.sleep(2000);
-//		    AppQueryPage.BackButton2(driver).click();
-//	    }
+	    
+	    public void CheckInfo() throws InterruptedException{
+	    	Thread.sleep(2000);
+	    	Log.info("验证审核信息界面");
+		    AppQueryPage.Check(driver).click();
+		    Thread.sleep(2000);
+		    String verify=AppQueryPage.CheckLog(driver).getText();
+		    assert verify.contains("审核记录");// 做断言 assertion
+		    Thread.sleep(2000);
+		    AppQueryPage.BackButton2(driver).click();
+	    }
 }

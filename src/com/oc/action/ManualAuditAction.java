@@ -1,6 +1,7 @@
 package com.oc.action;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -24,32 +25,30 @@ public class ManualAuditAction {
 		Thread.sleep(2000);
 		String appnum = ManualAuditPage.AppNumber(driver).getText();
 		Log.info("当前待审核工单数为" + appnum);
-		 int appnum1=Integer.parseInt(appnum);
-		 if(appnum1>=1)
-		 {
-			 ManualAuditPage.GetApp(driver).click();
-		 }
+		int appnum1 = Integer.parseInt(appnum);
+		if (appnum1 >= 1) {
+			ManualAuditPage.GetApp(driver).click();
+		}
 
 	}
 
 	public void ContinueAudit() throws InterruptedException {
 		Thread.sleep(2000);
-		//ManualAuditPage_pos.Go(driver).click();
-		//Thread.sleep(2000);
+		// ManualAuditPage_pos.Go(driver).click();
+		// Thread.sleep(2000);
 		ManualAuditPage.ContinueAudit(driver).click();
 	}
-	
+
 	public void ContinueAudit2() throws InterruptedException {
 		Log.info("继续审核");
 		Thread.sleep(2000);
-		//ManualAuditPage_pos.Go(driver).click();
-		//Thread.sleep(2000);
+		// ManualAuditPage_pos.Go(driver).click();
+		// Thread.sleep(2000);
 		ManualAuditPage.ContinueAudit2(driver).click();
 	}
-	
+
 	// }
-	public void AuditReturn()
-			throws InterruptedException {
+	public void AuditReturn() throws InterruptedException {
 		Thread.sleep(5000);
 		String app = ManualAuditPage.App(driver).getText();
 		Log.info("当前审核工单为：" + app + "审核状态：退回");
@@ -59,7 +58,6 @@ public class ManualAuditAction {
 		ManualAuditPage.ReturnSubmit(driver).click();
 		Thread.sleep(2000);
 		ManualAuditPage.ReturnSubmitConfirm(driver).click();
-		Reporter.log("人工审核退回-pos");
 	}
 
 	public void SaveOff() throws InterruptedException {
@@ -90,8 +88,8 @@ public class ManualAuditAction {
 		ManualAuditPage.Next(driver).click();
 	}
 
-	public void Audit2(String shebao, String xuexin,String storepic,String sellpic)
-			throws InterruptedException {
+	public void Audit2(String shebao, String xuexin, String storepic,
+			String sellpic) throws InterruptedException {
 		Thread.sleep(2000);
 		String cardinfo = ManualAuditPage.CardCheck(driver).getText();
 		// String sellinfo=ManualAuditPage.SellRemarks(driver).getText();
@@ -103,7 +101,8 @@ public class ManualAuditAction {
 		Thread.sleep(2000);
 		new Select(ManualAuditPage.XueXin(driver)).selectByVisibleText(xuexin);
 		Thread.sleep(2000);
-		new Select(ManualAuditPage.StorePic(driver)).selectByVisibleText(storepic);
+		new Select(ManualAuditPage.StorePic(driver))
+				.selectByVisibleText(storepic);
 		Thread.sleep(2000);
 		new Select(ManualAuditPage.SellPic(driver))
 				.selectByVisibleText(sellpic);
@@ -169,7 +168,9 @@ public class ManualAuditAction {
 	public void Audit4(String OfficeTelephone, String Phone, String Check,
 			String FamilyPhone, String Familytelephone, String Otherphone,
 			String ID5) throws Exception {
+
 		Thread.sleep(2000);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		List<WebElement> elements = driver.findElements(By.tagName("select"));
 		int number = elements.size();// 分数大于525时总共有8个，小于等于525时共12个
 		if (number == 8) {
@@ -184,54 +185,36 @@ public class ManualAuditAction {
 			new Select(ManualAuditPage.FamilyPhone(driver))
 					.selectByVisibleText(FamilyPhone);
 		} else {
-			if (number == 12) {//因滚动栏原因暂未解决定位问题
+			if (number == 12) {// 因滚动栏原因暂未解决定位问题
 				System.out.println("下拉框个数为7");
 				Thread.sleep(2000);
-				// 控制滚动栏
-				// driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div[2]/div[2]/div/div[2]/div[2]/div/div[2]/form/div/div[2]")).sendKeys(Keys.UP);
-				// Thread.sleep(2000);
-				new Select(driver.findElement(By.name("MCRE02")))
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				new Select(ManualAuditPage.OfficeTelephone(driver))
 						.selectByVisibleText(OfficeTelephone);// 申请人办公电话核实:
-				Thread.sleep(1000);
-				new Select(driver.findElement(By.name("MCRG07")))
-						.selectByVisibleText(Check);// 主观判断结果:
-				// if (OfficeTelephone.equals("信息验证失败")){
-				// new
-				// Select(driver.findElement(By.name("MCRE020401"))).selectByVisibleText(OfficeTelephone1);
-				// }
-
-				new Select(driver.findElement(By.name("MCRE03")))
+				new Select(ManualAuditPage.PhoneCheck(driver))
 						.selectByVisibleText(Phone);// 申请人手机电话核实:
-				// if (Phone.equals("信息验证失败")){
-				// new
-				// Select(driver.findElement(By.name("MCRE030301"))).selectByVisibleText(Phone1);
-				// }
-				new Select(driver.findElement(By.name("MCRG05")))
+				new Select(ManualAuditPage.ID5(driver))
 						.selectByVisibleText(ID5);// ID5办公电话核查
-				Thread.sleep(1000);
-				new Select(driver.findElement(By.name("MCRG07")))
-						.selectByVisibleText(Check);// 主观判断结果:
-				Thread.sleep(1000);
-				new Select(driver.findElement(By.name("MCRH06")))
+				new Select(ManualAuditPage.Check(driver))
+						.selectByVisibleText(Check);// 主观判断结果
+				new Select(ManualAuditPage.Otherphone(driver))
 						.selectByVisibleText(Otherphone);// 申请人其他联系人的手机电话核实:
-
-				new Select(driver.findElement(By.name("MCRH07")))
+				new Select(ManualAuditPage.FamilyPhone(driver))
 						.selectByVisibleText(FamilyPhone);// 申请人家庭成员电话核实:
-				new Select(driver.findElement(By.name("MCRM05")))
+				new Select(ManualAuditPage.Familytelephone(driver))
 						.selectByVisibleText(Familytelephone);// 申请人家庭座机电话核实:
 			}
 		}
 		Thread.sleep(2000);
-//		ManualAuditPage.SaveOff(driver).click();// 暂存
-//		Thread.sleep(2000);
-//		ManualAuditPage.SaveOffComfirm(driver).click();
+		// ManualAuditPage.SaveOff(driver).click();// 暂存
+		// Thread.sleep(2000);
+		// ManualAuditPage.SaveOffComfirm(driver).click();
 		ManualAuditPage.Confirm(driver).click();
 		Thread.sleep(2000);
-		ManualAuditPage.Commit(driver).click();//提交
+		ManualAuditPage.Commit(driver).click();// 提交
 		Thread.sleep(2000);
-		ManualAuditPage.Determine(driver).click();//确认
+		ManualAuditPage.Determine(driver).click();// 确认
 		Thread.sleep(2000);
-		ManualAuditPage.Determine(driver).click();//确认
-		Reporter.log("人工审核成功-pos");
+		ManualAuditPage.Determine(driver).click();// 确认
 	}
 }

@@ -16,7 +16,7 @@ public class ManualAllotAction {
 	}
 	
 	// 按键测试
-	 public void Button() throws InterruptedException{
+	 public void AuditAllotButton() throws InterruptedException{
 		  Thread.sleep(2000);
 		  ManualAllotPage.QueryButton(driver).click();
 		  Thread.sleep(2000);
@@ -39,8 +39,6 @@ public class ManualAllotAction {
 	public void AllotApp(String username,String app) throws InterruptedException {
 		Thread.sleep(2000);
 		//new Select(AuditAllotPage_pos.AllotState(driver)).selectByVisibleText("未分配");
-		ManualAllotPage.App(driver).clear();
-		Thread.sleep(1000);
 		ManualAllotPage.App(driver).sendKeys(app);
 		Thread.sleep(2000);
 		ManualAllotPage.QueryButton(driver).click();
@@ -52,7 +50,7 @@ public class ManualAllotAction {
 		ManualAllotPage.Allot(driver).click();
 		Thread.sleep(2000);
 		ManualAllotPage.Comfirm(driver).click();
-		Reporter.log("人工审核分单成功-pos");
+
 
 }
 

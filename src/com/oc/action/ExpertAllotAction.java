@@ -52,7 +52,6 @@ public class ExpertAllotAction {
 		ExpertAllotPage.Allot(driver).click();
 		Thread.sleep(2000);
 		ExpertAllotPage.Comfirm(driver).click();
-		Reporter.log("专家审批分单成功-pos");
 
 }
 
