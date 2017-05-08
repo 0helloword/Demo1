@@ -1,18 +1,15 @@
-package com.oc.testng;
+﻿package com.oc.testng;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.oc.action.*;
 import com.oc.basic.*;
-
-import listeners.*;
 
 //@Listeners({ myListener.class })
 public class OcProcess {

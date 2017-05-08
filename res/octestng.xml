@@ -13,7 +13,7 @@
         <parameter name="url_oc" value="http://123.57.56.45:7778/OC/initLogin" />
 		<parameter name="username" value="999111" />
 		<parameter name="password" value="cyj123" />
-		<parameter name="loginname" value="小拉" />
+		<parameter name="loginname" value="xiaola" />
 		<!-- 以下为需要修改的参数 -->
 		<parameter name="appid_pos" value="35441748"/>
 		<parameter name="appid_cash" value="35442048"/>	
