@@ -23,13 +23,13 @@ public class AppQueryAction {
 		  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    }
 	  
-	    //¹¤µ¥²éÑ¯
+	    //å·¥å•æŸ¥è¯¢
 	  public void AppQueryButton() throws InterruptedException{
-		  Log.info("ÑéÖ¤¹¤µ¥²éÑ¯½çÃæ°´¼ü¹¦ÄÜ");
+		  Log.info("éªŒè¯å·¥å•æŸ¥è¯¢ç•Œé¢æŒ‰é”®åŠŸèƒ½");
 		  Thread.sleep(2000);
 		  AppQueryPage.QueryButton(driver).click();
 		  Thread.sleep(2000);
-		  AppQueryPage.ResetButton(driver).click();//µã»÷ÖØÖÃ°´¼ü
+		  AppQueryPage.ResetButton(driver).click();//ç‚¹å‡»é‡ç½®æŒ‰é”®
 		  Thread.sleep(2000);
 		  AppQueryPage.QueryButton(driver).click();
 		  Thread.sleep(2000);
@@ -50,9 +50,9 @@ public class AppQueryAction {
 	  
 	    public void AppQueryState(String appstate) throws InterruptedException{
 	    	Thread.sleep(2000);
-	    	Log.info("ÑéÖ¤¹¤µ¥×´Ì¬½á¹ûÉ¸Ñ¡");
+	    	Log.info("éªŒè¯å·¥å•çŠ¶æ€ç»“æœç­›é€‰");
 	    	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		    new Select(AppQueryPage.AppState(driver)).selectByVisibleText(appstate);//Ñ¡Ôñ¹¤µ¥×´Ì¬É¸Ñ¡²éÑ¯
+		    new Select(AppQueryPage.AppState(driver)).selectByVisibleText(appstate);//é€‰æ‹©å·¥å•çŠ¶æ€ç­›é€‰æŸ¥è¯¢
 		    AppQueryPage.QueryButton(driver).click();
 		    Table table = new Table(driver);
 		    table.TableTest(appstate);
@@ -61,9 +61,9 @@ public class AppQueryAction {
 	   
 	    public void AppLoanType(String loantype) throws InterruptedException{
 	    	Thread.sleep(2000);
-	    	Log.info("ÑéÖ¤¹¤µ¥´û¿îÀàĞÍ½á¹ûÉ¸Ñ¡");
+	    	Log.info("éªŒè¯å·¥å•è´·æ¬¾ç±»å‹ç»“æœç­›é€‰");
 	    	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		    new Select(AppQueryPage.AppLoanType(driver)).selectByVisibleText(loantype);//Ñ¡Ôñ¹¤µ¥×´Ì¬É¸Ñ¡²éÑ¯
+		    new Select(AppQueryPage.AppLoanType(driver)).selectByVisibleText(loantype);//é€‰æ‹©å·¥å•çŠ¶æ€ç­›é€‰æŸ¥è¯¢
 		    AppQueryPage.QueryButton(driver).click();
 		    Table table = new Table(driver);
 		    table.TableTest(loantype);
@@ -72,7 +72,7 @@ public class AppQueryAction {
 	    
 	    public void AppDtail(String app) throws InterruptedException{
 	    	Thread.sleep(2000);
-	    	Log.info("ÑéÖ¤¹¤µ¥ÏêÇé½çÃæ");
+	    	Log.info("éªŒè¯å·¥å•è¯¦æƒ…ç•Œé¢");
 	    	AppQueryPage.AppId(driver).sendKeys(app);
 	    	Thread.sleep(1000);
 	    	AppQueryPage.QueryButton(driver).click();
@@ -80,7 +80,7 @@ public class AppQueryAction {
 		    AppQueryPage.App(driver,app).click();
 		    Thread.sleep(2000);
 		    String verify=AppQueryPage.AppDtail(driver).getText();
-		    assert verify.contains("¹¤µ¥ÏêÇé");// ×ö¶ÏÑÔ assertion
+		    assert verify.contains("å·¥å•è¯¦æƒ…");// åšæ–­è¨€ assertion
 		    Thread.sleep(1000);
 		    AppQueryPage.OpenButton(driver).click();
 		    Thread.sleep(1000);
@@ -98,11 +98,11 @@ public class AppQueryAction {
 	    
 	    public void CheckInfo() throws InterruptedException{
 	    	Thread.sleep(2000);
-	    	Log.info("ÑéÖ¤ÉóºËĞÅÏ¢½çÃæ");
+	    	Log.info("éªŒè¯å®¡æ ¸ä¿¡æ¯ç•Œé¢");
 		    AppQueryPage.Check(driver).click();
 		    Thread.sleep(2000);
 		    String verify=AppQueryPage.CheckLog(driver).getText();
-		    assert verify.contains("ÉóºË¼ÇÂ¼");// ×ö¶ÏÑÔ assertion
+		    assert verify.contains("å®¡æ ¸è®°å½•");// åšæ–­è¨€ assertion
 		    Thread.sleep(2000);
 		    AppQueryPage.BackButton2(driver).click();
 	    }

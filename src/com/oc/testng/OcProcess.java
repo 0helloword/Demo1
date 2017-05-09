@@ -1,6 +1,7 @@
-﻿package com.oc.testng;
+package com.oc.testng;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
@@ -25,6 +26,7 @@ public class OcProcess {
 	String appid_pos = null;
 
 	WebDriver webdriver = new FirefoxDriver();
+	//WebDriver webdriver = new ChromeDriver();
 
 	@Parameters({ "url_oc" })
 	@BeforeTest
@@ -59,15 +61,17 @@ public class OcProcess {
 	@Test(priority = 2)
 	public void ManualAudit_pos() throws Exception {
 		Log.info("人工审核-继续审核-pos");
-		// app.ManualAudit(); //人工审核
+		 app.ManualAudit(); //人工审核
 		app.ManualAuditPos();// 初步审核-pos
 		manualaudit = new ManualAuditAction(webdriver);
 		manualaudit.ContinueAudit();
-		manualaudit.Audit1("信息和照片均一致", "照片一致");
-		manualaudit.Audit2("社保单位名称与申请表一致", "学信网一致", "照片一致", "照片一致");
+		manualaudit.Audit1(2,1);
+		manualaudit.Audit2(1,2,1,1);
 		manualaudit.Audit3();
-		manualaudit.Audit4("信息已验证", "信息已验证", "RES05", "信息已验证", "信息已验证",
-				"信息已验证", "公司名和地址均一致");
+		manualaudit.Audit4(
+//				"信息已验证", "信息已验证", "RES05", "信息已验证", "信息已验证",
+//				"信息已验证", "公司名和地址均一致"
+				);
 		Reporter.log("人工审核成功-pos");
 	}
 
@@ -149,11 +153,13 @@ public class OcProcess {
 		app.ManualAuditCash();// 初步审核-cash
 		manualaudit = new ManualAuditAction(webdriver);
 		manualaudit.ContinueAudit();
-		manualaudit.Audit1("信息和照片均一致", "照片一致");
-		manualaudit.Audit2("社保单位名称与申请表一致", "学信网一致", "照片一致", "照片一致");
+		manualaudit.Audit1(2,1);
+		manualaudit.Audit2(1,2,1,1);
 		manualaudit.Audit3();
-		manualaudit.Audit4("信息已验证", "信息已验证", "RES01", "信息已验证", "信息已验证",
-				"信息已验证", "公司名和地址均一致");
+		manualaudit.Audit4(
+//				"信息已验证", "信息已验证", "RES01", "信息已验证", "信息已验证",
+//				"信息已验证", "公司名和地址均一致"
+				);
 		Reporter.log("人工审核成功-cash");
 	}
 

@@ -2,25 +2,25 @@ package listeners;
 
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
-//TestListenerAdapter ÒÑ¾­ÊµÏÖ ITestListener£¬²¢ÇÒÌá¹©ÁËÒ»Ğ©ÓĞÓÃµÄ·½·¨£¬
-//±ÈÈç·Ö±ğ»ñÈ¡ËùÓĞ³É¹¦Ê§°ÜÌø¹ıÈıÖÖ²âÊÔ½á¹ûµÄ²âÊÔ·½·¨µÄ·½·¨£¬²¢ÇÒ ITestListner 
-//ÖĞÓĞºÜ¶à·½·¨¶ø TestListenerAdapter ÒÑ¸ø³öÁËÄ¬ÈÏÊµÏÖ¡£
-//Òò´Ë£¬¼Ì³Ğ TestListenerAdapter ºó£¬±ãÖ»Ğè¹Ø×¢ĞèÒªĞŞ¸ÄµÄ·½·¨¡£
+//TestListenerAdapter å·²ç»å®ç° ITestListenerï¼Œå¹¶ä¸”æä¾›äº†ä¸€äº›æœ‰ç”¨çš„æ–¹æ³•ï¼Œ
+//æ¯”å¦‚åˆ†åˆ«è·å–æ‰€æœ‰æˆåŠŸå¤±è´¥è·³è¿‡ä¸‰ç§æµ‹è¯•ç»“æœçš„æµ‹è¯•æ–¹æ³•çš„æ–¹æ³•ï¼Œå¹¶ä¸” ITestListner 
+//ä¸­æœ‰å¾ˆå¤šæ–¹æ³•è€Œ TestListenerAdapter å·²ç»™å‡ºäº†é»˜è®¤å®ç°ã€‚
+//å› æ­¤ï¼Œç»§æ‰¿ TestListenerAdapter åï¼Œä¾¿åªéœ€å…³æ³¨éœ€è¦ä¿®æ”¹çš„æ–¹æ³•ã€‚
 public class myListener extends TestListenerAdapter{
      
-    @Override // @OverrideÊÇÎ±´úÂë,±íÊ¾ÖØĞ´(µ±È»²»Ğ´Ò²¿ÉÒÔ)
+    @Override // @Overrideæ˜¯ä¼ªä»£ç ,è¡¨ç¤ºé‡å†™(å½“ç„¶ä¸å†™ä¹Ÿå¯ä»¥)
     public void onTestFailure(ITestResult tr) {
-        log(tr.getName()+ "--Ö´ĞĞÊ§°Ü\n");
+        log(tr.getName()+ "--æ‰§è¡Œå¤±è´¥\n");
     }
      
     @Override
     public void onTestSkipped(ITestResult tr) {
-        log(tr.getName()+ "--Ö´ĞĞÌø¹ı\n");
+        log(tr.getName()+ "--æ‰§è¡Œè·³è¿‡\n");
     }
      
     @Override
     public void onTestSuccess(ITestResult tr) {
-        log(tr.getName()+ "--Ö´ĞĞ³É¹¦\n");
+        log(tr.getName()+ "--æ‰§è¡ŒæˆåŠŸ\n");
     }
      
     private void log(String string) {

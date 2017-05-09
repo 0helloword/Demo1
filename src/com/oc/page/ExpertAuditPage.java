@@ -8,190 +8,190 @@ public class ExpertAuditPage {
 	 private static WebElement element;
 	    
 	    public static WebElement GetApp(WebDriver driver){
-	        element = driver.findElement(By.id("autoGetLnApp"));//»ñÈ¡¹¤µ¥°´¼ü
+	        element = driver.findElement(By.id("autoGetLnApp"));//è·å–å·¥å•æŒ‰é”®
 	        return element;
 	    }
 	    
 	    public static WebElement AppNumber(WebDriver driver){
-	        element = driver.findElement(By.id("unAssignAppCount"));//´ıÉóºË¹¤µ¥ÊıÁ¿
+	        element = driver.findElement(By.id("unAssignAppCount"));//å¾…å®¡æ ¸å·¥å•æ•°é‡
 	        return element;
 	    }
 	    
 	    public static WebElement Go(WebDriver driver){
-	        element = driver.findElement(By.linkText("go"));//go°´¼ü
+	        element = driver.findElement(By.linkText("go"));//goæŒ‰é”®
 	        return element;
 	    }
 	    
 	    public static WebElement ContinueAudit(WebDriver driver){
-	        element = driver.findElement(By.linkText("¼ÌĞøÉóºË"));//¼ÌĞøÉóºË°´¼ü
+	        element = driver.findElement(By.linkText("ç»§ç»­å®¡æ ¸"));//ç»§ç»­å®¡æ ¸æŒ‰é”®
 	        return element;
 	    }
 	    
 	    public static WebElement ContinueAudit2(WebDriver driver){
-	        element = driver.findElement(By.xpath("(//a[contains(text(),'¼ÌĞøÉóºË')])[2]"));//¼ÌĞøÉóºË2°´¼ü
+	        element = driver.findElement(By.xpath("(//a[contains(text(),'ç»§ç»­å®¡æ ¸')])[2]"));//ç»§ç»­å®¡æ ¸2æŒ‰é”®
 	        return element;
 	    }
 	    
 	    public static WebElement ContinueAudit3(WebDriver driver){
-	        element = driver.findElement(By.xpath("(//a[contains(text(),'¼ÌĞøÉóºË')])[3]"));//¼ÌĞøÉóºË3°´¼ü
+	        element = driver.findElement(By.xpath("(//a[contains(text(),'ç»§ç»­å®¡æ ¸')])[3]"));//ç»§ç»­å®¡æ ¸3æŒ‰é”®
 	        return element;
 	    }
-	    //ÈË¹¤³õ²½ÉóºË½çÃæ¹«¹²ÔªËØ
+	    //äººå·¥åˆæ­¥å®¡æ ¸ç•Œé¢å…¬å…±å…ƒç´ 
 	    public static WebElement OpenButton(WebDriver driver){
-	        element = driver.findElement(By.cssSelector("a.collapse"));//±êÌâÉìËõ°´¼ü
+	        element = driver.findElement(By.cssSelector("a.collapse"));//æ ‡é¢˜ä¼¸ç¼©æŒ‰é”®
 	        return element;
 	    }
 	    
 	    public static WebElement Back(WebDriver driver){
-	        element = driver.findElement(By.linkText("·µ»Ø"));//·µ»Ø°´¼ü
+	        element = driver.findElement(By.linkText("è¿”å›"));//è¿”å›æŒ‰é”®
 	        return element;
 	    }
 	    
 	    public static WebElement Next(WebDriver driver){
-	        element = driver.findElement(By.linkText("ÏÂÒ»²½"));//ÏÂÒ»²½°´¼ü
+	        element = driver.findElement(By.linkText("ä¸‹ä¸€æ­¥"));//ä¸‹ä¸€æ­¥æŒ‰é”®
 	        return element;
 	    }
 	    
 	    public static WebElement App(WebDriver driver){
-	       element = driver.findElement(By.xpath("/html/body/div[2]/div[2]/div[2]/div[2]/div[2]/div/div/div/div/div[2]"));//¹¤µ¥±àºÅ
+	       element = driver.findElement(By.xpath("/html/body/div[2]/div[2]/div[2]/div[2]/div[2]/div/div/div/div/div[2]"));//å·¥å•ç¼–å·
 	       return element;
 	    }
-	    //Í¼Æ¬ºËÊµÔªËØ
+	    //å›¾ç‰‡æ ¸å®å…ƒç´ 
 	    public static WebElement NciicAuto(WebDriver driver){
-	    	element=driver.findElement(By.xpath("//*[contains(text(),'NCIIC×Ô¶¯¼ì²é')]"));//NCIIC×Ô¶¯¼ì²é
+	    	element=driver.findElement(By.xpath("//*[contains(text(),'NCIICè‡ªåŠ¨æ£€æŸ¥')]"));//NCIICè‡ªåŠ¨æ£€æŸ¥
 	        return element;
 	    }
 	    
 	   
-	    //Ö¤¼şºËÊµ
+	    //è¯ä»¶æ ¸å®
 	    public static WebElement CardCheck(WebDriver driver){
-	        element = driver.findElement(By.xpath("//*[contains(text(),'ÒøĞĞ¿¨')]"));//ÒøĞĞ¿¨Ñé¿¨ĞÅÏ¢
+	        element = driver.findElement(By.xpath("//*[contains(text(),'é“¶è¡Œå¡')]"));//é“¶è¡Œå¡éªŒå¡ä¿¡æ¯
 	        return element;
 	    }
 	    
 	    public static WebElement SellRemarks(WebDriver driver){
-	        element = driver.findElement(By.xpath("/html/body/div[2]/div[2]/div[2]/div[2]/div/div[2]/div/div/div/div[4]/div[2]"));//ÏúÊÛ±¸×¢
+	        element = driver.findElement(By.xpath("/html/body/div[2]/div[2]/div[2]/div[2]/div/div[2]/div/div/div/div[4]/div[2]"));//é”€å”®å¤‡æ³¨
 	        return element;
 	    }
 
 	    public static WebElement PySdt(WebDriver driver){
-	        element = driver.findElement(By.xpath("/html/body/div[2]/div[2]/div[2]/div[2]/div/div[2]/div/div/div/div[5]/div[2]"));//Ñ§ĞÅÍø²éÑ¯½á¹û
+	        element = driver.findElement(By.xpath("/html/body/div[2]/div[2]/div[2]/div[2]/div/div[2]/div/div/div/div[5]/div[2]"));//å­¦ä¿¡ç½‘æŸ¥è¯¢ç»“æœ
 	        return element;
 	    }
 	    
 
-	    //´û¿îĞÅÏ¢ºËÊµ
+	    //è´·æ¬¾ä¿¡æ¯æ ¸å®
 	    
 	 
-	    //¹ØÁªĞÅÏ¢µ÷²é
+	    //å…³è”ä¿¡æ¯è°ƒæŸ¥
 	    public static WebElement RelatedInfo(WebDriver driver){
-	        element = driver.findElement(By.linkText("¹ØÁªĞÅÏ¢µ÷²é"));//¹ØÁªĞÅÏ¢µ÷²é
+	        element = driver.findElement(By.linkText("å…³è”ä¿¡æ¯è°ƒæŸ¥"));//å…³è”ä¿¡æ¯è°ƒæŸ¥
 	        return element;
 	    }
 	    
 	    public static WebElement ContactNum(WebDriver driver){
-	        element = driver.findElement(By.name("phoneNum"));//¹ØÁªĞÅÏ¢µ÷²é-ÁªÏµµç»°
+	        element = driver.findElement(By.name("phoneNum"));//å…³è”ä¿¡æ¯è°ƒæŸ¥-è”ç³»ç”µè¯
 	        return element;
 	    }
 	    
 	    public static WebElement Query(WebDriver driver){
-	        element = driver.findElement(By.cssSelector("button.btn.btn-primary"));//¹ØÁªĞÅÏ¢µ÷²é-²éÑ¯
+	        element = driver.findElement(By.cssSelector("button.btn.btn-primary"));//å…³è”ä¿¡æ¯è°ƒæŸ¥-æŸ¥è¯¢
 	        return element;
 	    }
 	    
-	    //»ù´¡ĞÅÏ¢ºËÊµ
+	    //åŸºç¡€ä¿¡æ¯æ ¸å®
 	    public static WebElement PyCompany(WebDriver driver){
-	        element = driver.findElement(By.xpath("/html/body/div[2]/div[2]/div[2]/div[2]/div/div[2]/div/div/div/div[5]"));//ÆóÒµÃû³Æ/µç»°»¥²é½á¹û
+	        element = driver.findElement(By.xpath("/html/body/div[2]/div[2]/div[2]/div[2]/div/div[2]/div/div/div/div[5]"));//ä¼ä¸šåç§°/ç”µè¯äº’æŸ¥ç»“æœ
 	        return element;
 	    }
 	    
 	    public static WebElement Rule(WebDriver driver){
-	        element = driver.findElement(By.xpath("/html/body/div[2]/div[2]/div[2]/div[2]/div/div[2]/div/div/div/div[6]"));//¹æÔòÌáÊ¾
+	        element = driver.findElement(By.xpath("/html/body/div[2]/div[2]/div[2]/div[2]/div/div[2]/div/div/div/div[6]"));//è§„åˆ™æç¤º
 	        return element;
 	    }
 	    
 	    public static WebElement MobileRecord(WebDriver driver){
-	        element = driver.findElement(By.xpath("/html/body/div[2]/div[2]/div[2]/div[2]/div/div[2]/div/div/div/div[7]"));//ÔËÓªÉÌ²éÑ¯½á¹û
+	        element = driver.findElement(By.xpath("/html/body/div[2]/div[2]/div[2]/div[2]/div/div[2]/div/div/div/div[7]"));//è¿è¥å•†æŸ¥è¯¢ç»“æœ
 	        return element;
 	    }
  
 	    public static WebElement Commit(WebDriver driver){
-	        element = driver.findElement(By.linkText("Ìá½»"));//Ìá½»
+	        element = driver.findElement(By.linkText("æäº¤"));//æäº¤
 	        return element;
 	    }
 	    
 	    public static WebElement CommitCom(WebDriver driver){
-	        element = driver.findElement(By.id("passComment"));//Ìá½»±¸×¢
+	        element = driver.findElement(By.id("passComment"));//æäº¤å¤‡æ³¨
 	        return element;
 	    }
 	    
 	    public static WebElement CommitConfirm(WebDriver driver){
-	        element = driver.findElement(By.id("passSubmit"));//Ìá½»È·ÈÏ
+	        element = driver.findElement(By.id("passSubmit"));//æäº¤ç¡®è®¤
 	        return element;
 	    }
 	    
 	    public static WebElement Determine(WebDriver driver){
-	        element = driver.findElement(By.xpath("(//button[@type='button'])[8]"));//È·¶¨
+	        element = driver.findElement(By.xpath("(//button[@type='button'])[8]"));//ç¡®å®š
 	        return element;
 	    }
 	    
 	    public static WebElement Return(WebDriver driver){
-	        element = driver.findElement(By.cssSelector("button.btn.red-sunglo"));//ÍË»Ø
+	        element = driver.findElement(By.cssSelector("button.btn.red-sunglo"));//é€€å›
 	        return element;
 	    }
 	    
 	    public static WebElement ReturnCause(WebDriver driver){
-	        element = driver.findElement(By.id("returnCauseSelect"));//ÍË»ØÉóºË-ÍË»ØÔ­Òò
+	        element = driver.findElement(By.id("returnCauseSelect"));//é€€å›å®¡æ ¸-é€€å›åŸå› 
 	        return element;
 	    }
 	    
 	    public static WebElement ReturnDesc(WebDriver driver){
-	        element = driver.findElement(By.id("returnCauseDesc"));//ÍË»ØÉóºË-ÍË»ØÒâ¼û
+	        element = driver.findElement(By.id("returnCauseDesc"));//é€€å›å®¡æ ¸-é€€å›æ„è§
 	        return element;
 	    }
 	    
 	    public static WebElement ReturnCancle(WebDriver driver){
-	        element = driver.findElement(By.className("btn grey"));//ÍË»ØÉóºË-ÍË»ØÈ¡Ïû
+	        element = driver.findElement(By.className("btn grey"));//é€€å›å®¡æ ¸-é€€å›å–æ¶ˆ
 	        return element;
 	    }
 	    
 	    public static WebElement ReturnSubmit(WebDriver driver){
-	        element = driver.findElement(By.id("reutrnAppSubmit"));//ÍË»ØÉóºË-ÍË»ØÌá½»
+	        element = driver.findElement(By.id("reutrnAppSubmit"));//é€€å›å®¡æ ¸-é€€å›æäº¤
 	        return element;
 	    }
 	    
 	    public static WebElement ReturnSubmitConfirm(WebDriver driver){
-	        element = driver.findElement(By.xpath("(//button[@type='button'])[8]"));//ÍË»ØÉóºË-ÍË»ØÌá½»È·¶¨
+	        element = driver.findElement(By.xpath("(//button[@type='button'])[8]"));//é€€å›å®¡æ ¸-é€€å›æäº¤ç¡®å®š
 	        return element;
 	    }
 	    
 	    public static WebElement Refuse(WebDriver driver){
-	        element = driver.findElement(By.cssSelector("button.btn.yellow-gold"));//¾Ü¾øÉêÇë
+	        element = driver.findElement(By.cssSelector("button.btn.yellow-gold"));//æ‹’ç»ç”³è¯·
 	        return element;
 	    }
 	    
 	    public static WebElement RefuseCause1(WebDriver driver){
-	        element = driver.findElement(By.id("refuseCodes_1Select"));//¾Ü¾øÔ­Òò´óÀà
+	        element = driver.findElement(By.id("refuseCodes_1Select"));//æ‹’ç»åŸå› å¤§ç±»
 	        return element;
 	    }
 	    
 	    public static WebElement RefuseCause2(WebDriver driver){
-	        element = driver.findElement(By.id("refuseCodes_2Select"));//¾Ü¾øÔ­ÒòĞ¡Àà
+	        element = driver.findElement(By.id("refuseCodes_2Select"));//æ‹’ç»åŸå› å°ç±»
 	        return element;
 	    }
 	    
 	    public static WebElement RefuseOpinion(WebDriver driver){
-	        element = driver.findElement(By.id("refuseCauseDesc"));//¾Ü¾øÒâ¼û
+	        element = driver.findElement(By.id("refuseCauseDesc"));//æ‹’ç»æ„è§
 	        return element;
 	    }
 	    
 	    public static WebElement RefuseCommit(WebDriver driver){
-	        element = driver.findElement(By.cssSelector("#refuseCauseForm > div.modal-footer > #reutrnAppSubmit"));//¾Ü¾øÌá½»
+	        element = driver.findElement(By.cssSelector("#refuseCauseForm > div.modal-footer > #reutrnAppSubmit"));//æ‹’ç»æäº¤
 	        return element;
 	    }
 	    
 	    public static WebElement RefuseConfirm(WebDriver driver){
-	        element = driver.findElement(By.xpath("(//button[@type='button'])[8]"));//¾Ü¾øÌá½»È·¶¨
+	        element = driver.findElement(By.xpath("(//button[@type='button'])[8]"));//æ‹’ç»æäº¤ç¡®å®š
 	        return element;
 	    }
 }

@@ -14,11 +14,11 @@ public class ExpertAuditAction {
 		this.driver = driver;
 	}
 
-	// »ñÈ¡¹¤µ¥
+	// è·å–å·¥å•
 	public void Getapp() throws InterruptedException {
 		Thread.sleep(2000);
 		String appnum = ExpertAuditPage.AppNumber(driver).getText();
-		Log.info("µ±Ç°´ıÉóºË¹¤µ¥ÊıÎª" + appnum);
+		Log.info("å½“å‰å¾…å®¡æ ¸å·¥å•æ•°ä¸º" + appnum);
 		 int appnum1=Integer.parseInt(appnum);
 		 if(appnum1>=1)
 		 {
@@ -47,12 +47,12 @@ public class ExpertAuditAction {
 			throws InterruptedException {
 		Thread.sleep(5000);
 		String app = ExpertAuditPage.App(driver).getText();
-		Log.info("µ±Ç°ÉóºË¹¤µ¥Îª£º" + app + "ÉóºË×´Ì¬£ºÍË»Ø");
+		Log.info("å½“å‰å®¡æ ¸å·¥å•ä¸ºï¼š" + app + "å®¡æ ¸çŠ¶æ€ï¼šé€€å›");
 		ExpertAuditPage.Return(driver).click();
 		Thread.sleep(2000);
 		new Select(ExpertAuditPage.ReturnCause(driver)).selectByIndex(1);
 		Thread.sleep(2000);
-		ExpertAuditPage.ReturnDesc(driver).sendKeys("×¨¼ÒÉóÅúÍË»Ø");
+		ExpertAuditPage.ReturnDesc(driver).sendKeys("ä¸“å®¶å®¡æ‰¹é€€å›");
 		Thread.sleep(2000);
 		ExpertAuditPage.ReturnSubmit(driver).click();
 		Thread.sleep(2000);
@@ -63,14 +63,14 @@ public class ExpertAuditAction {
 			throws InterruptedException {
 		Thread.sleep(5000);
 		String app = ExpertAuditPage.App(driver).getText();
-		Log.info("µ±Ç°ÉóºË¹¤µ¥Îª£º" + app + "ÉóºË×´Ì¬£º¾Ü¾ø");
+		Log.info("å½“å‰å®¡æ ¸å·¥å•ä¸ºï¼š" + app + "å®¡æ ¸çŠ¶æ€ï¼šæ‹’ç»");
 		ExpertAuditPage.Refuse(driver).click();
 		Thread.sleep(2000);
 		new Select(ExpertAuditPage.RefuseCause1(driver)).selectByIndex(1);
 		Thread.sleep(1000);
 		new Select(ExpertAuditPage.RefuseCause2(driver)).selectByIndex(1);
 		Thread.sleep(1000);
-		ExpertAuditPage.RefuseOpinion(driver).sendKeys("×¨¼ÒÉóÅú¾Ü¾ø");
+		ExpertAuditPage.RefuseOpinion(driver).sendKeys("ä¸“å®¶å®¡æ‰¹æ‹’ç»");
 		Thread.sleep(1000);
 		ExpertAuditPage.RefuseCommit(driver).click();
 		Thread.sleep(1000);
@@ -81,7 +81,7 @@ public class ExpertAuditAction {
 	public void Audit1()throws InterruptedException {
 		Thread.sleep(5000);
 		String app = ExpertAuditPage.App(driver).getText();
-		Log.info("µ±Ç°ÉóºË¹¤µ¥Îª£º" + app + "ÉóºË×´Ì¬£º×¨¼ÒÉóÅú");
+		Log.info("å½“å‰å®¡æ ¸å·¥å•ä¸ºï¼š" + app + "å®¡æ ¸çŠ¶æ€ï¼šä¸“å®¶å®¡æ‰¹");
 		Thread.sleep(2000);
 		String nciicAuto = ExpertAuditPage.NciicAuto(driver).getText();
 		Log.info(nciicAuto);
@@ -94,7 +94,7 @@ public class ExpertAuditAction {
 		String cardinfo = ExpertAuditPage.CardCheck(driver).getText();
 		// String sellinfo=ExpertAuditPage_pos.SellRemarks(driver).getText();
 		// String pysdt=ExpertAuditPage_pos.PySdt(driver).getText();
-		// Log.info(cardinfo+"\n"+sellinfo+"\n"+pysdt); //Òò¹ö¶¯À¸ÎŞ·¨»ñÈ¡ÏúÊÛ±¸×¢ºÍÑ§ĞÅÍø²éÑ¯½á¹û£¿
+		// Log.info(cardinfo+"\n"+sellinfo+"\n"+pysdt); //å› æ»šåŠ¨æ æ— æ³•è·å–é”€å”®å¤‡æ³¨å’Œå­¦ä¿¡ç½‘æŸ¥è¯¢ç»“æœï¼Ÿ
 		Log.info(cardinfo);
 		Thread.sleep(2000);
 		ExpertAuditPage.Next(driver).click();
@@ -127,12 +127,12 @@ public class ExpertAuditAction {
 
 	public void Audit4() throws Exception {
 		Thread.sleep(2000);
-		ExpertAuditPage.Commit(driver).click();//Ìá½»
+		ExpertAuditPage.Commit(driver).click();//æäº¤
 		Thread.sleep(2000);
-		ExpertAuditPage.CommitCom(driver).sendKeys("test");;//ÊäÈë±¸×¢
+		ExpertAuditPage.CommitCom(driver).sendKeys("test");;//è¾“å…¥å¤‡æ³¨
 		Thread.sleep(2000);
-		ExpertAuditPage.CommitConfirm(driver).click();//È·ÈÏ
+		ExpertAuditPage.CommitConfirm(driver).click();//ç¡®è®¤
 		Thread.sleep(2000);
-		ExpertAuditPage.Determine(driver).click();//È·ÈÏ
+		ExpertAuditPage.Determine(driver).click();//ç¡®è®¤
 	}
 }

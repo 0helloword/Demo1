@@ -9,7 +9,7 @@ public class Log {
     private static Logger Log = Logger.getLogger(Log.class.getName());
     
     public static void startTestCase(String sTestCaseName){
-        PropertyConfigurator.configure("log4j.properties");
+        PropertyConfigurator.configure("F:\\test\\workspace\\Demo1\\src\\log4j.properties");
         Log.info("****************************************************************************************");    
         Log.info("$$$$$$$$$$$$$$$$$$$$$                 "+sTestCaseName+ "       $$$$$$$$$$$$$$$$$$$$$$$$$");   
         Log.info("****************************************************************************************");
@@ -17,12 +17,12 @@ public class Log {
         }
     
     public static void endTestCase(String sTestCaseName){
-        PropertyConfigurator.configure("log4j.properties");
+        PropertyConfigurator.configure("F:\\test\\workspace\\Demo1\\src\\log4j.properties");
         Log.info("XXXXXXXXXXXXXXXXXXXXXXX             "+"-E---N---D-"+"             XXXXXXXXXXXXXXXXXXXXXX");
         }
 
     public static void info(String message) {
-            PropertyConfigurator.configure("log4j.properties");
+            PropertyConfigurator.configure("F:\\test\\workspace\\Demo1\\src\\log4j.properties");
             Log.info(message);
     }
 }  

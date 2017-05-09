@@ -19,12 +19,12 @@ public class ManualAuditAction {
 		this.driver = driver;
 	}
 
-	// »ñÈ¡¹¤µ¥
+	// è·å–å·¥å•
 	public void Getapp() throws InterruptedException {
-		Log.info("»ñÈ¡¹¤µ¥");
+		Log.info("è·å–å·¥å•");
 		Thread.sleep(2000);
 		String appnum = ManualAuditPage.AppNumber(driver).getText();
-		Log.info("µ±Ç°´ıÉóºË¹¤µ¥ÊıÎª" + appnum);
+		Log.info("å½“å‰å¾…å®¡æ ¸å·¥å•æ•°ä¸º" + appnum);
 		int appnum1 = Integer.parseInt(appnum);
 		if (appnum1 >= 1) {
 			ManualAuditPage.GetApp(driver).click();
@@ -40,7 +40,7 @@ public class ManualAuditAction {
 	}
 
 	public void ContinueAudit2() throws InterruptedException {
-		Log.info("¼ÌĞøÉóºË");
+		Log.info("ç»§ç»­å®¡æ ¸");
 		Thread.sleep(2000);
 		// ManualAuditPage_pos.Go(driver).click();
 		// Thread.sleep(2000);
@@ -51,10 +51,10 @@ public class ManualAuditAction {
 	public void AuditReturn() throws InterruptedException {
 		Thread.sleep(5000);
 		String app = ManualAuditPage.App(driver).getText();
-		Log.info("µ±Ç°ÉóºË¹¤µ¥Îª£º" + app + "ÉóºË×´Ì¬£ºÍË»Ø");
+		Log.info("å½“å‰å®¡æ ¸å·¥å•ä¸ºï¼š" + app + "å®¡æ ¸çŠ¶æ€ï¼šé€€å›");
 		ManualAuditPage.Return(driver).click();
 		new Select(ManualAuditPage.ReturnCause(driver)).selectByIndex(1);
-		ManualAuditPage.ReturnDesc(driver).sendKeys("ÈË¹¤ÉóºËÍË»Ø");
+		ManualAuditPage.ReturnDesc(driver).sendKeys("äººå·¥å®¡æ ¸é€€å›");
 		ManualAuditPage.ReturnSubmit(driver).click();
 		Thread.sleep(2000);
 		ManualAuditPage.ReturnSubmitConfirm(driver).click();
@@ -63,49 +63,48 @@ public class ManualAuditAction {
 	public void SaveOff() throws InterruptedException {
 		Thread.sleep(5000);
 		String app = ManualAuditPage.App(driver).getText();
-		Log.info("µ±Ç°ÉóºË¹¤µ¥Îª£º" + app + "ÉóºË×´Ì¬£ºÔİ´æ");
+		Log.info("å½“å‰å®¡æ ¸å·¥å•ä¸ºï¼š" + app + "å®¡æ ¸çŠ¶æ€ï¼šæš‚å­˜");
 		ManualAuditPage.SaveOff(driver).click();
 		ManualAuditPage.SaveOffConfirm(driver).click();
 	}
 
-	public void Audit1(String nciic, String nciicPic)
+	public void Audit1(int nciic, int nciicPic)
 			throws InterruptedException {
 		Thread.sleep(5000);
 		String app = ManualAuditPage.App(driver).getText();
-		Log.info("µ±Ç°ÉóºË¹¤µ¥Îª£º" + app + "ÉóºË×´Ì¬£ºÈË¹¤³õ²½ÉóºË");
+		Log.info("å½“å‰å®¡æ ¸å·¥å•ä¸ºï¼š" + app + "å®¡æ ¸çŠ¶æ€ï¼šäººå·¥åˆæ­¥å®¡æ ¸");
 		Thread.sleep(2000);
 		String nciicAuto = ManualAuditPage.NciicAuto(driver).getText();
 		Log.info(nciicAuto);
 		Thread.sleep(2000);
-		new Select(ManualAuditPage.NciicCheck(driver))
-				.selectByVisibleText(nciic);
+		new Select(ManualAuditPage.NciicCheck(driver)).selectByIndex(nciic);	
 		Thread.sleep(2000);
 		new Select(ManualAuditPage.NciicPic(driver))
-				.selectByVisibleText(nciicPic);
+		.selectByIndex(nciicPic);
 		Thread.sleep(2000);
 		ManualAuditPage.Remarks(driver).sendKeys("test");
 		Thread.sleep(2000);
 		ManualAuditPage.Next(driver).click();
 	}
 
-	public void Audit2(String shebao, String xuexin, String storepic,
-			String sellpic) throws InterruptedException {
+	public void Audit2(int shebao, int xuexin, int storepic,
+			int sellpic) throws InterruptedException {
 		Thread.sleep(2000);
 		String cardinfo = ManualAuditPage.CardCheck(driver).getText();
 		// String sellinfo=ManualAuditPage.SellRemarks(driver).getText();
 		// String pysdt=ManualAuditPage.PySdt(driver).getText();
-		// Log.info(cardinfo+"\n"+sellinfo+"\n"+pysdt); //Òò¹ö¶¯À¸ÎŞ·¨»ñÈ¡ÏúÊÛ±¸×¢ºÍÑ§ĞÅÍø²éÑ¯½á¹û£¿
+		// Log.info(cardinfo+"\n"+sellinfo+"\n"+pysdt); //å› æ»šåŠ¨æ æ— æ³•è·å–é”€å”®å¤‡æ³¨å’Œå­¦ä¿¡ç½‘æŸ¥è¯¢ç»“æœï¼Ÿ
 		Log.info(cardinfo);
 		Thread.sleep(2000);
-		new Select(ManualAuditPage.SheBao(driver)).selectByVisibleText(shebao);
+		new Select(ManualAuditPage.SheBao(driver)).selectByIndex(shebao);
 		Thread.sleep(2000);
-		new Select(ManualAuditPage.XueXin(driver)).selectByVisibleText(xuexin);
+		new Select(ManualAuditPage.XueXin(driver)).selectByIndex(xuexin);
 		Thread.sleep(2000);
 		new Select(ManualAuditPage.StorePic(driver))
-				.selectByVisibleText(storepic);
+				.selectByIndex(storepic);
 		Thread.sleep(2000);
 		new Select(ManualAuditPage.SellPic(driver))
-				.selectByVisibleText(sellpic);
+				.selectByIndex(sellpic);
 		Thread.sleep(2000);
 		ManualAuditPage.Next(driver).click();
 	}
@@ -127,7 +126,7 @@ public class ManualAuditAction {
 		new Select(ManualAuditPage.State(driver)).selectByVisibleText(state);
 		Thread.sleep(2000);
 		ManualAuditPage.Remark(driver).sendKeys(remark);
-		ManualAuditPage.Save(driver).click();// ±£´æĞÂÔö±¾ÈËÁªÏµĞÅÏ¢
+		ManualAuditPage.Save(driver).click();// ä¿å­˜æ–°å¢æœ¬äººè”ç³»ä¿¡æ¯
 		Thread.sleep(2000);
 		ManualAuditPage.Determine(driver).click();
 		Thread.sleep(1000);
@@ -152,7 +151,7 @@ public class ManualAuditAction {
 		Thread.sleep(2000);
 		ManualAuditPage.Remark(driver).sendKeys(remark);
 		Thread.sleep(2000);
-		ManualAuditPage.Cancle(driver).click();// È¡ÏûĞÂÔö±¾ÈËÁªÏµĞÅÏ¢
+		ManualAuditPage.Cancle(driver).click();// å–æ¶ˆæ–°å¢æœ¬äººè”ç³»ä¿¡æ¯
 		ManualAuditPage.Back(driver).click();
 	}
 
@@ -165,56 +164,58 @@ public class ManualAuditAction {
 		Thread.sleep(2000);
 	}
 
-	public void Audit4(String OfficeTelephone, String Phone, String Check,
-			String FamilyPhone, String Familytelephone, String Otherphone,
-			String ID5) throws Exception {
+	public void Audit4(
+//			String OfficeTelephone, String Phone, String Check,
+//			String FamilyPhone, String Familytelephone, String Otherphone,
+//			String ID5
+			) throws Exception {
 
 		Thread.sleep(2000);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		List<WebElement> elements = driver.findElements(By.tagName("select"));
-		int number = elements.size();// ·ÖÊı´óÓÚ525Ê±×Ü¹²ÓĞ8¸ö£¬Ğ¡ÓÚµÈÓÚ525Ê±¹²12¸ö
+		int number = elements.size();// åˆ†æ•°å¤§äº525æ—¶æ€»å…±æœ‰8ä¸ªï¼Œå°äºç­‰äº525æ—¶å…±12ä¸ª
 		if (number == 8) {
-			System.out.println("ÏÂÀ­¿ò¸öÊıÎª4");
+			System.out.println("ä¸‹æ‹‰æ¡†ä¸ªæ•°ä¸º4");
 			Thread.sleep(2000);
 			new Select(ManualAuditPage.OfficeTelephone(driver))
-					.selectByVisibleText(OfficeTelephone);
+			.selectByIndex(3);
 			new Select(ManualAuditPage.PhoneCheck(driver))
-					.selectByVisibleText(Phone);
+			.selectByIndex(1);
 			new Select(ManualAuditPage.Check(driver))
-					.selectByVisibleText(Check);
+			.selectByIndex(5);
 			new Select(ManualAuditPage.FamilyPhone(driver))
-					.selectByVisibleText(FamilyPhone);
+			.selectByIndex(2);
 		} else {
-			if (number == 12) {// Òò¹ö¶¯À¸Ô­ÒòÔİÎ´½â¾ö¶¨Î»ÎÊÌâ
-				System.out.println("ÏÂÀ­¿ò¸öÊıÎª7");
+			if (number == 12) {// å› æ»šåŠ¨æ åŸå› æš‚æœªè§£å†³å®šä½é—®é¢˜
+				System.out.println("ä¸‹æ‹‰æ¡†ä¸ªæ•°ä¸º7");
 				Thread.sleep(2000);
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				new Select(ManualAuditPage.OfficeTelephone(driver))
-						.selectByVisibleText(OfficeTelephone);// ÉêÇëÈË°ì¹«µç»°ºËÊµ:
+				.selectByIndex(3);// ç”³è¯·äººåŠå…¬ç”µè¯æ ¸å®:
 				new Select(ManualAuditPage.PhoneCheck(driver))
-						.selectByVisibleText(Phone);// ÉêÇëÈËÊÖ»úµç»°ºËÊµ:
+				.selectByIndex(1);// ç”³è¯·äººæ‰‹æœºç”µè¯æ ¸å®:
 				new Select(ManualAuditPage.ID5(driver))
-						.selectByVisibleText(ID5);// ID5°ì¹«µç»°ºË²é
+				.selectByIndex(1);// ID5åŠå…¬ç”µè¯æ ¸æŸ¥
 				new Select(ManualAuditPage.Check(driver))
-						.selectByVisibleText(Check);// Ö÷¹ÛÅĞ¶Ï½á¹û
+				.selectByIndex(5);// ä¸»è§‚åˆ¤æ–­ç»“æœ
 				new Select(ManualAuditPage.Otherphone(driver))
-						.selectByVisibleText(Otherphone);// ÉêÇëÈËÆäËûÁªÏµÈËµÄÊÖ»úµç»°ºËÊµ:
+				.selectByIndex(2);// ç”³è¯·äººå…¶ä»–è”ç³»äººçš„æ‰‹æœºç”µè¯æ ¸å®:
 				new Select(ManualAuditPage.FamilyPhone(driver))
-						.selectByVisibleText(FamilyPhone);// ÉêÇëÈË¼ÒÍ¥³ÉÔ±µç»°ºËÊµ:
+				.selectByIndex(2);// ç”³è¯·äººå®¶åº­æˆå‘˜ç”µè¯æ ¸å®:
 				new Select(ManualAuditPage.Familytelephone(driver))
-						.selectByVisibleText(Familytelephone);// ÉêÇëÈË¼ÒÍ¥×ù»úµç»°ºËÊµ:
+				.selectByIndex(2);// ç”³è¯·äººå®¶åº­åº§æœºç”µè¯æ ¸å®:
 			}
 		}
 		Thread.sleep(2000);
-		// ManualAuditPage.SaveOff(driver).click();// Ôİ´æ
+		// ManualAuditPage.SaveOff(driver).click();// æš‚å­˜
 		// Thread.sleep(2000);
 		// ManualAuditPage.SaveOffComfirm(driver).click();
 		ManualAuditPage.Confirm(driver).click();
 		Thread.sleep(2000);
-		ManualAuditPage.Commit(driver).click();// Ìá½»
+		ManualAuditPage.Commit(driver).click();// æäº¤
 		Thread.sleep(2000);
-		ManualAuditPage.Determine(driver).click();// È·ÈÏ
+		ManualAuditPage.Determine(driver).click();// ç¡®è®¤
 		Thread.sleep(2000);
-		ManualAuditPage.Determine(driver).click();// È·ÈÏ
+		ManualAuditPage.Determine(driver).click();// ç¡®è®¤
 	}
 }

@@ -7,9 +7,9 @@ import com.oc.page.HomePage;
 
 public class LogoutAction {
 	  private WebDriver driver;
-	    //1£©¹¹Ôì·½·¨µÄ·½·¨Ãû±ØĞëÓëÀàÃûÏàÍ¬¡£
-	    //2£©¹¹Ôì·½·¨Ã»ÓĞ·µ»ØÀàĞÍ£¬Ò²²»ÄÜ¶¨ÒåÎªvoid£¬ÔÚ·½·¨ÃûÇ°Ãæ²»ÉùÃ÷·½·¨ÀàĞÍ¡£
-	    //3£©¹¹Ôì·½·¨µÄÖ÷Òª×÷ÓÃÊÇÍê³É¶ÔÏóµÄ³õÊ¼»¯¹¤×÷£¬ËüÄÜ¹»°Ñ¶¨Òå¶ÔÏóÊ±µÄ²ÎÊı´«¸ø¶ÔÏóµÄÓò¡£
+	    //1ï¼‰æ„é€ æ–¹æ³•çš„æ–¹æ³•åå¿…é¡»ä¸ç±»åç›¸åŒã€‚
+	    //2ï¼‰æ„é€ æ–¹æ³•æ²¡æœ‰è¿”å›ç±»å‹ï¼Œä¹Ÿä¸èƒ½å®šä¹‰ä¸ºvoidï¼Œåœ¨æ–¹æ³•åå‰é¢ä¸å£°æ˜æ–¹æ³•ç±»å‹ã€‚
+	    //3ï¼‰æ„é€ æ–¹æ³•çš„ä¸»è¦ä½œç”¨æ˜¯å®Œæˆå¯¹è±¡çš„åˆå§‹åŒ–å·¥ä½œï¼Œå®ƒèƒ½å¤ŸæŠŠå®šä¹‰å¯¹è±¡æ—¶çš„å‚æ•°ä¼ ç»™å¯¹è±¡çš„åŸŸã€‚
 	    public LogoutAction(WebDriver driver){
 	        this.driver = driver;
 	    }
@@ -17,7 +17,7 @@ public class LogoutAction {
 	    	HomePage.LogOut(driver).click();
 	    }
 	    
-	    //·µ»Ødriver
+	    //è¿”å›driver
 	    public WebDriver ReturnDriver(){
 	        return this.driver;
 	    }   

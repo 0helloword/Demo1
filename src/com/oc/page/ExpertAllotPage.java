@@ -8,47 +8,47 @@ public class ExpertAllotPage {
 	 private static WebElement element;
 	    
 	    public static WebElement QueryButton(WebDriver driver){
-	        element = driver.findElement(By.cssSelector("button.btn.blue-madison"));//²éÑ¯°´¼ü
+	        element = driver.findElement(By.cssSelector("button.btn.blue-madison"));//æŸ¥è¯¢æŒ‰é”®
 	        return element;
 	    }
 	    
 	    public static WebElement ResetButton(WebDriver driver){
-	        element = driver.findElement(By.cssSelector("button.btn.red-pink"));//ÖØÖÃ°´¼ü
+	        element = driver.findElement(By.cssSelector("button.btn.red-pink"));//é‡ç½®æŒ‰é”®
 	        return element;
 	    }
 	    
 	    public static WebElement AllotState(WebDriver driver){
-	        element = driver.findElement(By.id("assignStatus"));//²éÑ¯Ìõ¼ş-·ÖÅä×´Ì¬
+	        element = driver.findElement(By.id("assignStatus"));//æŸ¥è¯¢æ¡ä»¶-åˆ†é…çŠ¶æ€
 	        return element;
 	    }
 	    
 	    public static WebElement App(WebDriver driver){
-	        element = driver.findElement(By.name("id"));//²éÑ¯Ìõ¼ş-¹¤µ¥±àºÅ
+	        element = driver.findElement(By.name("id"));//æŸ¥è¯¢æ¡ä»¶-å·¥å•ç¼–å·
 	        return element;
 	    }
 	    
 	    public static WebElement Id(WebDriver driver){
-	        element = driver.findElement(By.name("ids"));//¹´Ñ¡¿ò
+	        element = driver.findElement(By.name("ids"));//å‹¾é€‰æ¡†
 	        return element;
 	    }
 	    
 	    public static WebElement Alloter(WebDriver driver){
-	        element = driver.findElement(By.id("executorId"));//ÉóºËÈËÉ¸Ñ¡¿ò
+	        element = driver.findElement(By.id("executorId"));//å®¡æ ¸äººç­›é€‰æ¡†
 	        return element;
 	    }
 	    
 	    public static WebElement Allot(WebDriver driver){
-	        element = driver.findElement(By.xpath("//button[@onclick='validateAssign()']"));//µ÷µ¥·ÖÅä
+	        element = driver.findElement(By.xpath("//button[@onclick='validateAssign()']"));//è°ƒå•åˆ†é…
 	        return element;
 	    }
 	    
 	    public static WebElement Comfirm(WebDriver driver){
-	        element = driver.findElement(By.xpath("(//button[@type='button'])[10]"));//µ÷µ¥·ÖÅäÈ·¶¨°´¼ü
+	        element = driver.findElement(By.xpath("(//button[@type='button'])[10]"));//è°ƒå•åˆ†é…ç¡®å®šæŒ‰é”®
 	        return element;
 	    }
 	    
 	    public static WebElement Up(WebDriver driver){
-	        element = driver.findElement(By.className("icon-arrow-up"));//ÏòÉÏ°´¼ü
+	        element = driver.findElement(By.className("icon-arrow-up"));//å‘ä¸ŠæŒ‰é”®
 	        return element;
 	    }
 }

@@ -8,81 +8,81 @@ public class HomePageAction {
 
 	private WebDriver driver;
 
-	// 1£©¹¹Ôì·½·¨µÄ·½·¨Ãû±ØĞëÓëÀàÃûÏàÍ¬¡£
-	// 2£©¹¹Ôì·½·¨Ã»ÓĞ·µ»ØÀàĞÍ£¬Ò²²»ÄÜ¶¨ÒåÎªvoid£¬ÔÚ·½·¨ÃûÇ°Ãæ²»ÉùÃ÷·½·¨ÀàĞÍ¡£
-	// 3£©¹¹Ôì·½·¨µÄÖ÷Òª×÷ÓÃÊÇÍê³É¶ÔÏóµÄ³õÊ¼»¯¹¤×÷£¬ËüÄÜ¹»°Ñ¶¨Òå¶ÔÏóÊ±µÄ²ÎÊı´«¸ø¶ÔÏóµÄÓò¡£
+	// 1ï¼‰æ„é€ æ–¹æ³•çš„æ–¹æ³•åå¿…é¡»ä¸ç±»åç›¸åŒã€‚
+	// 2ï¼‰æ„é€ æ–¹æ³•æ²¡æœ‰è¿”å›ç±»å‹ï¼Œä¹Ÿä¸èƒ½å®šä¹‰ä¸ºvoidï¼Œåœ¨æ–¹æ³•åå‰é¢ä¸å£°æ˜æ–¹æ³•ç±»å‹ã€‚
+	// 3ï¼‰æ„é€ æ–¹æ³•çš„ä¸»è¦ä½œç”¨æ˜¯å®Œæˆå¯¹è±¡çš„åˆå§‹åŒ–å·¥ä½œï¼Œå®ƒèƒ½å¤ŸæŠŠå®šä¹‰å¯¹è±¡æ—¶çš„å‚æ•°ä¼ ç»™å¯¹è±¡çš„åŸŸã€‚
 
 	public HomePageAction(WebDriver driver) {
 		this.driver = driver;
 	}
 
-	// ¹¤µ¥²éÑ¯
+	// å·¥å•æŸ¥è¯¢
 	public void AppQuery() {
 		HomePage.AppQuery(driver).click();
 
 	}
 
-	// ÈË¹¤ÉóºË
+	// äººå·¥å®¡æ ¸
 	public void ManualAudit() throws InterruptedException {
 		Thread.sleep(2000);
 		HomePage.ManualAudit(driver).click();
 	}
 
-	// ³õ²½ÉóºË-pos
+	// åˆæ­¥å®¡æ ¸-pos
 	public void ManualAuditPos() throws InterruptedException {
 		Thread.sleep(2000);
 		HomePage.ManualAuditPos(driver).click();
 	}
 
-	// ÉóºË·Öµ¥-pos
+	// å®¡æ ¸åˆ†å•-pos
 	public void ManualAllotPos() throws InterruptedException {
 		Thread.sleep(1000);
 		HomePage.ManualAllotPos(driver).click();
 	}
 
-	// ³õ²½ÉóºË-cash
+	// åˆæ­¥å®¡æ ¸-cash
 	public void ManualAuditCash() throws InterruptedException {
 		Thread.sleep(2000);
 		HomePage.ManualAuditCash(driver).click();
 	}
 
-	// ÉóºË·Öµ¥-cash
+	// å®¡æ ¸åˆ†å•-cash
 	public void ManualAllotCash() throws InterruptedException {
 		Thread.sleep(1000);
 		HomePage.ManualAllotCash(driver).click();
 	}
 
-	// ×¨¼ÒÉóÅú
+	// ä¸“å®¶å®¡æ‰¹
 	public void ExpertAudit() throws InterruptedException {
 		Thread.sleep(5000);
 		HomePage.ExpertAudit(driver).click();
 	}
 
-	// ³õ²½ÉóÅú-pos
+	// åˆæ­¥å®¡æ‰¹-pos
 	public void ExpertAuditPos() throws InterruptedException {
 		Thread.sleep(2000);
 		HomePage.ExpertAuditPos(driver).click();
 	}
 
-	// ÉóÅú·Öµ¥-pos
+	// å®¡æ‰¹åˆ†å•-pos
 	public void ExpertAllotPos() throws InterruptedException {
 		Thread.sleep(1000);
 		HomePage.ExpertAllotPos(driver).click();
 	}
 
-	// ³õ²½ÉóÅú-cash
+	// åˆæ­¥å®¡æ‰¹-cash
 	public void ExpertAuditCash() throws InterruptedException {
 		Thread.sleep(2000);
 		HomePage.ExpertAuditCash(driver).click();
 	}
 
-	// ÉóÅú·Öµ¥-cash
+	// å®¡æ‰¹åˆ†å•-cash
 	public void ExpertAllotCash() throws InterruptedException {
 		Thread.sleep(1000);
 		HomePage.ExpertAllotCash(driver).click();
 	}
 
-	// ·µ»Ødriver
+	// è¿”å›driver
 	public WebDriver ReturnDriver() {
 		return this.driver;
 	}

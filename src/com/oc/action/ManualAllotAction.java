@@ -15,7 +15,7 @@ public class ManualAllotAction {
 		this.driver = driver;
 	}
 	
-	// °´¼ü²âÊÔ
+	// æŒ‰é”®æµ‹è¯•
 	 public void AuditAllotButton() throws InterruptedException{
 		  Thread.sleep(2000);
 		  ManualAllotPage.QueryButton(driver).click();
@@ -38,7 +38,7 @@ public class ManualAllotAction {
 	
 	public void AllotApp(String username,String app) throws InterruptedException {
 		Thread.sleep(2000);
-		//new Select(AuditAllotPage_pos.AllotState(driver)).selectByVisibleText("Î´·ÖÅä");
+		//new Select(AuditAllotPage_pos.AllotState(driver)).selectByVisibleText("æœªåˆ†é…");
 		ManualAllotPage.App(driver).sendKeys(app);
 		Thread.sleep(2000);
 		ManualAllotPage.QueryButton(driver).click();

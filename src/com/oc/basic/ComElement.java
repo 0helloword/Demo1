@@ -9,37 +9,37 @@ public class ComElement {
 	  private static WebElement element;
 	
 	 public static WebElement NextPage(WebDriver driver){
-	        element = driver.findElement(By.linkText("ÏÂÒ»Ò³"));//ÏÂÒ»Ò³°´¼ü
+	        element = driver.findElement(By.linkText("ä¸‹ä¸€é¡µ"));//ä¸‹ä¸€é¡µæŒ‰é”®
 	        return element;
 	    }
 	
 	    public static WebElement PreviousPage(WebDriver driver){
-	        element = driver.findElement(By.linkText("ÉÏÒ»Ò³"));//ÉÏÒ»Ò³°´¼ü
+	        element = driver.findElement(By.linkText("ä¸Šä¸€é¡µ"));//ä¸Šä¸€é¡µæŒ‰é”®
 	        return element;
 	    }
 	
 	    public static WebElement FirstPage(WebDriver driver){
-	        element = driver.findElement(By.linkText("µÚÒ»Ò³"));//µÚÒ»Ò³°´¼ü
+	        element = driver.findElement(By.linkText("ç¬¬ä¸€é¡µ"));//ç¬¬ä¸€é¡µæŒ‰é”®
 	        return element;
 	    }
 	    
 	    public static WebElement LastPage(WebDriver driver){
-	        element = driver.findElement(By.linkText("×îºóÒ»Ò³"));//×îºóÒ»Ò³°´¼ü
+	        element = driver.findElement(By.linkText("æœ€åä¸€é¡µ"));//æœ€åä¸€é¡µæŒ‰é”®
 	        return element;
 	    }
 	    
 	    public static WebElement Go(WebDriver driver){
-	        element = driver.findElement(By.linkText("go"));//go°´¼ü
+	        element = driver.findElement(By.linkText("go"));//goæŒ‰é”®
 	        return element;
 	    }
 	    
 	    public static WebElement PageInput(WebDriver driver){
-	        element = driver.findElement(By.id("pageInput"));//ÊäÈëÒ³Âë
+	        element = driver.findElement(By.id("pageInput"));//è¾“å…¥é¡µç 
 	        return element;
 	    }
 	    
 	    public static WebElement table(WebDriver driver){
-	        element = driver.findElement(By.xpath("//table"));//±í¸ñ¼ÇÂ¼
+	        element = driver.findElement(By.xpath("//table"));//è¡¨æ ¼è®°å½•
 	        return element;
 	    }
 	    

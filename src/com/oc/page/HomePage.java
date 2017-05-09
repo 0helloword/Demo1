@@ -1,4 +1,4 @@
-//ÏµÍ³Ö÷Ò³ÃæµÄ²Ëµ¥¶ÔÏó
+//ç³»ç»Ÿä¸»é¡µé¢çš„èœå•å¯¹è±¡
 package com.oc.page;
 
 import org.openqa.selenium.By;
@@ -11,72 +11,72 @@ public class HomePage {
 	
 	
      public static WebElement AppQuery(WebDriver driver){
-        element = driver.findElement(By.xpath("//li[3]/a/span"));//¹¤µ¥²éÑ¯
+        element = driver.findElement(By.xpath("//li[3]/a/span"));//å·¥å•æŸ¥è¯¢
         return element;
     }
     
     public static WebElement ManualAudit(WebDriver driver){
-        element = driver.findElement(By.xpath("//li[4]/a/span"));//ÈË¹¤ÉóºË
+        element = driver.findElement(By.xpath("//li[4]/a/span"));//äººå·¥å®¡æ ¸
         return element;
     }
     
     public static WebElement ManualAuditPos(WebDriver driver){
-        element = driver.findElement(By.linkText("³õ²½ÉóºË£¨POS£©"));//³õ²½ÉóºËpos
+        element = driver.findElement(By.linkText("åˆæ­¥å®¡æ ¸ï¼ˆPOSï¼‰"));//åˆæ­¥å®¡æ ¸pos
         return element;
     }
     
     public static WebElement ManualAllotPos(WebDriver driver){
-        element = driver.findElement(By.linkText("ÉóºË·Öµ¥£¨POS£©"));//ÉóºË·Öµ¥pos
+        element = driver.findElement(By.linkText("å®¡æ ¸åˆ†å•ï¼ˆPOSï¼‰"));//å®¡æ ¸åˆ†å•pos
         return element;
     }
     
     public static WebElement ManualAuditCash(WebDriver driver){
-        element = driver.findElement(By.linkText("³õ²½ÉóºË£¨CASH£©"));//³õ²½ÉóºËcash
+        element = driver.findElement(By.linkText("åˆæ­¥å®¡æ ¸ï¼ˆCASHï¼‰"));//åˆæ­¥å®¡æ ¸cash
         return element;
     }
     
     public static WebElement ManualAllotCash(WebDriver driver){
-        element = driver.findElement(By.linkText("ÉóºË·Öµ¥£¨CASH£©"));//ÉóºË·Öµ¥cash
+        element = driver.findElement(By.linkText("å®¡æ ¸åˆ†å•ï¼ˆCASHï¼‰"));//å®¡æ ¸åˆ†å•cash
         return element;
     }
     
     public static WebElement ExpertAudit(WebDriver driver){
-        element = driver.findElement(By.xpath("//li[5]/a/span"));//×¨¼ÒÉóÅú
+        element = driver.findElement(By.xpath("//li[5]/a/span"));//ä¸“å®¶å®¡æ‰¹
         return element;
     }
     
     public static WebElement ExpertAuditPos(WebDriver driver){
-        element = driver.findElement(By.linkText("³õ²½ÉóÅú£¨POS£©"));//³õ²½ÉóÅúpos
+        element = driver.findElement(By.linkText("åˆæ­¥å®¡æ‰¹ï¼ˆPOSï¼‰"));//åˆæ­¥å®¡æ‰¹pos
         return element;
     }
     
     public static WebElement ExpertAllotPos(WebDriver driver){
-        element = driver.findElement(By.linkText("ÉóÅú·Öµ¥£¨POS£©"));//ÉóÅú·Öµ¥pos
+        element = driver.findElement(By.linkText("å®¡æ‰¹åˆ†å•ï¼ˆPOSï¼‰"));//å®¡æ‰¹åˆ†å•pos
         return element;
     }
     
     public static WebElement ExpertAuditCash(WebDriver driver){
-        element = driver.findElement(By.linkText("³õ²½ÉóÅú£¨CASH£©"));//³õ²½ÉóÅúcash
+        element = driver.findElement(By.linkText("åˆæ­¥å®¡æ‰¹ï¼ˆCASHï¼‰"));//åˆæ­¥å®¡æ‰¹cash
         return element;
     }
     
     public static WebElement ExpertAllotCash(WebDriver driver){
-        element = driver.findElement(By.linkText("ÉóÅú·Öµ¥£¨CASH£©"));//ÉóÅú·Öµ¥cash
+        element = driver.findElement(By.linkText("å®¡æ‰¹åˆ†å•ï¼ˆCASHï¼‰"));//å®¡æ‰¹åˆ†å•cash
         return element;
     }
     
     public static WebElement CustInfo(WebDriver driver){
-        element = driver.findElement(By.xpath("//li[6]/a/span"));//¿Í»§ĞÅÏ¢
+        element = driver.findElement(By.xpath("//li[6]/a/span"));//å®¢æˆ·ä¿¡æ¯
         return element;
     }
     
     public static WebElement TeleRepertory(WebDriver driver){
-        element = driver.findElement(By.linkText("µç»°²Ö¿â"));//µç»°²Ö¿â
+        element = driver.findElement(By.linkText("ç”µè¯ä»“åº“"));//ç”µè¯ä»“åº“
         return element;
     }  
     
     public static WebElement LogOut(WebDriver driver){
-        element = driver.findElement(By.className("icon-logout"));//ÍË³öµÇÂ¼
+        element = driver.findElement(By.className("icon-logout"));//é€€å‡ºç™»å½•
         return element;
     }  
 }  

@@ -4,8 +4,8 @@
 <suite name="oc_process" >
 <!-- listener类在reportng-1.1.5.jar中 -->
   <listeners>
-            <listener class-name="org.uncommons.reportng.HTMLReporter" />
-            <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+            <!--listener class-name="org.uncommons.reportng.HTMLReporter"/-->
+            <!-- listener class-name="org.uncommons.reportng.JUnitXMLReporter"/-->
             <listener class-name="listeners.myListener" />
         </listeners>
     <test name="oc" >  
@@ -15,13 +15,13 @@
 		<parameter name="password" value="cyj123" />
 		<parameter name="loginname" value="xiaola" />
 		<!-- 以下为需要修改的参数 -->
-		<parameter name="appid_pos" value="35441748"/>
+		<parameter name="appid_pos" value="35442040"/>
 		<parameter name="appid_cash" value="35442048"/>	
 		<classes >
 		<class name="com.oc.testng.OcProcess" >
 		<methods>
 					<include name="Login" />
-				    <include name="ManualAllot_pos" />
+				    <exclude name="ManualAllot_pos" />
 				    <include name="ManualAudit_pos" />
 					<exclude name="ManualAuditReturn_pos" />
 					<include name="ExpertAllot_pos" />

@@ -14,15 +14,15 @@ public class Table {
 	}
 
 	public void TableTest(String appstate) throws InterruptedException {
-			ComElement.LastPage(driver).click();//ÇĞ»»µ½×îºóÒ»Ò³£¬»ñÈ¡Ò³Âë£¬Í¨¹ı£¨×ÜÒ³ÂëÊı-1£©*Ã¿Ò³¼ÇÂ¼ÌõÊı+×îºóÒ»Ò³¼ÇÂ¼ÌõÊı=×ÜÌõÊı
+			ComElement.LastPage(driver).click();//åˆ‡æ¢åˆ°æœ€åä¸€é¡µï¼Œè·å–é¡µç ï¼Œé€šè¿‡ï¼ˆæ€»é¡µç æ•°-1ï¼‰*æ¯é¡µè®°å½•æ¡æ•°+æœ€åä¸€é¡µè®°å½•æ¡æ•°=æ€»æ¡æ•°
 			Thread.sleep(2000);
 			String pages = ComElement.PageInput(driver).getAttribute("value");
-			int pagenum = Integer.parseInt(pages)-1;//×ÜÒ³ÂëÊı¼õÈ¥1
+			int pagenum = Integer.parseInt(pages)-1;//æ€»é¡µç æ•°å‡å»1
 			WebElement table = ComElement.table(driver);
-			List<WebElement> rows = table.findElements(By.tagName("tr"));//»ñÈ¡×îºóÒ»Ò³µÄtr¼ÇÂ¼
-			int lastpagerow = rows.size()-1;//»ñÈ¡trµÄÌõÊı£¬°üÀ¨±êÌâÀ¸
+			List<WebElement> rows = table.findElements(By.tagName("tr"));//è·å–æœ€åä¸€é¡µçš„trè®°å½•
+			int lastpagerow = rows.size()-1;//è·å–trçš„æ¡æ•°ï¼ŒåŒ…æ‹¬æ ‡é¢˜æ 
 			int recordnum = 20 * pagenum + lastpagerow;
-			Log.info(appstate+" ¼ÇÂ¼×ÜÌõÊıÎª£º" + recordnum);
+			Log.info(appstate+" è®°å½•æ€»æ¡æ•°ä¸ºï¼š" + recordnum);
 		}	
 	}
 

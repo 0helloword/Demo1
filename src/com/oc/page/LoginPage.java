@@ -7,21 +7,21 @@ import org.openqa.selenium.WebElement;
 public class LoginPage {
     private static WebElement element;
     
-    public static WebElement userName(WebDriver driver){//ÓÃ»§Ãû
+    public static WebElement userName(WebDriver driver){//ç”¨æˆ·å
         element = driver.findElement(By.id("username"));
         return element;
     }
     
-    public static WebElement passWord(WebDriver driver){//ÃÜÂë
+    public static WebElement passWord(WebDriver driver){//å¯†ç 
         element = driver.findElement(By.id("password"));
         return element;
     }
-    public static WebElement loginButton(WebDriver driver){//µÇÂ¼°´¼ü
+    public static WebElement loginButton(WebDriver driver){//ç™»å½•æŒ‰é”®
         element = driver.findElement(By.id("loginButton"));
         return element;
     }  
     
-    public static WebElement loginname(WebDriver driver){//µÇÂ¼°´¼ü
+    public static WebElement loginname(WebDriver driver){//ç™»å½•æŒ‰é”®
         element = driver.findElement(By.cssSelector("span.name"));
         return element;
     }

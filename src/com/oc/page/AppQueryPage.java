@@ -10,87 +10,87 @@ public class AppQueryPage {
 	    private static WebElement element;
 	    
 	    public static WebElement QueryButton(WebDriver driver){
-	        element = driver.findElement(By.cssSelector("button.btn.btn-primary"));//²éÑ¯°´¼ü"btn btn-primary"
+	        element = driver.findElement(By.cssSelector("button.btn.btn-primary"));//æŸ¥è¯¢æŒ‰é”®"btn btn-primary"
 	        return element;
 	    }
 	 	    
 	    public static WebElement ResetButton(WebDriver driver){
-	        element = driver.findElement(By.cssSelector("button.btn.red-pink"));//ÖØÖÃ°´¼ü
+	        element = driver.findElement(By.cssSelector("button.btn.red-pink"));//é‡ç½®æŒ‰é”®
 	        return element;
 	    }
 	    
 	    public static WebElement AppId(WebDriver driver){
-	        element = driver.findElement(By.id("idParam"));//²éÑ¯Ìõ¼ş-¹¤µ¥±àºÅ
+	        element = driver.findElement(By.id("idParam"));//æŸ¥è¯¢æ¡ä»¶-å·¥å•ç¼–å·
 	        return element;
 	    }
 	    
 	    public static WebElement AppState(WebDriver driver){
-	        element = driver.findElement(By.id("appState"));//²éÑ¯Ìõ¼ş-¹¤µ¥×´Ì¬
+	        element = driver.findElement(By.id("appState"));//æŸ¥è¯¢æ¡ä»¶-å·¥å•çŠ¶æ€
 	        return element;
 	    }
 	    
 	    public static WebElement AppStateValue(WebDriver driver){
-	        element = driver.findElement(By.className("label label-sm label-danger"));//²éÑ¯½á¹û¹¤µ¥×´Ì¬ÁĞÖµ
+	        element = driver.findElement(By.className("label label-sm label-danger"));//æŸ¥è¯¢ç»“æœå·¥å•çŠ¶æ€åˆ—å€¼
 	        return element;
 	    }
 
 	    public static WebElement AppLoanType(WebDriver driver){
-	        element = driver.findElement(By.id("loanType"));//²éÑ¯Ìõ¼ş-´û¿îÀàĞÍ
+	        element = driver.findElement(By.id("loanType"));//æŸ¥è¯¢æ¡ä»¶-è´·æ¬¾ç±»å‹
 	        return element;
 	    }
 	    
 	    public static WebElement App(WebDriver driver,String app){
-	        element = driver.findElement(By.linkText(app));//¹¤µ¥ÏêÇéÁ´½Ó
+	        element = driver.findElement(By.linkText(app));//å·¥å•è¯¦æƒ…é“¾æ¥
 	        return element;
 	    }
 	
 	    public static WebElement AppDtail(WebDriver driver){
-	        element = driver.findElement(By.className("page-title"));//¹¤µ¥ÏêÇéÒ³Ãæ¹¤µ¥ÏêÇé±êÌâ
+	        element = driver.findElement(By.className("page-title"));//å·¥å•è¯¦æƒ…é¡µé¢å·¥å•è¯¦æƒ…æ ‡é¢˜
 	        return element;
 	    }
 	    
 	    public static WebElement HetongZiliao(WebDriver driver){
-	        element = driver.findElement(By.linkText("ºÏÍ¬×ÊÁÏ"));//ºÏÍ¬×ÊÁÏ
+	        element = driver.findElement(By.linkText("åˆåŒèµ„æ–™"));//åˆåŒèµ„æ–™
 	        return element;
 	    }
 	    
 	    public static WebElement XieshenXinxi(WebDriver driver){
-	        element = driver.findElement(By.linkText("Ğ­ÉóĞÅÏ¢"));//Ğ­ÉóĞÅÏ¢
+	        element = driver.findElement(By.linkText("åå®¡ä¿¡æ¯"));//åå®¡ä¿¡æ¯
 	        return element;
 	    }
 	    
 	    public static WebElement ShangpinXinxi(WebDriver driver){
-	        element = driver.findElement(By.linkText("ÉÌÆ·ĞÅÏ¢"));//ÉÌÆ·ĞÅÏ¢
+	        element = driver.findElement(By.linkText("å•†å“ä¿¡æ¯"));//å•†å“ä¿¡æ¯
 	        return element;
 	    }
 	    
 	    public static WebElement UpButton(WebDriver driver){
-	        element = driver.findElement(By.className("icon-arrow-up"));//ÏòÉÏ°´¼ü
+	        element = driver.findElement(By.className("icon-arrow-up"));//å‘ä¸ŠæŒ‰é”®
 	        return element;
 	    }
 	    
 	    public static WebElement OpenButton(WebDriver driver){
-	        element = driver.findElement(By.className("collapse"));//±êÌâÉìËõ°´¼ü
+	        element = driver.findElement(By.className("collapse"));//æ ‡é¢˜ä¼¸ç¼©æŒ‰é”®
 	        return element;
 	    }
 	    
 	    public static WebElement BackButton1(WebDriver driver){
-	        element = driver.findElement(By.name("back"));//¹¤µ¥ÏêÇéÒ³Ãæ·µ»Ø°´¼ü
+	        element = driver.findElement(By.name("back"));//å·¥å•è¯¦æƒ…é¡µé¢è¿”å›æŒ‰é”®
 	        return element;
 	    }
 	    
 	    public static WebElement Check(WebDriver driver){
-	        element = driver.findElement(By.linkText("²é¿´"));//²é¿´ÉóºË¼ÇÂ¼°´¼ü
+	        element = driver.findElement(By.linkText("æŸ¥çœ‹"));//æŸ¥çœ‹å®¡æ ¸è®°å½•æŒ‰é”®
 	        return element;
 	    }
 	    
 	    public static WebElement CheckLog(WebDriver driver){
-	        element = driver.findElement(By.className("page-title"));//ÉóºË¼ÇÂ¼½çÃæÉóºË¼ÇÂ¼±êÌâ
+	        element = driver.findElement(By.className("page-title"));//å®¡æ ¸è®°å½•ç•Œé¢å®¡æ ¸è®°å½•æ ‡é¢˜
 	        return element;
 	    }
 	    
 	    public static WebElement BackButton2(WebDriver driver){
-	        element = driver.findElement(By.cssSelector("button.btn.grey-silver"));//ÉóºË¼ÇÂ¼½çÃæ·µ»Ø°´¼ü
+	        element = driver.findElement(By.cssSelector("button.btn.grey-silver"));//å®¡æ ¸è®°å½•ç•Œé¢è¿”å›æŒ‰é”®
 	        return element;
 	    }
 		}

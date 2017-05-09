@@ -21,8 +21,8 @@ public class OcFiction {
 	
 	@BeforeTest
 	public void beforeMethod() {
-		Log.startTestCase("¿ªÊ¼testcase001");
-		// ³õÊ¼»¯Àà£¬²¢´ò¿ªÁ´½Ó
+		Log.startTestCase("å¼€å§‹testcase001");
+		// åˆå§‹åŒ–ç±»ï¼Œå¹¶æ‰“å¼€é“¾æ¥
 		login = new LoginAction(webdriver);
 		webdriver.get("http://123.57.56.45:7778/OC/initLogin");
 		webdriver.manage().window().maximize();
@@ -31,62 +31,64 @@ public class OcFiction {
 
 	@Test(priority = 1)
 	public void LoginA() {
-		// µÇÂ¼
+		// ç™»å½•
 		login.Login("999111", "cyj123");
 	}
 
 //	@Test(priority = 2)
 //	public void AppQuery() throws InterruptedException {
-//		// ¹¤µ¥²éÑ¯
-//		appquery = new AppQueryAction(webdriver);// ÓÒ²à¹¤µ¥²éÑ¯¹¦ÄÜ
-//		app.AppQuery();// ×ó²à²Ëµ¥À¸¹¤µ¥²éÑ¯
-//		appquery.AppQueryButton();// ¹¤µ¥²éÑ¯½çÃæ°´¼üÑéÖ¤
+//		// å·¥å•æŸ¥è¯¢
+//		appquery = new AppQueryAction(webdriver);// å³ä¾§å·¥å•æŸ¥è¯¢åŠŸèƒ½
+//		app.AppQuery();// å·¦ä¾§èœå•æ å·¥å•æŸ¥è¯¢
+//		appquery.AppQueryButton();// å·¥å•æŸ¥è¯¢ç•Œé¢æŒ‰é”®éªŒè¯
 //		app.AppQuery();
-//		appquery.AppQueryState("ÉóºËÖĞ - ÈË¹¤ÉóºË");//É¸Ñ¡¹¦ÄÜÑéÖ¤
+//		appquery.AppQueryState("å®¡æ ¸ä¸­ - äººå·¥å®¡æ ¸");//ç­›é€‰åŠŸèƒ½éªŒè¯
 //		app.AppQuery();
-//		appquery.AppLoanType("Å©»ú´û");//É¸Ñ¡¹¦ÄÜÑéÖ¤
+//		appquery.AppLoanType("å†œæœºè´·");//ç­›é€‰åŠŸèƒ½éªŒè¯
 //		app.AppQuery();
-//		appquery.AppDtail("35442075");// ¹¤µ¥ÏêÇéÑéÖ¤
-//		appquery.CheckInfo();// ¹¤µ¥ÉóºË¼ÇÂ¼ÑéÖ¤
+//		appquery.AppDtail("35442075");// å·¥å•è¯¦æƒ…éªŒè¯
+//		appquery.CheckInfo();// å·¥å•å®¡æ ¸è®°å½•éªŒè¯
 //	}
 //	
 //	@Test(priority=3)
 //	 public void AuditAllot_pos() throws Exception {
 //		auditallot_pos=new ManualAllotAction(webdriver);
-//		app.ManualAudit();//ÈË¹¤ÉóºË
-//		app.ManualAllotPos();//ÈË¹¤ÉóºË·Öµ¥¡ª¡ªpos´û
+//		app.ManualAudit();//äººå·¥å®¡æ ¸
+//		app.ManualAllotPos();//äººå·¥å®¡æ ¸åˆ†å•â€”â€”posè´·
 //		//auditallot_pos.AuditAllotButton();
-//		auditallot_pos.AllotApp("Ğ¡À­","35442019");	 
+//		auditallot_pos.AllotApp("å°æ‹‰","35442019");	 
 //	 }
 //	
 	 @Test(priority=4)
 	 public void ManualAudit_pos() throws Exception {
-		 //ÈË¹¤³õ²½ÉóºË
+		 //äººå·¥åˆæ­¥å®¡æ ¸
 		 manualaudit_pos=new ManualAuditAction(webdriver);
-		 app.ManualAudit();  //ÈË¹¤ÉóºË
-		 app.ManualAuditPos();//³õ²½ÉóºË
+		 app.ManualAudit();  //äººå·¥å®¡æ ¸
+		 app.ManualAuditPos();//åˆæ­¥å®¡æ ¸
 		 manualaudit_pos.ContinueAudit2();
-		 manualaudit_pos.Audit1("ĞÅÏ¢ºÍÕÕÆ¬¾ùÒ»ÖÂ", "ÕÕÆ¬Ò»ÖÂ");
-		 manualaudit_pos.Audit2("Éç±£µ¥Î»Ãû³ÆÓëÉêÇë±íÒ»ÖÂ","Ñ§ĞÅÍøÒ»ÖÂ","ÕÕÆ¬Ò»ÖÂ","ÕÕÆ¬Ò»ÖÂ");
+		 manualaudit_pos.Audit1(2,1);
+		 manualaudit_pos.Audit2(1,2,1,1);
 		 manualaudit_pos.Audit3();
-		 //manualaudit.Audit4info();  //Òò¹ö¶¯À¸Ô­Òò²»ºÃ¶¨Î»£¿
-		 //manualaudit.Audit4phoneself("µ¥Î»µç»°", "18956254412", "ÉúĞ§", "test");
-		// manualaudit.Audit4phoneother("µ±¿µ", "Ç×Êô", "16589784452", "Ê§Ğ§", "test");
-		 manualaudit_pos.Audit4("ĞÅÏ¢ÒÑÑéÖ¤","ĞÅÏ¢ÒÑÑéÖ¤", "RES01", "ĞÅÏ¢ÒÑÑéÖ¤", "ĞÅÏ¢ÒÑÑéÖ¤", "ĞÅÏ¢ÒÑÑéÖ¤", "¹«Ë¾ÃûºÍµØÖ·¾ùÒ»ÖÂ");
+		 //manualaudit.Audit4info();  //å› æ»šåŠ¨æ åŸå› ä¸å¥½å®šä½ï¼Ÿ
+		 //manualaudit.Audit4phoneself("å•ä½ç”µè¯", "18956254412", "ç”Ÿæ•ˆ", "test");
+		// manualaudit.Audit4phoneother("å½“åº·", "äº²å±", "16589784452", "å¤±æ•ˆ", "test");
+		 manualaudit_pos.Audit4(
+//				 "ä¿¡æ¯å·²éªŒè¯","ä¿¡æ¯å·²éªŒè¯", "RES01", "ä¿¡æ¯å·²éªŒè¯", "ä¿¡æ¯å·²éªŒè¯", "ä¿¡æ¯å·²éªŒè¯", "å…¬å¸åå’Œåœ°å€å‡ä¸€è‡´"
+				 );
 	 }
 	 
 	 
 	
 	// @Test(priority=3)
 	// public void LogOut(){
-	// //ÍË³öµÇÂ¼
+	// //é€€å‡ºç™»å½•
 	// logout=new LogOutAction();
-	// Log.endTestCase("ÍË³öµÇÂ¼");
+	// Log.endTestCase("é€€å‡ºç™»å½•");
 	// }
 
 	// @AfterMethod
 	// public void afterMethod(){
-	// //¹Ø±Õä¯ÀÀÆ÷
+	// //å…³é—­æµè§ˆå™¨
 	// login.ReturnDriver().close();
 	// }
 	

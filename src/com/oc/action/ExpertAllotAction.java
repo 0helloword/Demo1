@@ -17,7 +17,7 @@ public class ExpertAllotAction {
 		this.driver = driver;
 	}
 
-	// °´¼ü²âÊÔ
+	// æŒ‰é”®æµ‹è¯•
 	 public void Button() throws InterruptedException{
 		  Thread.sleep(2000);
 		  ManualAllotPage.QueryButton(driver).click();
@@ -40,7 +40,7 @@ public class ExpertAllotAction {
 	
 	public void AllotApp(String username,String app) throws InterruptedException {
 		Thread.sleep(2000);
-		//new Select(AuditAllotPage_pos.AllotState(driver)).selectByVisibleText("Î´·ÖÅä");
+		//new Select(AuditAllotPage_pos.AllotState(driver)).selectByVisibleText("æœªåˆ†é…");
 		ExpertAllotPage.App(driver).sendKeys(app);
 		Thread.sleep(2000);
 		ExpertAllotPage.QueryButton(driver).click();
