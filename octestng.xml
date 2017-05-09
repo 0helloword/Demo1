@@ -15,24 +15,24 @@
 		<parameter name="password" value="cyj123" />
 		<parameter name="loginname" value="xiaola" />
 		<!-- 以下为需要修改的参数 -->
-		<parameter name="appid_pos" value="35442040"/>
+		<parameter name="appid_pos" value="35441652"/>
 		<parameter name="appid_cash" value="35442048"/>	
 		<classes >
 		<class name="com.oc.testng.OcProcess" >
 		<methods>
 					<include name="Login" />
-				    <exclude name="ManualAllot_pos" />
+				    <include name="ManualAllot_pos" />
 				    <include name="ManualAudit_pos" />
 					<exclude name="ManualAuditReturn_pos" />
 					<include name="ExpertAllot_pos" />
 					<include name="ExpertAudit_pos" />
 					<exclude name="ExpertAuditRefuse_pos" />
 					<exclude name="ExpertAuditReturn_pos"/>
-					<include name="AuditAllot_cash" />
-					<include name="ManualAudit_cash" />
+					<exclude name="AuditAllot_cash" />
+					<exclude name="ManualAudit_cash" />
 					<exclude name="ManualAuditReturn_cash" />
-					<include name="ExpertAllot_cash" />
-					<include name="ExpertAudit_cash" />
+					<exclude name="ExpertAllot_cash" />
+					<exclude name="ExpertAudit_cash" />
 					<exclude name="ExpertAuditRefuse_cash" />
 					<exclude name="ExpertAuditReturn_cash"/>
 					
