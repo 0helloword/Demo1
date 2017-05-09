@@ -6,7 +6,7 @@
   <listeners>
             <!--listener class-name="org.uncommons.reportng.HTMLReporter"/-->
             <!-- listener class-name="org.uncommons.reportng.JUnitXMLReporter"/-->
-            <listener class-name="listeners.myListener" />
+            <listener class-name="com.oc.listeners.myListener" />
         </listeners>
     <test name="oc" >  
 		<!--禁用测试报告  parameter name="userdefaultlisteners" value="false" /-->
