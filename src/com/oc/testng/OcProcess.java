@@ -61,7 +61,7 @@ public class OcProcess {
 	@Test(priority = 2)
 	public void ManualAudit_pos() throws Exception {
 		Log.info("人工审核-继续审核-pos");
-		 app.ManualAudit(); //人工审核
+		 //app.ManualAudit(); //人工审核
 		app.ManualAuditPos();// 初步审核-pos
 		manualaudit = new ManualAuditAction(webdriver);
 		manualaudit.ContinueAudit();
