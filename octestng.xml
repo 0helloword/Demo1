@@ -4,8 +4,8 @@
 <suite name="oc_process" >
 <!-- listener类在reportng-1.1.5.jar中 -->
   <listeners>
-            <!--listener class-name="org.uncommons.reportng.HTMLReporter"/-->
-            <!-- listener class-name="org.uncommons.reportng.JUnitXMLReporter"/-->
+            <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+            <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
             <listener class-name="com.oc.listeners.myListener" />
         </listeners>
     <test name="oc" >  
