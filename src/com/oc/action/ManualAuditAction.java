@@ -210,7 +210,7 @@ public class ManualAuditAction {
 		// ManualAuditPage.SaveOff(driver).click();// 暂存
 		// Thread.sleep(2000);
 		// ManualAuditPage.SaveOffComfirm(driver).click();
-		ManualAuditPage.Confirm(driver).click();
+		ManualAuditPage.Confirm(driver).click();//确认
 		Thread.sleep(2000);
 		ManualAuditPage.Commit(driver).click();// 提交
 		Thread.sleep(2000);

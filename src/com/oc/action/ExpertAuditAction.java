@@ -129,7 +129,7 @@ public class ExpertAuditAction {
 		Thread.sleep(2000);
 		ExpertAuditPage.Commit(driver).click();//提交
 		Thread.sleep(2000);
-		ExpertAuditPage.CommitCom(driver).sendKeys("test");;//输入备注
+		ExpertAuditPage.CommitCom(driver).sendKeys("test");//输入备注
 		Thread.sleep(2000);
 		ExpertAuditPage.CommitConfirm(driver).click();//确认
 		Thread.sleep(2000);

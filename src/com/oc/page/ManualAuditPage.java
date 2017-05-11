@@ -256,7 +256,7 @@ public class ManualAuditPage {
 	    }
 	    
 	    public static WebElement Confirm(WebDriver driver){
-	        element = driver.findElement(By.cssSelector("i.fa.fa-check"));//确认
+	        element = driver.findElement(By.linkText("确认"));//确认
 	        return element;
 	    }
 	    
