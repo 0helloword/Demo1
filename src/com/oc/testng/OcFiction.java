@@ -1,7 +1,7 @@
 package com.oc.testng;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -16,8 +16,8 @@ public class OcFiction {
 	AppQueryAction appquery = null;
 	ManualAuditAction manualaudit_pos=null;
 	ManualAllotAction auditallot_pos=null;
-	WebDriver webdriver = new FirefoxDriver();
 	
+	WebDriver webdriver = new ChromeDriver();
 	
 	@BeforeTest
 	public void beforeMethod() {
@@ -72,9 +72,7 @@ public class OcFiction {
 		 //manualaudit.Audit4info();  //因滚动栏原因不好定位？
 		 //manualaudit.Audit4phoneself("单位电话", "18956254412", "生效", "test");
 		// manualaudit.Audit4phoneother("当康", "亲属", "16589784452", "失效", "test");
-		 manualaudit_pos.Audit4(
-//				 "信息已验证","信息已验证", "RES01", "信息已验证", "信息已验证", "信息已验证", "公司名和地址均一致"
-				 );
+		 manualaudit_pos.Audit4();
 	 }
 	 
 	 

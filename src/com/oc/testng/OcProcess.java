@@ -2,7 +2,6 @@ package com.oc.testng;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -25,14 +24,16 @@ public class OcProcess {
 	ExpertAuditAction expertaudit = null;
 	String appid_pos = null;
 
-	WebDriver webdriver = new FirefoxDriver();
-	//WebDriver webdriver = new ChromeDriver();
+	WebDriver webdriver = new ChromeDriver();
 
 	@Parameters({ "url_oc" })
 	@BeforeTest
 	public void beforeTest(String url_oc) {
-		Log.startTestCase("开始testcase001");
+		Log.startTestCase("开始OC审核审批测试");
 		// 初始化类，并打开链接
+		// 告诉系统chromedriver.exe的位置,可加可不加
+		System.setProperty("webdriver.chrome.driver",
+				"D:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
 		login = new LoginAction(webdriver);
 		webdriver.get(url_oc);
 		webdriver.manage().window().maximize();
@@ -40,14 +41,14 @@ public class OcProcess {
 	}
 
 	@Parameters({ "username", "password" })
-	@Test(priority = 0)
+	@Test(priority = 1)
 	public void Login(String username, String password) {
 		// 登录
 		login.Login(username, password);
 	}
 
 	@Parameters({ "loginname", "appid_pos" })
-	@Test(priority = 1)
+	@Test(priority = 2)
 	public void ManualAllot_pos(String loginname, String appid_pos)
 			throws Exception {
 		Log.info("人工审核分单-pos");
@@ -58,24 +59,24 @@ public class OcProcess {
 		Reporter.log("人工审核分单-pos");
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 3)
 	public void ManualAudit_pos() throws Exception {
 		Log.info("人工审核-继续审核-pos");
-		 //app.ManualAudit(); //人工审核
+		// app.ManualAudit(); //人工审核
 		app.ManualAuditPos();// 初步审核-pos
 		manualaudit = new ManualAuditAction(webdriver);
 		manualaudit.ContinueAudit();
-		manualaudit.Audit1(2,1);
-		manualaudit.Audit2(1,2,1,1);
+		manualaudit.Audit1(2, 1);
+		manualaudit.Audit2(1, 2, 1, 1);
 		manualaudit.Audit3();
 		manualaudit.Audit4(
-//				"信息已验证", "信息已验证", "RES05", "信息已验证", "信息已验证",
-//				"信息已验证", "公司名和地址均一致"
+		// "信息已验证", "信息已验证", "RES05", "信息已验证", "信息已验证",
+		// "信息已验证", "公司名和地址均一致"
 				);
 		Reporter.log("人工审核成功-pos");
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 3)
 	public void ManualAuditReturn_pos() throws Exception {
 		Log.info("人工审核-退回-pos");
 		// app.ManualAudit(); //人工审核
@@ -87,7 +88,7 @@ public class OcProcess {
 	}
 
 	@Parameters({ "loginname", "appid_pos" })
-	@Test(priority = 3)
+	@Test(priority = 4)
 	public void ExpertAllot_pos(String loginname, String appid_pos)
 			throws Exception {
 		Log.info("专家审批分单-pos");
@@ -98,7 +99,7 @@ public class OcProcess {
 		Reporter.log("专家审批分单-pos");
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 5)
 	public void ExpertAudit_pos() throws Exception {
 		Log.info("专家审批-继续审核-pos");
 		// app.ManualAudit(); //专家审批
@@ -112,7 +113,7 @@ public class OcProcess {
 		Reporter.log("专家审批成功-pos");
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 5)
 	public void ExpertAuditRefuse_pos() throws Exception {
 		Log.info("专家审批-拒绝-pos");
 		// app.ManualAudit(); //专家审批
@@ -123,7 +124,7 @@ public class OcProcess {
 		Reporter.log("专家审批拒绝-pos");
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 5)
 	public void ExpertAuditReturn_pos() throws Exception {
 		Log.info("专家审批-退回-pos");
 		app.ExpertAudit(); // 专家审批
@@ -135,7 +136,7 @@ public class OcProcess {
 	}
 
 	@Parameters({ "loginname", "appid_cash" })
-	@Test(priority = 5)
+	@Test(priority = 6)
 	public void AuditAllot_cash(String loginname, String appid_cash)
 			throws Exception {
 		Log.info("人工审核分单-cash");
@@ -146,24 +147,24 @@ public class OcProcess {
 		Reporter.log("人工审核分单-cash");
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 7)
 	public void ManualAudit_cash() throws Exception {
 		Log.info("人工审核-继续审核-cash");
 		// app.ManualAudit(); //人工审核
 		app.ManualAuditCash();// 初步审核-cash
 		manualaudit = new ManualAuditAction(webdriver);
 		manualaudit.ContinueAudit();
-		manualaudit.Audit1(2,1);
-		manualaudit.Audit2(1,2,1,1);
+		manualaudit.Audit1(2, 1);
+		manualaudit.Audit2(1, 2, 1, 1);
 		manualaudit.Audit3();
 		manualaudit.Audit4(
-//				"信息已验证", "信息已验证", "RES01", "信息已验证", "信息已验证",
-//				"信息已验证", "公司名和地址均一致"
+		// "信息已验证", "信息已验证", "RES01", "信息已验证", "信息已验证",
+		// "信息已验证", "公司名和地址均一致"
 				);
 		Reporter.log("人工审核成功-cash");
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 7)
 	public void ManualAuditReturn_cash() throws Exception {
 		Log.info("人工审核-退回-cash");
 		// app.ManualAudit(); //人工审核
@@ -175,7 +176,7 @@ public class OcProcess {
 	}
 
 	@Parameters({ "loginname", "appid_cash" })
-	@Test(priority = 7)
+	@Test(priority = 8)
 	public void ExpertAllot_cash(String loginname, String appid_cash)
 			throws Exception {
 		Log.info("专家审批分单-cash");
@@ -186,7 +187,7 @@ public class OcProcess {
 		Reporter.log("专家审批分单-cash");
 	}
 
-	@Test(priority = 8)
+	@Test(priority = 9)
 	public void ExpertAudit_cash() throws Exception {
 		Log.info("专家审批-继续审核-cash");
 		// app.ManualAudit(); //专家审批
@@ -200,7 +201,7 @@ public class OcProcess {
 		Reporter.log("专家审批成功-cash");
 	}
 
-	@Test(priority = 8)
+	@Test(priority = 9)
 	public void ExpertAuditRefuse_cash() throws Exception {
 		Log.info("专家审批-拒绝-cash");
 		// app.ManualAudit(); //专家审批
@@ -211,7 +212,7 @@ public class OcProcess {
 		Reporter.log("专家审批拒绝-cash");
 	}
 
-	@Test(priority = 8)
+	@Test(priority = 9)
 	public void ExpertAuditReturn_cash() throws Exception {
 		Log.info("专家审批-退回-cash");
 		// app.ExpertAudit(); //专家审批
@@ -222,7 +223,7 @@ public class OcProcess {
 		Reporter.log("专家审批退回-cash");
 	}
 
-	@Test(priority = 9)
+	@Test(priority = 10)
 	public void LogOut() {
 		// 退出登录
 		Log.info("退出登录");
