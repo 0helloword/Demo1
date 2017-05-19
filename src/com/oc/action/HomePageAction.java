@@ -17,7 +17,8 @@ public class HomePageAction {
 	}
 
 	// 工单查询
-	public void AppQuery() {
+	public void AppQuery() throws InterruptedException {
+		Thread.sleep(1000);
 		HomePage.AppQuery(driver).click();
 
 	}

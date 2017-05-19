@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="oc_funciton" >
+<!-- listener类在reportng-1.1.5.jar中 -->
+  <listeners>
+            <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+            <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+            <listener class-name="com.oc.listeners.myListener" />
+        </listeners>
+    <test name="oc_funciton" >  
+		<!--禁用测试报告  parameter name="userdefaultlisteners" value="false" /-->
+		<classes >
+		<class name="com.oc.testng.OcFiction" >
+		<methods>
+					<include name="Login" />
+				    <exclude name="AppQueryButton" />
+				    <exclude name="AppQueryState" />
+					<exclude name="AppLoanType" />
+					<exclude name="AppDtail" />
+					<exclude name="AppCheckInfo" />
+					
+					<include name="ManualAllotButton_pos" />
+					<include name="ManualAllot_pos"/>
+					<include name="ManualAudit_pos" />
+					<include name="ManualAuditReturn_pos" />
+					<exclude name="ExpertAllotButton_pos" />
+					<exclude name="ExpertAllot_pos" />
+					<exclude name="ExpertAudit_pos" />
+					
+			</methods>
+					</class>
+					</classes>
+
+   
+    </test> 
+</suite> 

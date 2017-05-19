@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Reporter;
 
-import com.oc.basic.ComElement;
+import com.oc.basic.*;
 import com.oc.page.AppQueryPage;
 import com.oc.page.ManualAllotPage;
 
@@ -39,6 +39,7 @@ public class ManualAllotAction {
 	public void AllotApp(String username,String app) throws InterruptedException {
 		Thread.sleep(2000);
 		//new Select(AuditAllotPage_pos.AllotState(driver)).selectByVisibleText("未分配");
+		ManualAllotPage.App(driver).clear();
 		ManualAllotPage.App(driver).sendKeys(app);
 		Thread.sleep(2000);
 		ManualAllotPage.QueryButton(driver).click();
@@ -50,8 +51,17 @@ public class ManualAllotAction {
 		ManualAllotPage.Allot(driver).click();
 		Thread.sleep(2000);
 		ManualAllotPage.Comfirm(driver).click();
+		Thread.sleep(2000);
+		if (DoesWebElementExist.ElementExist(driver)){
+			ManualAllotPage.Comfirm(driver).click();//如果有弹窗出现，点击确定
+		}
+		else
+		{
+			System.out.println(" ");
+		}
 
 
 }
+	
 
 }
