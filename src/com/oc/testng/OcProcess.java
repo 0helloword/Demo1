@@ -31,7 +31,7 @@ public class OcProcess {
 	public void beforeTest(String url_oc) {
 		Log.startTestCase("开始OC审核审批测试");
 		// 初始化类，并打开链接
-		// 告诉系统chromedriver.exe的位置,可加可不加
+		// 告诉系统chromedriver.exe的位置,可加可不加,但是chromedriver.exe
 		System.setProperty("webdriver.chrome.driver",
 				"D:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
 		login = new LoginAction(webdriver);

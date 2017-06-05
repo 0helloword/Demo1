@@ -26,7 +26,7 @@
        </path> 
     <target name="run" depends="compile">
         <testng  classpathref="runpath"  outputDir="test-output">
-            <xmlfileset dir="${basedir}" includes="octestng.xml"/>
+            <xmlfileset dir="${basedir}" includes="ocProcess.xml"/>
             <jvmarg value="-ea" />
         </testng>
     </target>
