@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [oc_process]">
+  <parameter name="loginname" value="xiaola"/>
+  <parameter name="username" value="999111"/>
+  <parameter name="url_oc" value="http://123.57.56.45:7778/OC/initLogin"/>
+  <parameter name="appid_pos" value="35441652"/>
+  <parameter name="appid_cash" value="35442048"/>
+  <parameter name="password" value="cyj123"/>
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="com.oc.listeners.myListener"/>
+  </listeners>
+  <test name="oc(failed)">
+    <parameter name="loginname" value="xiaola"/>
+    <parameter name="username" value="999111"/>
+    <parameter name="appid_cash" value="35442048"/>
+    <parameter name="appid_pos" value="35441652"/>
+    <parameter name="url_oc" value="http://123.57.56.45:7778/OC/initLogin"/>
+    <parameter name="password" value="cyj123"/>
+    <classes>
+      <class name="com.oc.testng.OcProcess">
+        <methods>
+          <include name="ManualAudit_pos"/>
+          <include name="afterTest"/>
+          <include name="ManualAllot_pos" invocation-numbers="0"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.oc.testng.OcProcess -->
+    </classes>
+  </test> <!-- oc(failed) -->
+</suite> <!-- Failed suite [oc_process] -->

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [oc_funciton]">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="com.oc.listeners.myListener"/>
+  </listeners>
+  <test name="oc_funciton(failed)">
+    <classes>
+      <class name="com.oc.testng.OcFiction">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="ManualAllot_pos"/>
+          <include name="ManualAuditReturn_pos"/>
+          <include name="Login"/>
+          <include name="ManualAllotButton_pos"/>
+          <include name="ManualAudit_pos"/>
+        </methods>
+      </class> <!-- com.oc.testng.OcFiction -->
+    </classes>
+  </test> <!-- oc_funciton(failed) -->
+</suite> <!-- Failed suite [oc_funciton] -->
